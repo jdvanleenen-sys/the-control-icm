@@ -40,7 +40,7 @@ only comparison whose sentence speaks of "the read path".
 | `docs` | The 18 documents, nothing else | Control |
 | `folder` | The entry's folder, unchanged, its four files loaded first (the entry's `c1111`) | First system |
 | `icm` | An ICM workspace built for this job by the ICM method | Second system |
-| `icm-eager` | The same ICM files, byte for byte, with one `@` import line per file added to the end of its router so that every file loads first | The read-path test: when the files load, nothing else |
+| `icm-eager` | The same ICM files, byte for byte, with the text of every other instruction file appended to its router, each under its path, so that every file loads first | The read-path test: when the files load, nothing else |
 
 In every arm the 18 documents are byte for byte the same files in the same place, and nothing is
 added inside `reference/`. The arms run in one batch, interleaved in a random order from a recorded
@@ -101,8 +101,9 @@ frozen ICM.
 cost facts) and wrote the brief. The brief is committed as written and says nothing about answer
 length or detail.
 
-`icm-eager` is made by script from the frozen ICM: the same files, and one line added to the end of
-the router for each other instruction file, `@<path>`. A script checks that nothing else differs.
+`icm-eager` is made by script from the frozen ICM: the same files, and the text of each other
+instruction file appended to the router under its path. (An `@` import would do the same, but a test
+showed it does not load a path that contains a space.) A script checks that nothing else differs.
 
 ## The questions
 
@@ -152,11 +153,11 @@ of the pair.
 | Condition | Holds when | Is seen to fail when |
 |---|---|---|
 | 1. Steps | Document steps lower on at least T questions | Document steps higher on at least T questions |
-| 2. Right answers | In none of the three readings does the ICM have fewer right answers (or answers holding every key fact) than the other arm by M or more, over all N × 3 answers | In any reading it has fewer by M or more |
+| 2. Right answers | In none of the three readings does the ICM have fewer right answers (or answers holding every key fact) than the other arm by M or more, counted as a share of each arm's clean sessions and scaled to all N × 3 answers, so a session left out for a set-up fault never counts as wrong | In any reading it has fewer by M or more |
 | 3. Text | Mean characters per session not more than 5% above the other arm | More than 5% above |
 
 - T is the smallest count for which a fair coin gives that many or more, in either direction, at most
-  5 times in 100: 15 of 20, 14 of 19, 14 of 18, 13 of 17, 12 of 16, 12 of 15. A tie on a question is
+  5 times in 100: 15 of 20, 15 of 19, 14 of 18, 13 of 17, 13 of 16, 12 of 15 (as computed by `verify/sup-verdict.mjs`; version 3 of this page had two of these wrong). A tie on a question is
   neither and stays in N. This is a threshold fixed in advance, not a significance test.
 - M is 5% of the answers in the set, rounded up: 3 when N is 20 (60 answers).
 - The 5% on text is about twice the run-to-run movement in the entry's rehearsals (7,359 to 7,536

@@ -90,3 +90,13 @@ prompt and answer are in `reviews/`. Plan version 3 in; version 4 out.
 | The outside marker could drop out silently | Mandatory | Accepted | Gemini's prompt, batch size and order committed before the run; its reading must be complete before any verdict, or the page says why not |
 | Publication could depend on the outcome | Mandatory | Accepted, changed | Publishing is Jeff's call; if anything is published, everything is, including a voided run |
 | Cut the giveaway check and runtime from the rule | Cut | Already met | Neither is in the rule |
+
+## Corrections found while writing the code, before any build or run
+
+Thursday 2026-10-15. Each was found by a test, not a review.
+
+| What | Found by | Change |
+|---|---|---|
+| An `@` import does not load a path with a space in it (four test sessions: plain, quoted and escaped forms all failed; a path with no space loaded) | A test before writing `icm-eager` | `icm-eager` appends each file's text to the router under its path instead of importing it |
+| The threshold table had 16 and 19 wrong (12 and 14; they are 13 and 15) | `verify/sup-verdict.test.mjs` | Corrected. N is 18, where the table was right, so no rule changes |
+| Counting right answers as a raw number would count every session left out for a set-up fault as a wrong answer | `verify/sup-verdict.test.mjs` | Counted as a share of each arm's clean sessions, scaled to all N × 3 answers |
