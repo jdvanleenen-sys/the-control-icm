@@ -188,9 +188,15 @@ every attempt kept; more than 5% of sessions faulted in any verdict arm voids th
 ## Predictions, written before the run
 
 1. `icm` takes clearly fewer document steps than `docs`.
-2. Text: written after the ICM's minimum text (router, map and the contracts every question must read)
-   is published against the folder's 5,261 characters, and before the run. The method places ICM's
-   saving against prompts tens of thousands of tokens long; this library is about 32,000 characters.
+2. Text, written on Thursday 2026-10-15 after the minimum was published (`builder/icm-check.txt`) and
+   before the run. The ICM loads 725 characters first, but its router sends every question to its
+   stage contract and document list before anything else: 9,397 characters at the least, against the
+   folder's 5,261 loaded first. Its contract also tells the model to read every governing paper that
+   touches the question, whole, and the changes paper always; in practice it fetched 14,700 to
+   23,800 characters a session. In the entry the documents alone came to 7,191 a session and the
+   folder to 9,689. We predict the ICM's text is more than 5% above both, so by the rule it does not
+   earn its place against either, whatever its steps and answers. Against `icm-eager` (11,473
+   characters loaded first) we predict the ICM's text is lower.
 
 ## Size
 
