@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Control: ICM supplement</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cognac: #C67A3C; --page: #F7F3EE; --card: #FFFFFF; --text: #14314F; --muted: #6B6560;
+    --hairline: rgba(107, 101, 96, .3); --track: #EDE7DF; --soft: #F5E6D5;
+    --docs: #4A74C0; --folder: #C67A3C; --icm: #1A9A82; --eager: #9B59B6;
+    --panel: #14314F; --on-panel: #FFFFFF; --best: rgba(26, 154, 130, .13);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #0E2740; --card: #12304C; --text: #EDE7DF; --muted: #A6A29C;
+      --hairline: rgba(237, 231, 223, .22); --track: #0B1F35; --soft: rgba(198, 122, 60, .16);
+      --docs: #5079C4; --folder: #C9803F; --icm: #1E9C84; --eager: #9D60BE;
+      --panel: #EDE7DF; --on-panel: #0E2740; --best: rgba(30, 156, 132, .2);
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #0E2740; --card: #12304C; --text: #EDE7DF; --muted: #A6A29C;
+    --hairline: rgba(237, 231, 223, .22); --track: #0B1F35; --soft: rgba(198, 122, 60, .16);
+    --docs: #5079C4; --folder: #C9803F; --icm: #1E9C84; --eager: #9D60BE;
+    --panel: #EDE7DF; --on-panel: #0E2740; --best: rgba(30, 156, 132, .2);
+  }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; background: var(--page); color: var(--text); font-family: "DM Sans", system-ui, sans-serif; font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  main { max-width: 960px; margin: 0 auto; padding: 36px 16px 48px; }
+  header { padding-bottom: 18px; border-bottom: 1px solid var(--hairline); font-weight: 500; }
+  header span { display: block; color: var(--muted); font-size: 14px; font-weight: 400; }
+  h1 { font-size: clamp(28px, 5vw, 42px); line-height: 1.12; letter-spacing: -.01em; margin: 30px 0 10px; font-weight: 700; }
+  h2 { font-size: 21px; line-height: 1.25; margin: 40px 0 6px; font-weight: 700; }
+  p { margin: 0 0 12px; max-width: 72ch; } .sub { color: var(--muted); margin-bottom: 16px; }
+  strong { font-weight: 700; }
+  .answer { background: var(--panel); color: var(--on-panel); border-radius: 8px; padding: 18px 20px; margin: 18px 0 0; font-size: 19px; font-weight: 500; }
+  .card { background: var(--card); border: 1px solid var(--hairline); border-radius: 10px; padding: 16px; }
+  .grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 7px; vertical-align: -1px; flex: none; }
+  .s-docs { background: var(--docs); } .s-folder { background: var(--folder); } .s-icm { background: var(--icm); } .s-eager { background: var(--eager); }
+  .setup h3 { font-size: 16px; margin: 0 0 4px; font-weight: 700; display: flex; align-items: center; }
+  .setup p { font-size: 14px; color: var(--muted); margin: 0; }
+  .setup .loads { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--hairline); font-size: 13px; color: var(--muted); }
+  .setup .loads b { display: block; color: var(--text); font-size: 20px; font-variant-numeric: tabular-nums; }
+  .tablewrap { overflow-x: auto; background: var(--card); border: 1px solid var(--hairline); border-radius: 10px; }
+  table.res { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 640px; }
+  table.res th, table.res td { padding: 10px 12px; border-bottom: 1px solid var(--hairline); text-align: right; font-variant-numeric: tabular-nums; }
+  table.res th:first-child, table.res td:first-child { text-align: left; }
+  table.res thead th { font-weight: 700; font-size: 13px; vertical-align: bottom; }
+  table.res thead th .sw { margin: 0 6px 0 0; }
+  table.res tr.group td { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); background: var(--page); padding-top: 8px; padding-bottom: 6px; }
+  table.res td.best { background: var(--best); font-weight: 700; }
+  table.res td:first-child { color: var(--text); }
+  table.res td:first-child span { display: block; font-size: 12px; color: var(--muted); }
+  table.res tr:last-child td { border-bottom: 0; }
+  .note { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .chart h3 { font-size: 16px; margin: 0 0 2px; font-weight: 700; } .chart .cap { color: var(--muted); font-size: 14px; margin-bottom: 12px; }
+  .grp { margin-bottom: 12px; } .grp > div:first-child { font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  .line { display: grid; grid-template-columns: 1fr 58px; gap: 8px; align-items: center; height: 16px; margin: 3px 0; }
+  .track { height: 10px; background: var(--track); border-radius: 0 4px 4px 0; position: relative; }
+  .bar { height: 10px; border-radius: 0 4px 4px 0; min-width: 2px; }
+  .b-docs { background: var(--docs); } .b-folder { background: var(--folder); } .b-icm { background: var(--icm); } .b-eager { background: var(--eager); }
+  .val { font-size: 13px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin: 0 0 12px; }
+  .verdict { display: grid; grid-template-columns: 210px 1fr; gap: 14px; padding: 14px 16px; border-bottom: 1px solid var(--hairline); align-items: start; }
+  .verdict:last-child { border-bottom: 0; }
+  .verdict b { font-weight: 700; } .verdict .tag { display: inline-block; font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 999px; margin-bottom: 4px; }
+  .tag.no { background: var(--soft); color: var(--text); border: 1px solid var(--folder); }
+  .tag.cant { background: var(--track); color: var(--text); border: 1px solid var(--hairline); }
+  .verdict p { margin: 0; font-size: 15px; } .verdict .why { color: var(--muted); font-size: 14px; margin-top: 4px; }
+  .fair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; }
+  .fair div { font-size: 14px; padding-left: 14px; border-left: 3px solid var(--cognac); }
+  .fair b { display: block; font-size: 15px; }
+  ul.plain { margin: 0; padding-left: 20px; } ul.plain li { margin-bottom: 6px; max-width: 72ch; }
+  footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--hairline); color: var(--muted); font-size: 14px; }
+  footer strong { color: var(--text); } a { color: inherit; }
+  @media (max-width: 760px) { .grid4 { grid-template-columns: 1fr 1fr; } .grid2, .fair { grid-template-columns: 1fr; } .verdict { grid-template-columns: 1fr; gap: 4px; } }
+  @page { size: 1000px 3800px; margin: 30px; }
+  @media print { body { background: #fff; } main { padding: 0; max-width: none; } .grid4 { grid-template-columns: repeat(4, 1fr); } .grid2, .fair { grid-template-columns: 1fr 1fr; } .verdict { grid-template-columns: 210px 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>The Control: a follow-up study<span>After Weekly Comp #14 · run Thursday 15 October 2026</span></header>
+
+  <h1>Does an ICM workspace beat the folder?</h1>
+  <p class="sub">The competition entry tested a five-file folder against the same documents with no instructions. This follow-up adds a fourth set-up, an ICM workspace built by the ICM method, and runs all four on the same 18 documents, the same model and the same rule.</p>
+  <div class="answer">The ICM was the most accurate set-up: right on all 54 answers by both markers. It also read the most. By the rule fixed before the run, it did not earn its place.</div>
+
+  <h2>The four set-ups</h2>
+  <p class="sub">Same 18 documents in every one, same model (Claude Sonnet 5.5), same tools (read and search only), same questions, run in one batch in random order.</p>
+  <div class="grid4">
+    <div class="card setup"><h3><i class="sw s-docs"></i>Documents only</h3><p>The 18 documents and nothing else.</p><div class="loads"><b>0</b>characters of instructions loaded first</div></div>
+    <div class="card setup"><h3><i class="sw s-folder"></i>The entry's folder</h3><p>A map, identity, rules and examples, all loaded before the question.</p><div class="loads"><b>5,261</b>characters loaded first</div></div>
+    <div class="card setup"><h3><i class="sw s-icm"></i>ICM workspace</h3><p>A short router loads first. The stage contract and document list are read when needed.</p><div class="loads"><b>902</b>characters loaded first</div></div>
+    <div class="card setup"><h3><i class="sw s-eager"></i>Same ICM, all at once</h3><p>The ICM's files, word for word, but every one loaded before the question.</p><div class="loads"><b>11,886</b>characters loaded first</div></div>
+  </div>
+
+  <h2>The results</h2>
+  <p class="sub">18 new questions, 3 runs each: 54 answers per set-up. Means per question unless it says otherwise. Shaded cells are the best in each row.</p>
+  <div class="tablewrap">
+    <table class="res">
+      <thead><tr><th></th><th><i class="sw s-docs"></i>Documents only</th><th><i class="sw s-folder"></i>Folder</th><th><i class="sw s-icm"></i>ICM</th><th><i class="sw s-eager"></i>ICM, all at once</th></tr></thead>
+      <tbody>
+        <tr class="group"><td colspan="5">Right answers, out of 54</td></tr>
+        <tr><td>Marked by Claude Opus 5.5<span>arm hidden</span></td><td>52</td><td>52</td><td class="best">54</td><td class="best">54</td></tr>
+        <tr><td>Marked by Gemini 4 Flash<span>another maker, arm hidden</span></td><td>50</td><td>52</td><td class="best">54</td><td class="best">54</td></tr>
+        <tr><td>Hold every fact the key asks for<span>counted by script, no marker</span></td><td>49</td><td>50</td><td>53</td><td class="best">54</td></tr>
+        <tr class="group"><td colspan="5">Work</td></tr>
+        <tr><td>Steps to find the documents<span>searches, listings, document opens</span></td><td>5.44</td><td class="best">2.46</td><td>3.61</td><td>3.89</td></tr>
+        <tr><td>Instruction files opened</td><td class="best">0</td><td class="best">0</td><td>2.00</td><td>1.96</td></tr>
+        <tr><td>Seconds</td><td>7.8</td><td class="best">4.0</td><td>9.0</td><td>8.7</td></tr>
+        <tr><td>Words in the answer</td><td>166</td><td class="best">85</td><td>312</td><td>318</td></tr>
+        <tr class="group"><td colspan="5">Cost</td></tr>
+        <tr><td>Text put in front of the model<span>characters, loaded and fetched</span></td><td class="best">8,171</td><td>10,447</td><td>17,781</td><td>29,208</td></tr>
+        <tr><td>Tokens in<span>whole conversation, every turn</span></td><td>22,711</td><td class="best">18,372</td><td>26,876</td><td>28,090</td></tr>
+        <tr><td>Tokens out</td><td>925</td><td class="best">443</td><td>1,176</td><td>1,203</td></tr>
+        <tr><td>Cost per question<span>list price, US dollars</span></td><td>0.026</td><td class="best">0.014</td><td>0.027</td><td>0.034</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Tokens in count the whole conversation each time it is sent, so they grow with the number of turns as well as with the text; the documents-only set-up took about six turns a question. That is why the rule uses characters of text, not tokens.</p>
+
+  <div class="grid2" style="margin-top:22px">
+    <div class="card chart">
+      <h3>Right answers, out of 54</h3>
+      <div class="cap">Three readings of the same answers. Higher is better.</div>
+      <div class="legend"><span><i class="sw s-docs"></i>Documents</span><span><i class="sw s-folder"></i>Folder</span><span><i class="sw s-icm"></i>ICM</span><span><i class="sw s-eager"></i>ICM, all at once</span></div>
+      <div class="grp"><div>Claude Opus 5.5</div>
+        <div class="line"><div class="track"><div class="bar b-docs" style="width:96.3%"></div></div><span class="val">52</span></div>
+        <div class="line"><div class="track"><div class="bar b-folder" style="width:96.3%"></div></div><span class="val">52</span></div>
+        <div class="line"><div class="track"><div class="bar b-icm" style="width:100%"></div></div><span class="val">54</span></div>
+        <div class="line"><div class="track"><div class="bar b-eager" style="width:100%"></div></div><span class="val">54</span></div></div>
+      <div class="grp"><div>Gemini 4 Flash</div>
+        <div class="line"><div class="track"><div class="bar b-docs" style="width:92.6%"></div></div><span class="val">50</span></div>
+        <div class="line"><div class="track"><div class="bar b-folder" style="width:96.3%"></div></div><span class="val">52</span></div>
+        <div class="line"><div class="track"><div class="bar b-icm" style="width:100%"></div></div><span class="val">54</span></div>
+        <div class="line"><div class="track"><div class="bar b-eager" style="width:100%"></div></div><span class="val">54</span></div></div>
+      <div class="grp" style="margin-bottom:0"><div>Every key fact, by script</div>
+        <div class="line"><div class="track"><div class="bar b-docs" style="width:90.7%"></div></div><span class="val">49</span></div>
+        <div class="line"><div class="track"><div class="bar b-folder" style="width:92.6%"></div></div><span class="val">50</span></div>
+        <div class="line"><div class="track"><div class="bar b-icm" style="width:98.1%"></div></div><span class="val">53</span></div>
+        <div class="line"><div class="track"><div class="bar b-eager" style="width:100%"></div></div><span class="val">54</span></div></div>
+    </div>
+    <div class="card chart">
+      <h3>What each answer cost</h3>
+      <div class="cap">Per question. Shorter is cheaper.</div>
+      <div class="legend"><span><i class="sw s-docs"></i>Documents</span><span><i class="sw s-folder"></i>Folder</span><span><i class="sw s-icm"></i>ICM</span><span><i class="sw s-eager"></i>ICM, all at once</span></div>
+      <div class="grp"><div>Text in front of the model, characters</div>
+        <div class="line"><div class="track"><div class="bar b-docs" style="width:28.0%"></div></div><span class="val">8,171</span></div>
+        <div class="line"><div class="track"><div class="bar b-folder" style="width:35.8%"></div></div><span class="val">10,447</span></div>
+        <div class="line"><div class="track"><div class="bar b-icm" style="width:60.9%"></div></div><span class="val">17,781</span></div>
+        <div class="line"><div class="track"><div class="bar b-eager" style="width:100%"></div></div><span class="val">29,208</span></div></div>
+      <div class="grp"><div>Tokens in</div>
+        <div class="line"><div class="track"><div class="bar b-docs" style="width:80.9%"></div></div><span class="val">22,711</span></div>
+        <div class="line"><div class="track"><div class="bar b-folder" style="width:65.4%"></div></div><span class="val">18,372</span></div>
+        <div class="line"><div class="track"><div class="bar b-icm" style="width:95.7%"></div></div><span class="val">26,876</span></div>
+        <div class="line"><div class="track"><div class="bar b-eager" style="width:100%"></div></div><span class="val">28,090</span></div></div>
+      <div class="grp" style="margin-bottom:0"><div>Tokens out</div>
+        <div class="line"><div class="track"><div class="bar b-docs" style="width:76.9%"></div></div><span class="val">925</span></div>
+        <div class="line"><div class="track"><div class="bar b-folder" style="width:36.8%"></div></div><span class="val">443</span></div>
+        <div class="line"><div class="track"><div class="bar b-icm" style="width:97.8%"></div></div><span class="val">1,176</span></div>
+        <div class="line"><div class="track"><div class="bar b-eager" style="width:100%"></div></div><span class="val">1,203</span></div></div>
+    </div>
+  </div>
+
+  <h2>The verdicts, by the rule fixed before the run</h2>
+  <p class="sub">The same three-part rule as the competition entry: a set-up earns its place only if it finds the documents in clearly fewer steps, loses no right answers, and puts no more than 5% more text in front of the model.</p>
+  <div class="card" style="padding:0">
+    <div class="verdict"><div><span class="tag no">Did not earn its place</span><br><b>ICM against the documents alone</b></div><div><p>Fewer steps on 16 of 18 questions and no answers lost. It failed on text alone: 17,781 characters against 8,171.</p></div></div>
+    <div class="verdict"><div><span class="tag no">Did not earn its place</span><br><b>ICM against the folder</b></div><div><p>More steps to find the documents (more on 14 of 18 questions) and more text: 17,781 characters against 10,447.</p></div></div>
+    <div class="verdict"><div><span class="tag cant">Could not tell</span><br><b>Reading on demand against loading it all first</b></div><div><p>The same ICM files, loaded when needed instead of all at once, saved 39% of the text and changed nothing else: same answers, about the same steps.</p><p class="why">The all-at-once version still opened its two instruction files in almost every session, although they were already loaded.</p></div></div>
+  </div>
+  <p class="note">The rule only checks that a set-up does not lose right answers; it gives no credit for gaining them. The ICM's extra accuracy does not count toward earning its place.</p>
+
+  <h2>What it means</h2>
+  <ul class="plain">
+    <li><strong>The ICM bought accuracy with reading.</strong> Its contract tells the model to read every paper that touches the question, check every change, and show its working before answering. It got every answer right, and it wrote answers almost four times as long as the folder's.</li>
+    <li><strong>The folder is still the cheapest way to the documents.</strong> Its map took the model to the right papers in 2.46 steps, and the entry's own result came back in this batch: fewer steps on 10 of 10 of the entry's questions in both sets, with more text and fewer complete answers than the documents alone.</li>
+    <li><strong>On-demand loading is real, and small here.</strong> At 18 documents the saving was text, not behaviour. The method places its saving against libraries many times this size.</li>
+    <li><strong>Most questions did not separate the set-ups.</strong> On 12 of 18, every set-up was right every time. The differences come from six questions.</li>
+  </ul>
+
+  <h2>How it was kept fair</h2>
+  <div class="fair">
+    <div><b>Questions written first</b>18 new questions written by a separate Claude Opus 5.5 session from the documents alone, key-checked by another model, committed before the ICM existed. I never read them until the run was over.</div>
+    <div><b>The ICM built blind</b>Built by the icm-architect method on practice documents only, in the house style of my PO Verifier. The builder never saw the live documents or questions.</div>
+    <div><b>Practice matched</b>The ICM got the same five practice rounds the folder had, then had to pass two gate audits by sessions that did not build it.</div>
+    <div><b>Plan reviewed four times</b>Three design reviews (method, ICM fidelity, a skeptic), then one by Perplexity, which added the all-at-once set-up. Every change is logged.</div>
+    <div><b>Markers blind, two makers</b>Answers shuffled under random numbers. Four planted answers of known grade were marked right by both. Neither marker could guess the set-up (44% and 32%).</div>
+    <div><b>One sealed run, every session kept</b>456 sessions, no faults. A first run was voided when a usage limit refused a quarter of its sessions; it is published, never analysed.</div>
+    <div><b>The verdict is a script</b>The rule, the thresholds and the sentences were code, tested on made-up data before the run. It was run once.</div>
+    <div><b>Predictions on record</b>Written before the run: fewer steps than the documents alone, and more text than both. Both held.</div>
+  </div>
+
+  <h2>What this cannot tell you</h2>
+  <ul class="plain">
+    <li>Anything about ICM's hand-offs between stages or its human checks. For a single question the method chose one stage: there is nothing to hand on and nobody to check it.</li>
+    <li>Anything about large libraries, where ICM claims its biggest saving. This one is about 32,000 characters.</li>
+    <li>Anything beyond one model and made-up rule documents. The new questions were written and checked by Claude models.</li>
+  </ul>
+
+  <footer><strong>Everything is public:</strong> the plan, every review, the ICM, the questions, all 912 session logs, both markers' marks and the scripts. <strong>github.com/jdvanleenen-sys/the-control-icm</strong> · Start with RESULTS.md. More tests to follow.</footer>
+</main>
+</body>
+</html>
