@@ -1,0 +1,11 @@
+node_modules/
+
+# Kept back until the reveal. tools/reveal.mjs prints the command that adds them.
+runs/*/key.json
+runs/*/key-staged.json
+runs/*/probe.md
+runs/*/marking-key.csv
+
+# What a visitor's own commands write.
+runs/ask-*/
+runs/*-rerun-*/
