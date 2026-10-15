@@ -1,0 +1,31 @@
+# Fingerprints, taken before the first practice round
+
+sha256 of each file. Thursday 2026-10-15. The template's reference/ folder (a price list with private
+account IDs, and a sample layout) was left out of the copy; the template is used for structure only.
+
+```
+0486bf1814509346c1551ed9e8ee2bba3a3fb3a1bafbc37be383b9972d97ef31 *builder/BRIEF.md
+2084b364b8e0a54bc10177791375fe3498484e075015a88c8c5a653a299c6b12 *builder/template/01 intake/CONTEXT.md
+a4a24ebf82cae67665e8dd9ba609008b6fc5b739f10b7232f512f586bd72ccc3 *builder/template/02 read/CONTEXT.md
+0f34b15060784f45822514d50a88ed78cd967befb84755394ae11cbb5c3f9adb *builder/template/03 compare/CONTEXT.md
+b4d304959b5e5c56fa96a35dbbd2bece493a8cd8887e565d2225f2af2279f769 *builder/template/04 review/CONTEXT.md
+0906bb3e83144a3794983e775d0bb14bf5e3283647714aa3c1434cf368b387f8 *builder/template/05 request/CONTEXT.md
+0922c1843a01ad4c58f25798125638bbe9680593ce0e7ca670cff897fff7fd29 *builder/template/CLAUDE.md
+0804c80a59a616d3c064684c989e567711343c7c32758facc9d3ad07ac0c93d1 *builder/template/CONTEXT.md
+e4285cc144cb854c9c95dab5308b152f87539c82a5fc2065451a7226650c8c74 *builder/template/the-page.md
+05fbdc4c9179fad8afb1e2c8d839bb55176ed153ff00d72488d23bdbbb32a789 *./LICENSE
+eca1282eb690eecf6651bb6ab5dfdfe9d48b9b2e01909996f48dd3e1307b3cc5 *./README.md
+3df13abf3a6ea8a7e9979e6f62f2cba0eb9bd3d1231de90745ee9bb32fec9cf6 *./SKILL.md
+666bb990b2e5a6c7b9e8e0ca298adfba3da338a28cd85fe53970933f18b7e78b *./assets/templates/CLAUDE.md
+43315b4436e861455cab4a8b22b4b9cb7c58722d6320c2ef76fe1b59676ba2df *./assets/templates/CONTEXT.md
+00d256e4d297ed2c1e2f37da5b363b23accdeab1dd5787c8eb5c65081ec43b29 *./assets/templates/node.md
+4e8a0c74197527cc833931ba6db77181634f50e8d2337673e28a7e305d7bf710 *./assets/templates/object.md
+3cf0b514852334c1c1864fd88c2f3e73a6ea7ff04459ad49983f8e33191cc5a9 *./assets/templates/process.md
+7f216527a7e108e41536925891fddeb6863c591e83ca6f1de0249f65fb74ea09 *./assets/templates/questionnaire.md
+788f3fdc49216d199a54ad5e9f6ed39020a57378f6a5282e0f9267c2e1aa6803 *./assets/templates/schema.md
+5737ebc6874c8fae6b1bc0970f16ce08e8f83361abe8eac0314767958d3c6ad7 *./assets/templates/stage-CONTEXT.md
+66afae39a80736a939872dbbd0b3a7c71a9007e8c12c082613e3fd2f634956b0 *./references/core.md
+bbde6148731df773b9224e1031bf18b298093e7c46e34b07d0cd4b3a13ba3f5d *./references/forms.md
+a57bae043e43316dcb09948fa7e73f57c8480ac9652767b62c93a457d2e49ca9 *./references/reference-integrity.md
+cd7f180e7c481cd8f5982c3f93b5a444d262d965af76d34bbfcec0f20083a4e7 *./references/system-map.md
+```
