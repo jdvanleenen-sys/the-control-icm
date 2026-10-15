@@ -1,0 +1,969 @@
+Attached are the working papers of two small, made-up organisations. Each file begins with a header saying which organisation it belongs to and whether it is a governing document, a changes document, a summary or an archive copy.
+
+Write 20 exam questions about these papers, 10 for each organisation, with the answer to each. They will be used to test how well a reader can find the right answer in the papers.
+
+## What makes a good question here
+
+- A careful reader who checks the papers gets it right. A hasty reader, who stops at the first passage that looks relevant, gets it wrong.
+- The answer is checkable by a stranger: an amount, a date, a count, a yes or no, or a short list. Never a matter of opinion.
+- It reads as a real person would ask it: a member, a volunteer or someone at the front desk describing a situation. Do not name a document, a file or a section number in the question.
+- It gives every date and figure the answer depends on, with the year. Nothing may depend on today's date.
+- No two questions rest on the same rule.
+
+## The ten questions for each organisation
+
+Write two questions of each of these five types, in this order. Make the two of a pair as good as each other: which one is used will be decided later by a random draw, and the other will be used as well.
+
+1. **Plain lookup.** The answer sits in one governing document and no later decision changes it. What makes it hard is detail inside that document, such as two similar figures.
+2. **Changed rule.** A later decision in the changes document alters the answer, or looks as if it does and, on the dates given, does not.
+3. **Exception or condition.** A general rule has an exception, a limit or a condition in the same document, and the case in the question falls under it.
+4. **Two documents.** The answer needs facts from two different governing documents put together.
+5. **Trap.** For the organisation whose name comes first in the alphabet: the summary or the archive copy says something different from the governing document, and the governing document decides. For the other organisation: the papers do not contain the answer, and the right answer is to say so and say what the papers do cover nearby.
+
+If the papers contradict themselves in a way that is not meant (two governing documents that disagree), do not write a question about it. List it under "Contradictions found" at the end.
+
+## The form of your answer
+
+One code block and one list, and nothing else.
+
+**The block, named `question-pool.md`:** all 20 questions, numbered `P1` to `P20`. `P1` to `P10` are the first organisation in alphabetical order: two of type 1, then two of type 2, and so on. `P11` to `P20` are the second organisation in the same order.
+
+Every question has exactly this form:
+
+```
+## P1
+
+**Set:** <the prefix that starts that organisation's file names>
+
+**Type:** <plain lookup | changed rule | exception or condition | two documents | trap>
+
+**Prompt (paste exactly):**
+
+> Under the <organisation's full name> rules: <the question>
+
+**Expected answer:** <the answer in two to four sentences, with every figure and date, and the reason>
+
+**Source:** <file name and section numbers the answer rests on>
+
+**Correct requires:** <what an answer must contain to be right, and the specific wrong answers a hasty reader would give, each with the figure it would produce>
+```
+
+One filled-in example of the form, about an organisation that is not in your papers:
+
+```
+## P1
+
+**Set:** choir
+
+**Type:** exception or condition
+
+**Prompt (paste exactly):**
+
+> Under the Wexcombe Community Choir rules: A member aged 17 paid the adult annual subscription on 3 February 2026 because the treasurer did not know their age. They ask for the difference back on 20 February 2026. Are they owed anything, and how much?
+
+**Expected answer:** Yes, £18. Members under 18 on the day they pay are charged the youth subscription of £12, not the adult subscription of £30, and an overpayment caused by the choir's mistake is refunded in full if it is asked for within 28 days of payment. 20 February is 17 days after 3 February.
+
+**Source:** choir-fees.md, sections 2.1, 2.3 and 5.2.
+
+**Correct requires:** The answer must say £18 is owed. It is wrong if it says nothing is owed because subscriptions are not refundable (the general rule in 5.1, ignoring 5.2), if it refunds the whole £30, or if it refuses the refund as out of time.
+```
+
+**The list, headed "Contradictions found":** one line for each unintended contradiction you noticed, with the two places. Write "None" if there were none.
+
+Do not explain your choices. Do not add anything before, between or after these two parts.
+
+<attached file="film.txt">
+### film-changes.md
+
+---
+set: Fenwray Film Society
+role: changes
+covers: "Dated committee amendments to governing sections during 2025 and 2026"
+replaces:
+  - "1.1 Annual adult membership in film-fees.md"
+  - "2.2 Member admission in film-fees.md"
+  - "3.1 Refundable security deposit in film-equipment.md"
+  - "2.2 Maximum equipment hire in film-equipment.md"
+  - "3.1 Maximum audience in film-screenings.md"
+  - "1.2 Early ticket cancellation in film-refunds.md"
+note: "Each entry specifies the case date that determines whether its replacement applies."
+---
+# Committee Changes Register
+Fenwray Film Society is a fictional organisation.
+
+Maintained by the secretary.
+Earlier governing text remains on file and is not rewritten.
+
+## 1. Decision of 16 June 2025
+1.1 Replaces section 1.1 Annual adult membership in film-fees.md.
+1.2 From 1 July 2025, annual adult membership costs £28 instead of £24.
+1.3 The date membership payment is received determines the fee.
+1.4 Payments received before 1 July 2025 retain the old fee.
+
+## 2. Decision of 10 September 2025
+2.1 Replaces section 3.1 Refundable security deposit in film-equipment.md.
+2.2 From 1 October 2025, the deposit is £100 instead of £80.
+2.3 The scheduled collection date determines the deposit required.
+2.4 Earlier confirmed bookings are subject to the new deposit if collected on or after that date.
+
+## 3. Decision of 19 January 2026
+3.1 Replaces section 2.2 Member admission in film-fees.md.
+3.2 From 1 February 2026, active members pay £5 instead of £4.
+3.3 The screening date determines the ticket price, including advance purchases.
+
+## 4. Decision of 12 March 2026
+4.1 Replaces section 2.2 Maximum equipment hire in film-equipment.md.
+4.2 From 1 April 2026, the maximum hire is five consecutive booking days.
+4.3 The scheduled first collection date determines the permitted duration.
+
+## 5. Decision of 22 May 2026
+5.1 Replaces section 3.1 Maximum audience in film-screenings.md.
+5.2 From 1 June 2026, the maximum audience is 36, excluding duty volunteers.
+5.3 The screening date determines the audience limit.
+
+## 6. Decision of 14 August 2026
+6.1 Replaces section 1.2 Early ticket cancellation in film-refunds.md.
+6.2 From 1 September 2026, a full refund requires at least 72 hours' notice.
+6.3 The scheduled screening date determines which notice period applies.
+6.4 Section 1.4 of film-refunds.md still determines when notice was received.
+
+### film-conduct.md
+
+---
+set: Fenwray Film Society
+role: governing
+covers: "Behaviour at society activities, complaints and member suspensions"
+---
+# Conduct and Complaints
+Fenwray Film Society is a fictional organisation.
+
+Adopted: 18 March 2025
+Effective: 1 April 2025
+
+## 1. Expected behaviour
+1.1 Members and visitors must treat others respectfully.
+1.2 Threats, harassment and deliberate disruption are prohibited.
+1.3 Visitors must follow reasonable instructions from duty volunteers.
+1.4 Recording a screening without permission is prohibited.
+1.5 Smoking and vaping are not permitted in the hired room.
+
+## 2. Immediate action
+2.1 A duty volunteer may ask someone to stop disruptive behaviour.
+2.2 A person who refuses may be required to leave the activity.
+2.3 Serious threats may result in immediate removal without a warning.
+2.4 The duty volunteer must record the incident within 48 hours.
+2.5 Immediate removal does not itself end society membership.
+
+## 3. Complaints
+3.1 Complaints may be submitted in writing to the secretary.
+3.2 The secretary acknowledges a complaint within five working days.
+3.3 A person named in a complaint must be allowed to respond.
+3.4 The committee normally decides a complaint within 21 calendar days.
+3.5 A committee member directly involved must not vote on that complaint.
+
+## 4. Suspension
+4.1 The committee may suspend membership for up to 30 calendar days.
+4.2 A suspension requires a majority vote of uninvolved committee members.
+4.3 The written decision must state the reason and suspension dates.
+4.4 Membership rights during suspension are governed by film-membership.md.
+4.5 The member may request one review within seven calendar days.
+4.6 The committee decides a review within 14 calendar days.
+
+## 5. Records and refunds
+5.1 Complaint records are kept for 24 months after closure.
+5.2 Access is restricted to the secretary and uninvolved committee members.
+5.3 Removal from an event does not automatically create a refund right.
+5.4 Refund eligibility is determined by film-refunds.md.
+
+### film-equipment.md
+
+---
+set: Fenwray Film Society
+role: governing
+covers: "Projector and screen loans, booking periods, deposits and returns"
+---
+# Equipment Lending Rules
+Fenwray Film Society is a fictional organisation.
+
+Adopted: 26 February 2025
+Effective: 1 March 2025
+
+## 1. Eligibility and reservations
+1.1 Only active members aged 18 or over may borrow equipment.
+1.2 Bookings must be requested at least three calendar days ahead.
+1.3 Requests are recorded in order of receipt.
+1.4 A booking is confirmed when the hire fee and deposit are received.
+1.5 Equipment cannot be booked for dates reserved for society screenings.
+
+## 2. Hire period
+2.1 A booking day runs from 12:00 noon until 12:00 noon the next day.
+2.2 Equipment may be hired for no more than three consecutive booking days.
+2.3 An extension requires approval before the original return deadline.
+2.4 Extensions are charged using the rates in film-fees.md.
+
+## 3. Deposits and collection
+3.1 The refundable security deposit is £80 per booking.
+3.2 One deposit covers the projector and screen when hired together.
+3.3 The borrower must present their membership number at collection.
+3.4 The equipment officer records its condition before handover.
+3.5 The borrower signs the collection and condition record.
+
+## 4. Use and responsibility
+4.1 Equipment may be used indoors only.
+4.2 Borrowers must not lend it to another person.
+4.3 The projector and screen must remain in their protective cases during transport.
+4.4 Borrowers must report faults within 24 hours of discovering them.
+4.5 Safety precautions are specified in film-safety.md.
+
+## 5. Returns and charges
+5.1 Returns are accepted between 10:00 and 16:00 by arrangement.
+5.2 A late return costs £10 for each started 24-hour period.
+5.3 The deposit is returned within seven calendar days after inspection.
+5.4 Documented damage costs may be deducted from the deposit.
+5.5 Any deduction must be itemised and sent to the borrower.
+5.6 Hire refunds are governed by film-refunds.md.
+
+### film-fees-archive.md
+
+---
+set: Fenwray Film Society
+role: archive
+covers: "Superseded fee schedule retained as a historical committee record"
+---
+# Archived Fees and Payments
+Fenwray Film Society is a fictional organisation.
+
+Adopted: 10 January 2025
+Effective: 1 February 2025
+Superseded in full: 1 March 2025
+
+This is a historical copy and must not be used for current charges.
+The replacement governing document is film-fees.md.
+
+## 1. Membership fees
+1.1 Annual adult membership costs £20.
+1.2 Annual membership for people aged 16 or 17 costs £10.
+1.3 Membership fees are not reduced for joining partway through the year.
+1.4 Membership ends on 31 January following enrolment.
+1.5 No additional joining fee is charged.
+
+## 2. Screening tickets
+2.1 Standard admission costs £6 per screening.
+2.2 Active members pay £3 per screening.
+2.3 Children aged under 12 pay £2 when accompanied by an adult.
+2.4 Children aged 12 to 15 pay £4.
+2.5 Discounted tickets are for the named member only.
+2.6 Admission remains subject to the room's permitted capacity.
+
+## 3. Equipment charges
+3.1 Projector hire costs £15 per booking day.
+3.2 Screen hire costs £6 per booking day.
+3.3 Hiring both together costs £19 per booking day.
+3.4 Only active adult members may borrow equipment.
+3.5 The refundable deposit is £60 per booking.
+3.6 The maximum hire period is two consecutive booking days.
+
+## 4. Payment
+4.1 Payment may be made by cash or bank transfer.
+4.2 Payment must be completed before tickets or equipment are issued.
+4.3 Cheques are not accepted.
+4.4 Receipts are provided for payments of £10 or more.
+
+## 5. Record status
+5.1 This schedule applied only from 1 February 2025 to 28 February 2025.
+5.2 Later transactions are governed by film-fees.md and applicable changes.
+5.3 This archived copy is kept to explain historical receipts.
+
+### film-fees.md
+
+---
+set: Fenwray Film Society
+role: governing
+covers: "Membership fees, screening tickets, payments and concessions"
+---
+# Fees and Payments
+Fenwray Film Society is a fictional organisation.
+
+Adopted: 12 February 2025
+Effective: 1 March 2025
+
+## 1. Membership fees
+1.1 Annual adult membership costs £24.
+1.2 Annual membership for people aged 16 or 17 costs £12.
+1.3 Membership fees are not reduced for joining partway through the year.
+1.4 The membership period is determined by film-membership.md.
+1.5 No joining or administration fee is charged.
+
+## 2. Screening tickets
+2.1 Standard admission costs £7 per screening.
+2.2 Members with active membership pay £4 per screening.
+2.3 Children aged under 12 pay £3 when accompanied by an adult.
+2.4 Children aged 12 to 15 pay £5.
+2.5 A member cannot buy discounted tickets for non-members.
+2.6 Admission is subject to the capacity rules in film-screenings.md.
+
+## 3. Equipment charges
+3.1 Projector hire costs £18 per booking day.
+3.2 Screen hire costs £8 per booking day.
+3.3 Hiring both together costs £23 per booking day.
+3.4 Only active members may borrow equipment.
+3.5 Deposits, hire duration and return rules are in film-equipment.md.
+3.6 A booking day is defined in section 2 of film-equipment.md.
+
+## 4. Payment
+4.1 Payments may be made by cash or bank transfer.
+4.2 Cheques and instalment payments are not accepted.
+4.3 Fees must be paid in full before the relevant service is provided.
+4.4 The treasurer issues a receipt for payments of £10 or more.
+4.5 A payment is received when cash is handed over or a transfer clears.
+
+## 5. Refunds and adjustments
+5.1 Membership fees are non-refundable after membership begins.
+5.2 Ticket and equipment refunds follow film-refunds.md.
+5.3 Members cannot exchange unused tickets for membership credit.
+5.4 The treasurer may correct a documented overpayment at any time.
+
+### film-membership.md
+
+---
+set: Fenwray Film Society
+role: governing
+covers: "Membership eligibility, applications, voting rights and renewal"
+---
+# Membership Rules
+Fenwray Film Society is a fictional organisation.
+
+Adopted: 12 February 2025
+Effective: 1 March 2025
+
+## 1. Who may join
+1.1 Membership is open to anyone aged 16 or over.
+1.2 Applicants aged 16 or 17 need written consent from a parent or guardian.
+1.3 Members do not need to live in any particular area.
+1.4 Membership belongs to one person and cannot be transferred.
+
+## 2. Applications
+2.1 Applications must be made using the society's membership form.
+2.2 The secretary records the date a complete application is received.
+2.3 The committee decides applications within 14 calendar days.
+2.4 An application is complete when the form and required consent are received.
+2.5 Payment is due only after the application is accepted.
+
+## 3. Membership period
+3.1 Membership begins on the date the treasurer receives payment.
+3.2 Membership lasts until 28 February following that date.
+3.3 A member who joins during February receives membership until 28 February of the following year.
+3.4 Renewals paid within 30 days after expiry keep the original membership number.
+
+## 4. Rights and responsibilities
+4.1 Members aged 18 or over may vote at society meetings.
+4.2 Each eligible member has one vote.
+4.3 Members may book equipment subject to film-equipment.md.
+4.4 Membership does not guarantee admission to a screening.
+4.5 Members must follow film-conduct.md at all society activities.
+
+## 5. Ending membership
+5.1 A member may resign by writing to the secretary.
+5.2 The society does not refund unused membership time.
+5.3 Membership may be suspended under section 4 of film-conduct.md.
+5.4 A suspended member cannot vote, book equipment or claim member prices.
+5.5 The secretary records the start and end dates of each suspension.
+
+### film-quick-guide.md
+
+---
+set: Fenwray Film Society
+role: summary
+covers: "Front-desk guidance on joining, tickets, loans and cancellations"
+---
+# Volunteer Front-Desk Quick Guide
+Fenwray Film Society is a fictional organisation.
+
+Prepared: 8 April 2025
+Last reviewed: 15 July 2025
+
+This sheet is for quick answers, not formal decisions.
+The governing documents prevail over this summary.
+Check film-changes.md for later decisions before quoting a figure.
+
+## 1. Joining the society
+1.1 People aged 16 and over can apply.
+1.2 Under-18s need a parent or guardian's written agreement.
+1.3 Adults pay roughly £25 to £30 annually.
+1.4 Younger members pay £12 annually.
+1.5 Membership usually runs to the end of February.
+1.6 Ask the secretary if someone has recently renewed.
+
+## 2. Coming to a film
+2.1 Public screenings are normally held twice monthly.
+2.2 Standard admission is £7.
+2.3 Members usually pay around £4 or £5.
+2.4 Children have lower prices depending on age.
+2.5 Reservations open about two weeks before the film.
+2.6 Seats are limited, so advance payment is recommended.
+
+## 3. Borrowing the equipment
+3.1 Adult members may borrow the projector or screen.
+3.2 Bookings need a few days' notice.
+3.3 The projector costs £18 per day and the screen £8.
+3.4 Taking both together costs £23 per day.
+3.5 Expect a refundable deposit of around £80 to £100.
+3.6 The usual loan is a few days, subject to the current limit.
+
+## 4. Cancellations and problems
+4.1 Early ticket cancellation normally qualifies for a refund.
+4.2 Equipment cancellation may result in a partial charge.
+4.3 The society refunds tickets when it cancels a screening.
+4.4 Report faulty equipment promptly to the equipment officer.
+
+## 5. Before giving a definite answer
+5.1 Check the relevant governing document and changes register.
+5.2 Do not promise an exception without committee authority.
+
+### film-refunds.md
+
+---
+set: Fenwray Film Society
+role: governing
+covers: "Ticket cancellations, equipment refunds, deposits and unresolved matters"
+---
+# Refunds and Uncovered Matters
+Fenwray Film Society is a fictional organisation.
+
+Adopted: 25 March 2025
+Effective: 1 April 2025
+
+## 1. Member ticket cancellations
+1.1 A ticket holder may request cancellation in writing.
+1.2 Requests received at least 48 hours before the screening receive a full refund.
+1.3 Requests received later receive no refund.
+1.4 The receipt time recorded by the secretary decides which rule applies.
+1.5 Refunds are made within 10 working days of approval.
+
+## 2. Society screening cancellations
+2.1 If the society cancels a screening, every paid ticket receives a full refund.
+2.2 If the advertised film changes, buyers may request a full refund before entry.
+2.3 A buyer who enters after being informed of the change loses that option.
+2.4 No additional travel or accommodation expenses are reimbursed.
+
+## 3. Equipment booking cancellations
+3.1 A borrower may cancel by writing to the equipment officer.
+3.2 Cancellation at least seven calendar days before collection receives a full hire-fee refund.
+3.3 Cancellation later than that receives 50% of the hire fee.
+3.4 The cancellation receipt date determines the applicable refund.
+3.5 Security deposits are returned in full when collection never occurred.
+3.6 Damage and late-return deductions follow film-equipment.md.
+
+## 4. Refund administration
+4.1 Refunds are issued by bank transfer unless cash repayment is agreed.
+4.2 Refund requests must identify the booking or ticket concerned.
+4.3 The treasurer keeps a record of the amount, reason and payment date.
+4.4 Membership fee refunds are governed by film-fees.md.
+
+## 5. Matters not covered
+5.1 These rules do not establish a hardship or emergency-membership scheme.
+5.2 They do not set compensation for lost personal property.
+5.3 They do not specify film selection or programming criteria.
+5.4 The committee considers these matters individually if they arise.
+5.5 Individual decisions do not automatically create a continuing policy.
+
+### film-screenings.md
+
+---
+set: Fenwray Film Society
+role: governing
+covers: "Public screenings, reservations, attendance and room arrangements"
+---
+# Screening and Room Rules
+Fenwray Film Society is a fictional organisation.
+
+Adopted: 20 February 2025
+Effective: 1 March 2025
+
+## 1. Screening schedule
+1.1 The society normally holds two public screenings each month.
+1.2 The committee confirms dates at least 21 days beforehand.
+1.3 Screenings take place in a room hired by the society.
+1.4 The society does not own or permanently control the room.
+1.5 The secretary maintains the official screening calendar.
+
+## 2. Reservations
+2.1 Reservations open 14 calendar days before each screening.
+2.2 Reservations close two hours before the advertised start time.
+2.3 Each person may reserve no more than four tickets per screening.
+2.4 Reservations are confirmed only when full payment is received.
+2.5 Ticket prices are set by film-fees.md.
+2.6 Unpaid requests do not reserve seats.
+
+## 3. Capacity and entry
+3.1 The maximum audience is 42 people, excluding duty volunteers.
+3.2 At least two duty volunteers must attend every public screening.
+3.3 Doors open 30 minutes before the advertised start time.
+3.4 Reserved seats are held until 10 minutes after the advertised start.
+3.5 Late arrivals may enter only during a suitable break.
+3.6 Entry is refused once the permitted audience capacity is reached.
+
+## 4. Cancellations and changes
+4.1 The coordinator may cancel a screening for safety or room unavailability.
+4.2 A changed film title must be announced before doors open.
+4.3 Ticket refunds are determined by film-refunds.md.
+4.4 The coordinator records the reason for any cancellation.
+
+## 5. Room and audience safety
+5.1 Exit routes must be checked before the audience enters.
+5.2 The room must be cleared within 30 minutes after the screening ends.
+5.3 Equipment must be placed so cables do not obstruct walking routes.
+5.4 The duty volunteers apply the safety rules in film-safety.md.
+5.5 Audience conduct is governed by film-conduct.md.
+</attached>
+
+<attached file="hall.txt">
+### hall-bookings.md
+
+---
+set: Quillbrook Village Hall
+role: governing
+covers: "Booking requests, confirmation, hire hours, access and capacity"
+---
+# Room Booking Rules
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. General conditions
+1.1 These rules were adopted on 12 February 2025.
+1.2 Rooms may be hired by adults aged 18 or over.
+1.3 The named hirer is responsible for the entire booking.
+1.4 The hirer must give a contact address and telephone number.
+
+## 2. Booking requests
+2.1 Requests may be submitted up to 12 months in advance.
+2.2 Requests must arrive at least three calendar days before the event.
+2.3 The booking officer checks availability before accepting a request.
+2.4 A booking is accepted only when written acceptance is issued.
+2.5 Payment deadlines are set out in hall-fees.md section 6.
+2.6 Failure to pay the booking deposit cancels an accepted booking.
+
+## 3. Opening hours
+3.1 Monday to Thursday: 08:00 to 22:00.
+3.2 Friday and Saturday: 08:00 to 23:00.
+3.3 Sunday: 09:00 to 21:00.
+3.4 All guests must leave by the relevant closing time.
+3.5 Setup and clearing must take place within booked hours.
+
+## 4. Room capacities
+4.1 Main Hall: maximum 90 people.
+4.2 Meeting Room: maximum 24 people.
+4.3 Combined events may not exceed 100 people in the building.
+4.4 Capacities include organisers, performers and children.
+4.5 Fire safety requirements in hall-safety.md also apply.
+
+## 5. Access and equipment
+5.1 Keys are collected from the booking officer by arrangement.
+5.2 Keys may not be copied or passed to another hirer.
+5.3 Equipment must be requested when the booking is made.
+5.4 Equipment charges follow hall-fees.md section 4.
+5.5 Hirers must report missing or faulty equipment before use.
+
+## 6. Changes
+6.1 Changes to dates or rooms require written approval.
+6.2 A date change counts as cancellation and a new booking.
+6.3 Cancellation charges are governed by hall-refunds.md.
+
+### hall-changes.md
+
+---
+set: Quillbrook Village Hall
+role: changes
+covers: "Dated committee decisions replacing specified sections of current governing rules"
+replaces:
+  - "2.1 Main Hall rate in hall-fees.md"
+  - "3.1 Village group discount in hall-fees.md"
+  - "3.1 Monday to Thursday hours in hall-bookings.md"
+  - "4.1 Friday and Saturday music cutoff in hall-conduct.md"
+  - "2.2 Cancellation from 14 to 27 days in hall-refunds.md"
+  - "5.1 Emergency spending limit in hall-safety.md"
+note: "Each entry identifies its controlling date; apply it only when that date is on or after the effective date."
+---
+# Committee Changes Register
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. How to use this register
+1.1 These entries replace only the named governing sections.
+1.2 All other governing wording remains unchanged.
+1.3 The original governing documents retain their adopted wording.
+1.4 Entries apply from their effective dates, not their decision dates.
+
+## 2. Decision made 18 September 2025
+2.1 Effective 1 November 2025: replace hall-fees.md section 2.1.
+2.2 Main Hall hire is £28 per hour instead of £24.
+2.3 Controlling date: the first date of the booked event.
+
+## 3. Decision made 15 January 2026
+3.1 Effective 1 February 2026: replace hall-fees.md section 3.1.
+3.2 Registered village groups receive 25% off room hire instead of 20%.
+3.3 Controlling date: the first date of the booked event.
+
+## 4. Decision made 15 January 2026
+4.1 Effective 1 March 2026: replace hall-bookings.md section 3.1.
+4.2 Monday to Thursday opening hours become 08:00 to 21:30.
+4.3 Controlling date: the date on which room use takes place.
+
+## 5. Decision made 20 March 2026
+5.1 Effective 1 April 2026: replace hall-conduct.md section 4.1.
+5.2 Friday and Saturday amplified music must stop by 21:30.
+5.3 Controlling date: the date on which the music is played.
+
+## 6. Decision made 14 May 2026
+6.1 Effective 1 June 2026: replace hall-refunds.md section 2.2.
+6.2 Cancellation from 14 to 27 days before the event gives a 25% refund.
+6.3 Controlling date: when the booking officer receives cancellation.
+6.4 The separate booking deposit exclusion still applies.
+
+## 7. Decision made 14 May 2026
+7.1 Effective 1 July 2026: replace hall-safety.md section 5.1.
+7.2 The chair may authorise up to £650 for urgent safety work.
+7.3 Controlling date: when the emergency spending is authorised.
+
+### hall-conduct.md
+
+---
+set: Quillbrook Village Hall
+role: governing
+covers: "Behaviour, alcohol, noise, cleaning and responsibility for damage"
+---
+# Hall Use and Conduct Rules
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. Responsibility
+1.1 These rules were adopted on 12 February 2025.
+1.2 The named hirer is responsible for guests and suppliers.
+1.3 Hirers must remain on site throughout their events.
+1.4 Hirers must follow the safety rules in hall-safety.md.
+
+## 2. Behaviour
+2.1 Threatening or abusive behaviour is not permitted.
+2.2 Smoking and vaping are prohibited inside the building.
+2.3 Illegal activities are prohibited anywhere on hall grounds.
+2.4 Animals are not permitted except assistance animals.
+2.5 Decorations must not be attached with nails or screws.
+
+## 3. Alcohol
+3.1 Alcohol may be served only with prior written permission.
+3.2 Alcohol may not be sold under an ordinary hall booking.
+3.3 Permission to serve alcohol requires the damage deposit in hall-fees.md.
+3.4 The hirer must ensure alcohol is not supplied to underage guests.
+3.5 Alcohol must not be taken outside the designated hall grounds.
+
+## 4. Music and noise
+4.1 Amplified music must stop by 22:00 on Friday and Saturday.
+4.2 Amplified music must stop by 21:00 on all other days.
+4.3 External speakers are not permitted.
+4.4 Doors and windows must remain closed during amplified music.
+4.5 The booking officer may require immediate noise reduction.
+
+## 5. Cleaning and damage
+5.1 Hirers must leave rooms clean and furniture in its original layout.
+5.2 All rubbish must be placed in the designated outdoor bins.
+5.3 Kitchen surfaces must be wiped after use.
+5.4 Damage must be reported within 24 hours after the event.
+5.5 Reasonable repair costs may be deducted under hall-refunds.md.
+
+## 6. Breaches
+6.1 Serious breaches may result in immediate termination of the event.
+6.2 Terminated bookings receive no refund of room hire charges.
+6.3 The committee may refuse future bookings following serious breaches.
+
+### hall-fees-archive.md
+
+---
+set: Quillbrook Village Hall
+role: archive
+covers: "Superseded hire charges and payment arrangements retained for historical reference"
+---
+# Hire Charges and Payments: Archived Version
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. Archive status
+1.1 These rules were adopted on 8 January 2025.
+1.2 They applied to bookings starting from 1 February 2025.
+1.3 They were superseded by hall-fees.md on 1 April 2025.
+1.4 This document is retained for historical reference only.
+1.5 It must not be used to quote current prices.
+
+## 2. Room hire
+2.1 Main Hall: £20 per hour.
+2.2 Meeting Room: £10 per hour.
+2.3 Kitchen used with either room: £6 per booking.
+2.4 The minimum paid booking is two hours per room.
+2.5 Setup and clearing time is included in paid hours.
+2.6 Charges are rounded upwards to the next whole hour.
+
+## 3. Discounts
+3.1 Registered village groups receive 15% off room hire.
+3.2 A registered village group must have at least eight local members.
+3.3 Groups must confirm their membership count when booking.
+3.4 Discounts apply to room charges only.
+3.5 Discounts cannot be combined.
+
+## 4. Equipment charges
+4.1 Projector: £12 per booking.
+4.2 Portable speaker: £8 per booking.
+4.3 Folding display boards: £4 per set per booking.
+4.4 Equipment may only be hired alongside a room.
+
+## 5. Deposits
+5.1 The booking deposit is £20.
+5.2 Events serving alcohol require a £75 damage deposit.
+5.3 The damage deposit is separate from the booking deposit.
+5.4 The booking deposit counts towards the hire charge.
+
+## 6. Payment deadlines
+6.1 The booking deposit is due within seven calendar days of acceptance.
+6.2 Remaining hire charges are due seven calendar days before the event.
+6.3 Bookings made fewer than seven days ahead require full payment.
+6.4 This archived document creates no entitlement to historical prices.
+
+### hall-fees.md
+
+---
+set: Quillbrook Village Hall
+role: governing
+covers: "Room hire charges, equipment fees, deposits and payment deadlines"
+---
+# Hire Charges and Payments
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. Scope
+1.1 These charges were approved on 12 February 2025.
+1.2 They apply to bookings starting on or after 1 April 2025.
+1.3 Room availability is governed by hall-bookings.md.
+
+## 2. Room hire
+2.1 Main Hall: £24 per hour.
+2.2 Meeting Room: £12 per hour.
+2.3 Kitchen used with either room: £8 per booking.
+2.4 The minimum paid booking is two hours per room.
+2.5 Setup and clearing time must be included in paid hours.
+2.6 Hire is charged in whole hours, rounded upwards.
+
+## 3. Discounts
+3.1 Registered village groups receive 20% off room hire.
+3.2 A registered village group must have at least ten local members.
+3.3 Groups must provide their membership count before booking.
+3.4 The discount does not apply to kitchen or equipment charges.
+3.5 No other discounts may be combined with this discount.
+
+## 4. Equipment charges
+4.1 Projector: £15 per booking.
+4.2 Portable speaker: £10 per booking.
+4.3 Folding display boards: £5 per set per booking.
+4.4 Equipment may only be hired alongside a room.
+4.5 Equipment availability must be confirmed under hall-bookings.md.
+
+## 5. Deposits
+5.1 Every booking requires a £30 booking deposit.
+5.2 Parties serving alcohol require a £100 damage deposit.
+5.3 The damage deposit is separate from the booking deposit.
+5.4 The booking deposit counts towards the total hire charge.
+5.5 Damage deposit returns follow hall-refunds.md section 4.
+
+## 6. Payment deadlines
+6.1 The booking deposit is due within seven calendar days of acceptance.
+6.2 The remaining hire charge is due 14 calendar days before the event.
+6.3 Bookings made fewer than 14 days ahead require full payment at acceptance.
+6.4 Refund eligibility is determined under hall-refunds.md.
+
+### hall-quick-guide.md
+
+---
+set: Quillbrook Village Hall
+role: summary
+covers: "Front-desk guidance on bookings, prices, use conditions and refunds"
+---
+# Booking Desk Quick Guide
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. Using this guide
+This sheet was last refreshed on 10 July 2026.
+It is a convenience summary, not a governing document.
+The governing documents and hall-changes.md always prevail.
+Check the event and cancellation dates before quoting a price.
+
+## 2. Rooms and prices
+The Main Hall normally costs £28 an hour.
+The Meeting Room costs £12 an hour.
+The kitchen costs another £8 per booking.
+Bookings normally last at least two hours per room.
+Registered village groups generally get 25% off room hire.
+Projectors cost £15 and portable speakers cost £10.
+Display boards cost £5 per set.
+Equipment and kitchen charges do not receive the group discount.
+
+## 3. Booking and payment
+Bookings can be requested up to a year ahead.
+Allow at least three days before the event.
+A booking is not accepted until confirmed in writing.
+A £30 booking deposit is normally required.
+The outstanding hire bill is generally due two weeks before the event.
+Alcohol events also need a £100 damage deposit.
+
+## 4. Opening and attendance
+Monday to Thursday events now finish by 21:30.
+Friday and Saturday events may run until 23:00.
+Sunday events finish by 21:00.
+The Main Hall holds up to 90 people.
+The Meeting Room holds up to 24 people.
+Combined events are limited to 100 people in the building.
+
+## 5. Music and cancellations
+Friday and Saturday amplified music stops at 21:30.
+Music stops by 21:00 on other days.
+Early cancellation may qualify for a full or partial refund.
+Mid-range cancellations now generally receive 25% rather than 50%.
+The booking deposit is normally kept when a hirer cancels.
+
+## 6. Questions to refer
+Check hall-refunds.md before promising any repayment.
+Refer safety issues immediately to a trustee.
+Do not settle disputed damage charges at the booking desk.
+
+### hall-refunds.md
+
+---
+set: Quillbrook Village Hall
+role: governing
+covers: "Cancellations, hire refunds, damage deposits and repayment procedures"
+---
+# Cancellation and Refund Rules
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. Scope
+1.1 These rules were adopted on 12 February 2025.
+1.2 They apply to accepted bookings under hall-bookings.md.
+1.3 Cancellation requests must be submitted in writing.
+1.4 The date the booking officer receives the request is the cancellation date.
+
+## 2. Hirer cancellations
+2.1 Cancellation at least 28 calendar days before the event gives a full refund.
+2.2 Cancellation from 14 to 27 calendar days before the event gives a 50% refund.
+2.3 Cancellation fewer than 14 calendar days before the event gives no refund.
+2.4 The refund percentages apply to room, kitchen and equipment hire charges.
+2.5 The £30 booking deposit is non-refundable in every hirer cancellation.
+2.6 Refunds under 2.1 and 2.2 exclude the booking deposit.
+2.7 An unpaid balance remains payable if the cancellation charge exceeds payments.
+
+## 3. Hall cancellations
+3.1 If the committee cancels an event, all payments are refunded.
+3.2 This includes bookings cancelled for safety reasons under hall-safety.md.
+3.3 The committee does not pay compensation for external costs.
+3.4 The booking officer must notify the hirer as soon as reasonably possible.
+
+## 4. Damage deposits
+4.1 Damage deposits are returned within ten working days after the event.
+4.2 Documented repair or additional cleaning costs may be deducted.
+4.3 The hirer must receive an itemised statement of deductions.
+4.4 Any disputed deduction is reviewed by two trustees.
+4.5 An unused damage deposit is returned in full after hirer cancellation.
+
+## 5. Refund processing
+5.1 Refunds are made by bank transfer.
+5.2 Approved refunds must be issued within 15 working days.
+5.3 The treasurer records every refund in the payment ledger.
+5.4 Refund approvals above £500 require two trustees.
+5.5 Working days mean Monday to Friday, excluding public holidays.
+
+### hall-safety.md
+
+---
+set: Quillbrook Village Hall
+role: governing
+covers: "Fire precautions, occupancy, emergencies, incidents and safety authority"
+---
+# Hall Safety Rules
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. Scope
+1.1 These rules were adopted on 12 February 2025.
+1.2 They apply to all hirers, trustees, visitors and contractors.
+1.3 The named hirer must explain emergency exits to organisers.
+
+## 2. Fire safety
+2.1 All marked fire exits must remain unobstructed.
+2.2 Fire doors must not be wedged open.
+2.3 Open flames, candles and fireworks are prohibited.
+2.4 Electrical appliances brought in must be safe and undamaged.
+2.5 Cooking is permitted only in the designated kitchen.
+2.6 No cooking equipment may be placed in hired rooms.
+
+## 3. Occupancy and supervision
+3.1 Maximum numbers are specified in hall-bookings.md section 4.
+3.2 The hirer must count attendees when an event begins.
+3.3 Children under 12 must remain under adult supervision.
+3.4 At least one responsible adult must remain near the main entrance.
+3.5 Corridors and access routes must remain clear.
+
+## 4. Emergencies and reporting
+4.1 In a fire, occupants must evacuate immediately.
+4.2 Emergency services must be contacted when necessary.
+4.3 Occupants must assemble at the marked garden gate.
+4.4 Nobody may re-enter until emergency services permit it.
+4.5 Injuries requiring first aid must be recorded in the incident book.
+4.6 Serious incidents must be reported to the chair within 24 hours.
+
+## 5. Emergency spending
+5.1 The chair may authorise up to £400 for urgent safety work.
+5.2 This exception overrides hall-trustees.md section 5.2.
+5.3 A second trustee must confirm the urgency in writing.
+5.4 The spending must be reported at the next committee meeting.
+
+## 6. Temporary closure
+6.1 The chair may close an unsafe room immediately.
+6.2 A closed room must not be hired until declared safe.
+6.3 Refunds caused by safety closure follow hall-refunds.md section 3.
+
+### hall-trustees.md
+
+---
+set: Quillbrook Village Hall
+role: governing
+covers: "Trustee membership, voting, meetings and decision-making authority"
+---
+# Trustee Committee Rules
+Quillbrook Village Hall is a fictional organisation.
+
+## 1. Purpose
+1.1 The committee manages the hall for community use.
+1.2 It may hire out rooms and equipment under hall-bookings.md.
+1.3 These rules were adopted on 12 February 2025.
+
+## 2. Committee membership
+2.1 The committee has between five and nine trustees.
+2.2 Trustees must be at least 18 years old.
+2.3 Applicants must live in Quillbrook or a neighbouring village.
+2.4 A trustee serves for two years and may stand again.
+2.5 Trustees receive no payment for committee work.
+
+## 3. Appointment and departure
+3.1 New trustees are elected at the annual public meeting.
+3.2 Election requires more than half of votes cast.
+3.3 The committee may fill vacancies until the next annual meeting.
+3.4 A trustee may resign by giving written notice.
+3.5 Three consecutive missed meetings without explanation trigger a review.
+
+## 4. Meetings and votes
+4.1 The committee meets at least six times each calendar year.
+4.2 Four trustees form a quorum.
+4.3 Decisions require a majority of those present and voting.
+4.4 The chair has a casting vote if votes are equal.
+4.5 Minutes must be approved at the next meeting.
+
+## 5. Spending authority
+5.1 The treasurer may approve routine spending up to £150.
+5.2 Spending above £150 requires a committee vote.
+5.3 Emergency safety spending follows hall-safety.md section 5.
+5.4 Two trustees must approve payments above £500.
+
+## 6. Matters not covered
+6.1 These rules do not set a maximum number of trustee terms.
+6.2 They do not prescribe a method for resolving personal disputes.
+6.3 They do not specify whether trustees may attend remotely.
+</attached>

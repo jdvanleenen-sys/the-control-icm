@@ -49,3 +49,26 @@ method rather than a caricature of it. Plan version 1 in; version 2 out.
 | `icm-same` is a test of load timing, not of ICM | Optional | Accepted | Renamed `folder-staged`; its sentence never mentions ICM |
 | Remove prediction 2: the ICM loads less text first by construction | Removal | Accepted | Removed; the text prediction is written after the minimum is published |
 | A stranger could not rebuild the ICM without the practice documents | Missing | Accepted | The three practice sets are copied into `practice/` |
+
+## Round 3: the skeptic, elegance and replication
+
+Thursday 2026-10-15. Reviewer: Claude Sonnet 5.5, read-only, asked to play a judge looking for a
+reason to dismiss the result, and to cut whatever had accreted. Plan version 2 in; version 3 out.
+
+| Note | Kind | Decision | What changed |
+|---|---|---|---|
+| The right-answer tolerance was measured in the run it judges, at an unstated grain; two analysts could differ | Mandatory | Accepted | A fixed margin: fewer by 5% of the set's answers, rounded up (3 of 54) |
+| How three runs collapse to one direction per question, and how ties count, was unstated | Mandatory | Accepted | Mean of the three runs; a tie is neither and stays in N; T computed for N |
+| Excluding instruction opens from steps looks built for the ICM to win | Mandatory | Accepted | Total steps printed in the same sentence; if they clearly rose, a fixed clause says so |
+| "Text did not rise" had no unit or margin | Mandatory | Accepted | Mean characters per session, not more than 5% above (about twice the entry's run-to-run movement) |
+| No decision table; "seen to fail" undefined for the new conditions | Mandatory | Accepted | A decision table, and a committed analysis script tested on fixtures before the run |
+| `icm` against `folder` is a bundle comparison, not one manipulation | Defect | Accepted | Said in the question; differences listed |
+| The brief encodes the experimenter's knowledge ("answer every case") | Defect | Accepted | The brief says nothing about answer length or detail; it only forbids "stop and ask", because no person is there. Fingerprinted, committed before practice, never edited |
+| A model-built ICM cannot be rebuilt the same | Defect | Accepted | The frozen ICM is the artifact; transcripts and fingerprints committed; "reproduces" means the run |
+| Every marker is Claude | Defect | Accepted, changed | Jeff allowed Gemini and Perplexity if the build session does the transfers. Gemini is the second marking pass; the key-fact count is a third reading no model judges |
+| Who the key-check session is, and N, were unclear | Defect | Accepted | Its report is committed; N is 18 |
+| Crash and re-run rules | Optional | Accepted | The entry's fault rules, unchanged |
+| Cut the strict-reading print | Cut | Accepted | Removed |
+| Cut "no prediction" lines | Cut | Accepted | Removed |
+| `folder-staged` should carry measures, not a verdict | Cut | Accepted | Reported as measures only |
+| Cut the exam and held-out sets | Cut | Refused, changed | Kept as a replication check of the entry's pattern in this batch; they cannot decide the verdict |
