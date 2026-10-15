@@ -72,3 +72,21 @@ reason to dismiss the result, and to cut whatever had accreted. Plan version 2 i
 | Cut "no prediction" lines | Cut | Accepted | Removed |
 | `folder-staged` should carry measures, not a verdict | Cut | Accepted | Reported as measures only |
 | Cut the exam and held-out sets | Cut | Refused, changed | Kept as a replication check of the entry's pattern in this batch; they cannot decide the verdict |
+
+## Round 4: outside review by Perplexity
+
+Thursday 2026-10-15. Jeff allowed Perplexity and Gemini if the build session does the transfers. The
+prompt and answer are in `reviews/`. Plan version 3 in; version 4 out.
+
+| Note | Kind | Decision | What changed |
+|---|---|---|---|
+| `icm` against `docs` or `folder` cannot show a read-path effect; it compares whole workspaces | Mandatory | Accepted | New arm `icm-eager`: the same files with every one loaded first. `icm` against `icm-eager` is the only read-path comparison; the other two speak of "the ICM workspace" |
+| A point difference under a margin is not evidence of no loss | Mandatory | Accepted, first option | Stated as a decision rule on one finite set of questions, not an estimate; per-question differences published |
+| Isolation of each session was under-specified | Mandatory | Accepted | The entry's isolation, which already covers this, is now spelled out in the plan; each log keeps its start-up record |
+| `folder-staged` adds routing, so it does not change one thing | Defect | Accepted | Replaced by `icm-eager` |
+| N and the de-duplication rule were not fixed before generation | Mandatory | Already met, now stated | The rule was in plan version 1 (dc6f91d), committed before the questions were written; N is 18 |
+| The key-fact count had no validity check | Mandatory | Accepted | Fixtures for every pattern, run by script; called key-fact coverage |
+| Competing authorities over the ICM's shape | Defect | Accepted | The PO Verifier copy is frozen with a fingerprint; a session that is neither builder nor experimenter checks the ICM against the skill's ten invariants before the freeze |
+| The outside marker could drop out silently | Mandatory | Accepted | Gemini's prompt, batch size and order committed before the run; its reading must be complete before any verdict, or the page says why not |
+| Publication could depend on the outcome | Mandatory | Accepted, changed | Publishing is Jeff's call; if anything is published, everything is, including a voided run |
+| Cut the giveaway check and runtime from the rule | Cut | Already met | Neither is in the rule |
