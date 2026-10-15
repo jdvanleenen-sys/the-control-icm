@@ -1,0 +1,28 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 14751 characters, 369 words, 9.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-membership.md
+  - Read reference/lend/lend-changes.md
+
+**Rules that decide it** (Osterby Toy and Tool Library)
+
+- **lend-fees.md §2.1 Standard annual fee:** the original says the fee is £24. It is replaced for this case, as shown below.
+- **lend-changes.md §2, Annual fee decision:** this replaces §2.1 and is effective from 1 January 2026. The date test is the date the joining or renewal payment is accepted, and the entry applies if that date is on or after 1 January 2026. The payment was accepted on 10 January 2026, which is after the effective date, so the replacement applies. It reads: "The annual household membership fee is £30 for each 12-month term. The fee is payable on joining and on each renewal."
+- **lend-fees.md §2.2 Reduced annual fee:** the £12 fee needs one named adult to declare income support. Neither does, so it doesn't apply.
+- **lend-fees.md §3.2 and lend-membership.md §2.2 Unpaid charges:** an unpaid charge blocks renewal. The household has none, so nothing blocks it.
+- **lend-membership.md §2.1 Membership term:** "Membership lasts 12 calendar months from the joining or renewal date. Renewal starts on the date the renewal payment is accepted, not on the old expiry date."
+- **Other change entries (§3 and §4):** these cover loan length and unused-membership refunds. They don't touch this question.
+
+**Working**
+
+- **Fee:** payment accepted on 10 January 2026 is on or after 1 January 2026, so the fee is £30.
+- **Start date:** the renewal starts when payment is accepted, which is Saturday 10 January 2026. It does not start on the old expiry date of 20 December 2025, so the lapse of 21 days is not backdated.
+- **Term:** 12 calendar months from 10 January 2026 runs to 10 January 2027. The last day of cover is 9 January 2027.
+
+**Check:** No figure came from the desk guide or the archive paper. The fee change entry was tested on the payment acceptance date. I read the fees and membership papers, and the changes paper. No deciding fact is missing, and both parts of the question are answered.
+
+**Answer:** They pay £30. The renewed membership runs from Saturday 10 January 2026 for 12 calendar months, ending 10 January 2027 (the last day of cover is 9 January 2027).
+

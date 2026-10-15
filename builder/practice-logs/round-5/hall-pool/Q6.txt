@@ -1,0 +1,30 @@
+## Q6, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 20040 characters, 313 words, 10 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-licensing-limits.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-who-can-hire.md
+  - Read reference/hall/hall-kitchen-and-equipment.md
+
+**Rules that decide it**
+- **hall-licensing-limits.md, 1.1:** "Main Hall 120 standing or 90 seated at tables."
+- **hall-licensing-limits.md, 1.3:** "The count includes children, helpers, caterers and performers."
+- **hall-licensing-limits.md, 1.2:** no more than 150 people in the building at once.
+- **hall-licensing-limits.md, 5.3:** "An event with more than 80 guests needs one steward aged 18 or over for every 40 guests or part of 40."
+- **hall-changes-log.md:** the only entry that touches hall-licensing-limits.md is Change 3, which replaces section 3.1 (music finishing time). It doesn't touch sections 1 or 5, so the original wording of both stands. I didn't need to date-test it.
+- Alcohol rules don't come into it, because the reception has none.
+
+**Working**
+- **Capacity:** the 5 caterers and helpers count, so the room holds 95 + 5 = 100 people. The reception is standing, so the limit is 120. 100 is under 120, so it's allowed. The 100 is also under the 150 building limit, assuming no other rooms are in use at the same time.
+- **Stewards:** 95 guests is more than 80, so the steward rule applies. 95 ÷ 40 = 2.375, and "or part of 40" rounds that up to 3. If the 5 caterers were also counted as guests, 100 ÷ 40 = 2.5 would still round up to 3. So the answer is the same either way. Each steward must be 18 or over.
+
+**Check**
+- No figure came from the summary or archive papers.
+- I read the licensing paper and the changes log. I also read who-can-hire and kitchen-and-equipment, and neither adds a capacity or steward rule.
+- No missing fact changes the result.
+- Both parts of the question are answered.
+
+**Answer:** Yes, 100 people is allowed in the Main Hall for a standing event, because the limit is 120. The hirer must provide 3 stewards, each aged 18 or over.
+

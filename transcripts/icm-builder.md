@@ -3986,3 +3986,465 @@ practice/boat-lend/reference/boat/boat-volunteers.md
 ```
 {"success":true,"message":"Report delivered to your caller."}
 ```
+
+## Call: Bash
+
+```json
+{
+  "command": "date; cat /c/tc-build/GATE.md; cat /c/tc-build/icm/CLAUDE.md /c/tc-build/icm/CONTEXT.md",
+  "description": "Read the gate audit and current router and map"
+}
+```
+
+## Result
+
+```
+Thu Oct 15 10:01:11 MDT 2026
+# Gate audit: Rules Desk workspace (`icm/`)
+
+Audited 2026-10-15, 09:57 to 10:00 MDT. Auditor: independent gate agent (not the builder,
+not the experimenter). Method: `icm-architect` SKILL.md, `references/core.md`, `references/forms.md`,
+`assets/templates/stage-CONTEXT.md`; house style `template/` (PO Verifier); limits `BRIEF.md`.
+`ROUNDS.md` was not read. `DECISIONS.md` was read only after the lists in section 3 were scored.
+
+## 1. Cold walk
+
+Read first, with nothing else open: `icm/CLAUDE.md` (14 lines).
+
+- **Where am I?** Answered by the entry file alone: "Rules Desk", answers one question under one
+  organisation's rules from its papers, in one reply, never asks back (CLAUDE.md:1-5).
+- **Where do I go?** Answered by the entry file alone: read `01 answer/CONTEXT.md` and
+  `01 answer/documents.md` together, then the papers in `reference/` (CLAUDE.md:7-9). The map is
+  explicitly not needed for a question (CLAUDE.md:11-12).
+- Reads 2 and 3 (taken in one step, as instructed): `01 answer/CONTEXT.md` gave the whole method:
+  the four kinds of paper, an eight-step order of work, the reply shape and the never-rules.
+  `01 answer/documents.md` in the build is a marked placeholder (3 lines of text, "generated; do not
+  edit by hand"), so from the workshop copy I could not see which papers exist; in a staged room it
+  is replaced by the generated list (confirmed by the six runs below, which all read it and then
+  went straight to the right organisation's papers).
+- Verdict: entry plus two reads is enough to know where I am, what to do and in what order. The only
+  thing a cold walk of the build copy cannot answer is "which papers", by design.
+
+## 2. Practice runs (one run each, `tools/practice.mjs`, model claude-sonnet-5-5)
+
+Logs: `gate-logs/<set>/Q*-r1.jsonl`, console output `gate-logs/<set>-Q*.out.txt`.
+
+| Set / Q | Verdict | Reason | Steps | Instr. opens | Chars fetched |
+|---|---|---|---|---|---|
+| garden-makerspace Q1 | RIGHT | First Saturday of each month, April to October; lists the seven 2026 dates (also allowed). | 4 | 2 | 15,923 |
+| garden-makerspace Q6 | RIGHT | Names the Wh rating as the missing fact; allowed at 100 Wh or less, not allowed above. | 5 | 2 | 18,599 |
+| hall-pool Q1 | RIGHT | £7; Change 2 date-tested on the visit date; booking valid at 8 days. | 7 | 2 | 23,752 |
+| hall-pool Q6 | RIGHT | 100 allowed (120 standing, caterers counted); 3 stewards aged 18 or over. | 5 | 2 | 17,535 |
+| boat-lend Q1 | RIGHT | Splits on payment date: £100 in March, £110 in April; joining fee £15 both cases. | 5 | 2 | 15,129 |
+| boat-lend Q6 | RIGHT | £30; term from 10 January 2026, not backdated. | 5 | 2 | 14,679 |
+
+6 of 6 right. No run opened the root `CONTEXT.md`, a summary or an archive paper. Range 14.7k to
+23.8k characters (about 3.7k to 6k tokens) per question, all reads.
+
+Small observations, not failures: boat-lend Q1 phrases the split by month ("in March" / "in April")
+rather than "on or before 31 March / on or after 1 April"; the question restricts joining to those two
+months, so the split is equivalent and the payment date is named as the deciding fact. hall-pool Q6
+adds an unneeded caveat about other rooms and the 150 building limit; it does not change the answer.
+
+## 3. The lists
+
+### (a) Walk test (SKILL.md, "The walk test")
+
+| # | Item | Score | Evidence |
+|---|---|---|---|
+| a1 | Entry plus at most two reads answers where am I / where to go | PASS | CLAUDE.md:3-9 routes to two files read in one step; cold walk above; every run used exactly 2 instruction opens. |
+| a2 | Stage contract names exact input paths, job, output, human check | PASS (paths, job, output); N/A (human check) | `01 answer/CONTEXT.md`:4-5 job, :8-13 inputs (`documents.md` next to the file, `reference/<organisation folder>/`, patterned because the papers are unseen), :60-72 output. Human check N/A: BRIEF "no person is present" and "must not tell the model to stop and ask". |
+| a3 | Status derivable by scanning `output/` | N/A | BRIEF: "A session can only Read, Glob and Grep. It cannot write files." No run leaves state on disk. |
+| a4 | No routing file carries content payload | PASS | CLAUDE.md 14 lines, routing plus one never-line; root CONTEXT.md 38 lines, catalog table and maintainer notes; the method lives only in the stage contract. |
+| a5 | No fact stored in two places | **FAIL** | "Never ask a question back" is in CLAUDE.md:5, CONTEXT.md:38 and `01 answer/CONTEXT.md`:81. "Never edit" is in CLAUDE.md:14, CONTEXT.md:34 and `01 answer/CONTEXT.md`:81. "Never answer from a paper that does not govern" is in CLAUDE.md:14 and `01 answer/CONTEXT.md`:16-22, :82. Only the CLAUDE.md copy is defensible by the limit "only CLAUDE.md loads by itself"; the map and contract copies are not forced. DECISIONS.md:85 claims one home and is contradicted. |
+| a6 | After a restructure, every prior reference still resolves | N/A | Build mode, not restructure; the item's own condition is not met (this is not a harness limit). Related note: `tools/make-map.mjs` (CONTEXT.md:24, documents.md:3) does not resolve from the workspace root; it resolves from the workshop root, as the brief names it. |
+| a7 | Token check: entry + contract + inputs in about 2k-8k tokens | PASS | Entry 725 chars, contract 5,785 chars; whole sessions fetched 14,679-23,752 chars (about 3.7k-6k tokens) including the generated list and papers. |
+| a8 | System map: what is X / what moves | N/A | Not the System map form (forms.md: Pipeline chosen). Not a harness limit; the item's own condition. |
+
+### (b) The ten invariants (SKILL.md, "The invariants")
+
+| # | Invariant | Score | Evidence |
+|---|---|---|---|
+| b1 | One folder, one job, purpose stated inside | PASS | Root: CLAUDE.md:3-5; `01 answer/CONTEXT.md`:1-5. `reference/` has no purpose file inside it, which BRIEF forbids ("nothing is added inside reference/"); its purpose is stated in CONTEXT.md:15. |
+| b2 | Small, stable entry file that only routes | PASS | CLAUDE.md is 14 lines (target under 60), routes to the stage, the list, the papers and the map. |
+| b3 | Numbering encodes order | PASS | One stage, `01 answer`. |
+| b4 | Explicit contract per working folder | PASS; human check N/A | `01 answer/CONTEXT.md` has inputs (:7-13), process (:24-58), outputs (:60-78). Human check N/A: BRIEF, no person present, no stop-and-ask. |
+| b5 | Factory vs product apart | PASS | Factory = contract + generated list; papers supplied in `reference/`; product = the reply only (CONTEXT.md:18-21). |
+| b6 | Every output an edit surface; person reads before next step | N/A | BRIEF: session cannot write files; no person present. |
+| b7 | Load only what the step needs | PASS | CLAUDE.md:11-12 keeps the map out of question runs; runs opened 2 instruction files and 2-5 papers of one organisation only. |
+| b8 | Plain text, linkable, queryable; one home per fact | **FAIL** | Plain markdown with relative paths: yes. Frontmatter lives on the papers and feeds the generated list: acceptable. "One home per fact" fails for the same three duplicated rules as a5. |
+| b9 | Filesystem is the state machine; generated indexes by script | PASS (index); N/A (status) | `documents.md` is written whole by `tools/make-map.mjs` (CONTEXT.md:23-27; staged by `tools/practice.mjs` `stageRoom`). Status-by-scan N/A: session cannot write. |
+| b10 | Instantiate by copying, `_templates/` | N/A | BRIEF: session cannot write files; the unit is a message, so there is nothing to copy into existence. |
+
+### (c) Fidelity to the PO Verifier house style
+
+| # | Element | Score | Evidence |
+|---|---|---|---|
+| c1 | Router `CLAUDE.md` | PASS | Same shape as `template/CLAUDE.md`:1-11: title, one-line what it is, numbered route to the stage, closing never-line (`icm/CLAUDE.md`:1-14). Departures: no `the-page.md`, and it does not send the model to the map first (see DECISIONS review, items 7 and 8). |
+| c2 | Map `CONTEXT.md` | PASS | Same sections as `template/CONTEXT.md`: What this is, What is here (table), How a [unit] moves through, How things are named, What must never happen (`icm/CONTEXT.md`:3-38). Template's domain-only sections (numbers, lives elsewhere, where Sam is asked) correctly have no counterpart. |
+| c3 | Stage contract shape | PASS | Same headings as `template/02 read/CONTEXT.md`: What this stage is for, What comes in, process sections, What goes out, What must never happen here (`01 answer/CONTEXT.md`:3, 7, 15-58, 60, 80). "What goes out" names where the output goes (the reply, :60-72), as the template's stages name the next stage. |
+
+Observation outside the lists (not scored): the stage contract is about 1,450 tokens, above the
+200-500 tokens core.md gives for an L2 contract. It is the only method file a question reads, the
+whole session stays inside 2k-8k, and the practice results do not show a cost. Recorded, not fixed.
+
+## DECISIONS.md review
+
+Whether each listed departure is justified by the harness limits in BRIEF.md:
+
+1. Folder name with a space: not a harness limit; justified by the brief's house-style rule ("Where it differs, follow the PO Verifier").
+2. No `stages/` wrapper: same; house-style rule, not a harness limit.
+3. No `_shared/`, `_templates/`, `setup/`: partly by limits (session cannot write, so no unit to copy; no person to configure). Justified.
+4. No `output/`, no edit surface: justified by "cannot write files".
+5. No human check: justified by "no person is present" and "must not tell the model to stop and ask".
+6. PO Verifier headings: house-style rule, not a harness limit; justified by the brief.
+7. No `the-page.md`: not forced by any limit. The brief's house-style sentence lists router, map, stage folders and `reference/` only, which supports it; the cost argument (one more read) is a design choice. Acceptable, not limit-forced.
+8. Entry file does not say "read the map first": not forced by any limit (reads are unlimited). A step-budget choice that departs from the house router. Practice shows no cost (6/6 right). Acceptable as a choice; not justified by the limits.
+9. No `reference/` in the build: justified; `tools/practice.mjs` `stageRoom` throws if the workspace holds its own `reference/`, and BRIEF says the papers come with the set.
+10. "Stop and ask" replaced: justified by "must not tell the model to stop and ask".
+
+Not listed as a departure but should be: the never-rules are repeated across router, map and contract,
+against DECISIONS.md:85's own "one home per rule" and invariant 8 (finding a5/b8).
+
+Also checked: DECISIONS.md:81 (no figure, date, section number or organisation name from a practice
+paper in the workspace). Grep of `icm/` for every practice organisation name, set name, "£" and
+"Wh" outside `documents.md`: no hits other than "calendar" matching "lend". Holds.
+
+## 4. Fixes
+
+None made. No problem found falls under the four allowed kinds:
+- Missing file: none. `reference/` is absent by design (harness supplies it; the runner refuses a workspace copy).
+- Broken path: every in-workspace path resolves. `tools/make-map.mjs` is an external tool named as the
+  brief names it; no single path form resolves in every location the workspace is copied to, so it is
+  recorded, not edited.
+- Router or map that does not name a stage: CLAUDE.md:7 and CONTEXT.md:13, 18 name `01 answer`.
+- Stage that does not say where to go next: `01 answer/CONTEXT.md`:60-72 says the output is the reply; it is the last stage.
+
+Recorded, not fixed: the duplicated never-rules (a5, b8); the over-size L2 contract (observation).
+
+GATE: FAIL. Failing items: a5 (walk test, a fact stored in two places) and b8 (invariant 8, one home
+per fact), both from the "never ask back", "never edit" and "never use a non-governing paper" rules
+repeated in CLAUDE.md, CONTEXT.md and `01 answer/CONTEXT.md`.
+# Rules Desk
+
+This answers one question about a situation, under one small organisation's rules, from that
+organisation's papers. The answer goes back in your reply, in one message. Nobody is here to
+answer a question from you, so never ask one back.
+
+1. Read `01 answer/CONTEXT.md` and `01 answer/documents.md` together, in one step, before
+   anything else. The first says how to answer; the second lists every paper and what it is.
+2. Then read the papers the contract tells you to, from `reference/`, and answer.
+
+`CONTEXT.md` at the top is the map of this workspace, for whoever maintains it. A question does
+not need it.
+
+Never edit, move or add anything. Never answer from memory or from a paper that does not govern.
+# Rules Desk: the map
+
+## What this is
+A member, a volunteer or someone at a front desk asks a question about a situation under one
+organisation's rules. A fresh session answers it from the papers, in one reply. The papers stay
+the same from question to question; only the question is new.
+
+## What is here
+
+| Folder or file | What it holds |
+|---|---|
+| `CLAUDE.md` | Where a question starts. Loads by itself. |
+| `01 answer/CONTEXT.md` | How to answer: which papers to read, how changes and dates work, what the reply holds |
+| `01 answer/documents.md` | The list of every paper, generated from the papers' headers. Never edited by hand |
+| `reference/` | The papers, one subfolder per organisation. Supplied with the papers, never edited |
+
+## How a question moves through
+There is one stage, `01 answer`. A question arrives as the first message. The session reads the
+stage contract and the document list, reads the papers that govern the situation, and replies.
+Nothing is written to disk. There is no second stage because there is no file to hand on and no
+person to check one.
+
+## How the document list is made
+`01 answer/documents.md` is written by `tools/make-map.mjs` from the header at the top of each
+paper in `reference/`. When the papers change, run the script again and write its output to that
+path. It holds the only facts taken from the papers that live outside `reference/`. Everything
+else in this workspace is about how to read papers of this kind, not about any one set of them.
+
+## How things are named
+The four kinds of paper (governing, changes, summary, archive) and what each one is worth are
+defined once, in `01 answer/CONTEXT.md`.
+
+## What must never happen
+- Nothing in `reference/` is changed, moved or added to.
+- `01 answer/documents.md` is never edited by hand.
+- No figure, date or section number from a paper is written into any file here except the
+  generated list.
+- The session never asks the person a question; a missing fact is handled in the answer.
+```
+
+## Call: Bash
+
+```json
+{
+  "command": "mkdir -p /c/tc-build/practice-logs/round-5/before && cp -r /c/tc-build/icm/. /c/tc-build/practice-logs/round-5/before/ && ls -R /c/tc-build/practice-logs/round-5/before; cat -n \"/c/tc-build/icm/01 answer/documents.md\"",
+  "description": "Snapshot the workspace before round 5 edits"
+}
+```
+
+## Result
+
+```
+/c/tc-build/practice-logs/round-5/before:
+01 answer
+CLAUDE.md
+CONTEXT.md
+
+/c/tc-build/practice-logs/round-5/before/01 answer:
+CONTEXT.md
+documents.md
+     1	# Document list (generated; do not edit by hand)
+     2	
+     3	This file is replaced whole by the output of `tools/make-map.mjs`, run on the papers in
+     4	`reference/`. Until it has been generated, the papers are in `reference/`, one subfolder per
+     5	organisation, and each paper's header says its organisation and kind.
+```
+
+## Call: Bash
+
+```json
+{
+  "command": "cd /c/tc-build/icm && python - <<'EOF'\nimport io\ndef rep(path, old, new):\n    t = io.open(path, encoding='utf-8').read()\n    assert t.count(old) == 1, (path, old)\n    io.open(path, 'w', encoding='utf-8', newline='\\n').write(t.replace(old, new))\nrep('CLAUDE.md', \"Never edit, move or add anything. Never answer from memory or from a paper that does not govern.\\n\",\n \"Never edit, move or add anything, and never answer from memory. These rules, and the one above\\n\"\n \"about asking back, hold for the whole session and are written only here. Which papers may decide\\n\"\n \"an answer is set only in `01 answer/CONTEXT.md`, under \\\"The four kinds of paper\\\".\\n\")\nrep('CONTEXT.md', \"| `reference/` | The papers, one subfolder per organisation. Supplied with the papers, never edited |\",\n \"| `reference/` | The papers, one subfolder per organisation. Supplied with the papers |\")\nrep('CONTEXT.md', \"`01 answer/documents.md` is written by `tools/make-map.mjs` from the header at the top of each\\npaper in `reference/`.\",\n \"`01 answer/documents.md` is written by `tools/make-map.mjs` from the header at the top of each\\npaper in `reference/`. That script is not part of this workspace: it lives in the workshop that\\nbuilds it, outside this folder, so the path does not resolve from here.\")\nrep('CONTEXT.md', \"- Nothing in `reference/` is changed, moved or added to.\\n\", \"\")\nrep('CONTEXT.md', \"- The session never asks the person a question; a missing fact is handled in the answer.\\n\",\n \"- What a session may never do (ask back, edit, move or add anything) is written once, in\\n  `CLAUDE.md`. Which papers may decide an answer is written once, in `01 answer/CONTEXT.md`.\\n\")\nrep('01 answer/CONTEXT.md', \"Never ask the person a question back. Never edit anything. Never use the other organisation's\\npapers. Never let a summary or an archive paper decide an answer.\\n\",\n \"Never use the other organisation's papers. Which papers may decide an answer is set once, above,\\nunder \\\"The four kinds of paper\\\". The rules for the whole session (asking back, editing) are in\\n`CLAUDE.md`, which is always loaded.\\n\")\nrep('01 answer/documents.md', \"the output of `tools/make-map.mjs`, run on\",\n \"the output of `tools/make-map.mjs` (a script in the workshop,\\noutside this workspace), run on\")\nEOF\ncd /c/tc-build/practice-logs/round-5; diff -ru before /c/tc-build/icm > icm.diff; cat icm.diff",
+  "description": "Apply one-home edits and diff against the snapshot"
+}
+```
+
+## Result
+
+```
+diff -ru "before/01 answer/CONTEXT.md" "/c/tc-build/icm/01 answer/CONTEXT.md"
+--- "before/01 answer/CONTEXT.md"	2026-10-15 10:01:38.666410700 -0600
++++ "/c/tc-build/icm/01 answer/CONTEXT.md"	2026-10-15 10:01:56.067840400 -0600
+@@ -78,5 +78,6 @@
+ about matters the question did not raise, such as what happens next or other charges.
+ 
+ ## What must never happen here
+-Never ask the person a question back. Never edit anything. Never use the other organisation's
+-papers. Never let a summary or an archive paper decide an answer.
++Never use the other organisation's papers. Which papers may decide an answer is set once, above,
++under "The four kinds of paper". The rules for the whole session (asking back, editing) are in
++`CLAUDE.md`, which is always loaded.
+diff -ru "before/01 answer/documents.md" "/c/tc-build/icm/01 answer/documents.md"
+--- "before/01 answer/documents.md"	2026-10-15 10:01:38.666410700 -0600
++++ "/c/tc-build/icm/01 answer/documents.md"	2026-10-15 10:01:56.067840400 -0600
+@@ -1,5 +1,6 @@
+ # Document list (generated; do not edit by hand)
+ 
+-This file is replaced whole by the output of `tools/make-map.mjs`, run on the papers in
++This file is replaced whole by the output of `tools/make-map.mjs` (a script in the workshop,
++outside this workspace), run on the papers in
+ `reference/`. Until it has been generated, the papers are in `reference/`, one subfolder per
+ organisation, and each paper's header says its organisation and kind.
+diff -ru before/CLAUDE.md /c/tc-build/icm/CLAUDE.md
+--- before/CLAUDE.md	2026-10-15 10:01:38.665408100 -0600
++++ /c/tc-build/icm/CLAUDE.md	2026-10-15 10:01:56.036592100 -0600
+@@ -11,4 +11,6 @@
+ `CONTEXT.md` at the top is the map of this workspace, for whoever maintains it. A question does
+ not need it.
+ 
+-Never edit, move or add anything. Never answer from memory or from a paper that does not govern.
++Never edit, move or add anything, and never answer from memory. These rules, and the one above
++about asking back, hold for the whole session and are written only here. Which papers may decide
++an answer is set only in `01 answer/CONTEXT.md`, under "The four kinds of paper".
+diff -ru before/CONTEXT.md /c/tc-build/icm/CONTEXT.md
+--- before/CONTEXT.md	2026-10-15 10:01:38.664401400 -0600
++++ /c/tc-build/icm/CONTEXT.md	2026-10-15 10:01:56.066838400 -0600
+@@ -12,7 +12,7 @@
+ | `CLAUDE.md` | Where a question starts. Loads by itself. |
+ | `01 answer/CONTEXT.md` | How to answer: which papers to read, how changes and dates work, what the reply holds |
+ | `01 answer/documents.md` | The list of every paper, generated from the papers' headers. Never edited by hand |
+-| `reference/` | The papers, one subfolder per organisation. Supplied with the papers, never edited |
++| `reference/` | The papers, one subfolder per organisation. Supplied with the papers |
+ 
+ ## How a question moves through
+ There is one stage, `01 answer`. A question arrives as the first message. The session reads the
+@@ -22,7 +22,8 @@
+ 
+ ## How the document list is made
+ `01 answer/documents.md` is written by `tools/make-map.mjs` from the header at the top of each
+-paper in `reference/`. When the papers change, run the script again and write its output to that
++paper in `reference/`. That script is not part of this workspace: it lives in the workshop that
++builds it, outside this folder, so the path does not resolve from here. When the papers change, run the script again and write its output to that
+ path. It holds the only facts taken from the papers that live outside `reference/`. Everything
+ else in this workspace is about how to read papers of this kind, not about any one set of them.
+ 
+@@ -31,8 +32,8 @@
+ defined once, in `01 answer/CONTEXT.md`.
+ 
+ ## What must never happen
+-- Nothing in `reference/` is changed, moved or added to.
+ - `01 answer/documents.md` is never edited by hand.
+ - No figure, date or section number from a paper is written into any file here except the
+   generated list.
+-- The session never asks the person a question; a missing fact is handled in the answer.
++- What a session may never do (ask back, edit, move or add anything) is written once, in
++  `CLAUDE.md`. Which papers may decide an answer is written once, in `01 answer/CONTEXT.md`.
+```
+
+## Call: Edit
+
+```json
+{
+  "replace_all": false,
+  "file_path": "C:\\tc-build\\icm\\CONTEXT.md",
+  "old_string": "paper in `reference/`. That script is not part of this workspace: it lives in the workshop that\nbuilds it, outside this folder, so the path does not resolve from here. When the papers change, run the script again and write its output to that\npath. It holds",
+  "new_string": "paper in `reference/`. That script is not part of this workspace: it lives in the workshop that\nbuilds it, outside this folder, so the path does not resolve from here. When the papers change,\nrun the script again and write its output to that path. It holds"
+}
+```
+
+## Result
+
+```
+<tool_use_error>File has not been read yet. Read it first before writing to it.</tool_use_error>
+```
+
+## Call: Bash
+
+```json
+{
+  "command": "cd /c/tc-build/practice-logs/round-5; diff -ru before /c/tc-build/icm > icm.diff; sed -n '/How the document list/,/^@@/p' icm.diff; date; bash \"C:/Users/<user>/AppData/Local/Temp/claude/c--GitHub-gsd-todo-tutorial/2fb9ec64-8e96-443d-80ed-fec8743a0fec/scratchpad/run-round.sh\" 5 garden-makerspace:Q1 garden-makerspace:Q6 hall-pool:Q1 hall-pool:Q6 boat-lend:Q1 boat-lend:Q6; date; for f in */*.txt; do echo \"#### $f\"; grep \"^steps\" $f; grep \"^  - \" $f; grep -A4 \"^\\*\\*Answer\" $f; done",
+  "description": "Regenerate diff and run the six gate questions",
+  "timeout": 600000
+}
+```
+
+## Result
+
+```
+## How the document list is made
+ `01 answer/documents.md` is written by `tools/make-map.mjs` from the header at the top of each
+-paper in `reference/`. When the papers change, run the script again and write its output to that
++paper in `reference/`. That script is not part of this workspace: it lives in the workshop that
++builds it, outside this folder, so the path does not resolve from here. When the papers change, run the script again and write its output to that
+ path. It holds the only facts taken from the papers that live outside `reference/`. Everything
+ else in this workspace is about how to read papers of this kind, not about any one set of them.
+ 
+@@ -31,8 +32,8 @@
+Thu Oct 15 10:02:03 MDT 2026
+done
+Thu Oct 15 10:02:17 MDT 2026
+#### boat-lend/Q1.txt
+steps 5 (instruction opens 2, document steps 3), text fetched 15201 characters, 335 words, 10 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-fees.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-membership.md
+**Answer:** It depends on the month they join. If they pay in March 2026, they pay **£100** (£15 joining + £85 annual). If they pay in April 2026, they pay **£110** (£15 joining + £95 annual).
+
+#### boat-lend/Q6.txt
+steps 5 (instruction opens 2, document steps 3), text fetched 14751 characters, 369 words, 9.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-membership.md
+  - Read reference/lend/lend-changes.md
+**Answer:** They pay £30. The renewed membership runs from Saturday 10 January 2026 for 12 calendar months, ending 10 January 2027 (the last day of cover is 9 January 2027).
+
+#### garden-makerspace/Q1.txt
+steps 4 (instruction opens 2, document steps 2), text fetched 15995 characters, 261 words, 6.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+**Answer:** The plot secretary inspects every plot on the first Saturday of each month from April to October. In 2026 those days are 4 April, 2 May, 6 June, 4 July, 1 August, 5 September and 3 October.
+
+#### garden-makerspace/Q6.txt
+steps 5 (instruction opens 2, document steps 3), text fetched 18671 characters, 316 words, 9.2 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/storage.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+**Answer:** It depends on the pack's rating. If it is **100 Wh or less** (exactly 100 Wh is allowed), the member may store it, because the 12 kg total is under 25 kg and nothing else is prohibited. If it is **above 100 Wh**, the member may not store it, and staff would remove it under storage.md 2.2.
+
+#### hall-pool/Q1.txt
+steps 6 (instruction opens 2, document steps 4), text fetched 21113 characters, 345 words, 9.3 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-booking.md
+  - Read reference/pool/pool-membership.md
+  - Read reference/pool/pool-changes.md
+  - The original pool-booking.md §1.2 allows only 7 days ahead.
+  - Change 1 replaces it with 10 days ahead. Its deciding date is the day the booking is made, 16 January 2026, which is after 1 October 2025. The booking is therefore valid.
+**Answer:** £7 (the guest fee for a guest aged 16 or over, under Change 2, for a visit on or after 1 January 2026).
+
+#### hall-pool/Q6.txt
+steps 6 (instruction opens 2, document steps 4), text fetched 20040 characters, 313 words, 10 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-licensing-limits.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-who-can-hire.md
+  - Read reference/hall/hall-kitchen-and-equipment.md
+**Answer:** Yes, 100 people is allowed in the Main Hall for a standing event, because the limit is 120. The hirer must provide 3 stewards, each aged 18 or over.
+```
+
+## Call: Bash
+
+```json
+{
+  "command": "cd /c/tc-build/icm && python - <<'EOF'\nimport io\np='CONTEXT.md'; t=io.open(p,encoding='utf-8').read()\nold=\"outside this folder, so the path does not resolve from here. When the papers change, run the script again and write its output to that\\npath. It holds\"\nnew=\"outside this folder, so the path does not resolve from here. When the papers change,\\nrun the script again and write its output to that path. It holds\"\nassert t.count(old)==1; io.open(p,'w',encoding='utf-8',newline='\\n').write(t.replace(old,new))\nEOF\ncd /c/tc-build/practice-logs/round-5; diff -ru before /c/tc-build/icm > icm.diff; grep -c \"\" icm.diff; grep -i \"payment date\\|deciding\" boat-lend/Q1.txt | head -3; grep -i \"caterer\" hall-pool/Q6.txt | head -2\ncd /c/tc-build/icm; echo \"CLAUDE.md count: $(find . -iname claude.md | wc -l)\"; echo \"@: $(grep -rn '@' . | wc -l)\"; echo \"digits outside list:\"; grep -rn \"[0-9£\\$]\" --exclude=documents.md . | grep -v \"01 answer\\|^\\./01 answer/CONTEXT.md:[0-9]*:[0-9]\\. \\|^\\./01 answer/CONTEXT.md:[0-9]*:   *\\|step 7\"; grep -rnio \"brindlecombe\\|osterby\\|fernhill\\|brindle yard\\|tannerwick\\|quillmere\\|wh\\b\" . ; ls -d reference 2>&1 | head -1; for f in CLAUDE.md CONTEXT.md \"01 answer/CONTEXT.md\" \"01 answer/documents.md\"; do echo \"$(wc -l < \"$f\") $f\"; done",
+  "description": "Reflow, final diff, verify answers and run scripted checks"
+}
+```
+
+## Result
+
+```
+69
+- `boat-changes.md` 2.4 replaces 1.3 with "The annual fee for a household membership is £95." The deciding date is the payment date (the note in `documents.md` says the payment date decides fee rules). Entry 2.2 applies it to payments made on or after 1 April 2026.
+**Check:** No figure came from a summary or archive paper. The fee change entry was date-tested on the payment date. The fees, membership and changes papers were all read. The missing deciding fact (the joining month) has both outcomes given.
+- **hall-licensing-limits.md, 1.3:** "The count includes children, helpers, caterers and performers."
+- **Capacity:** the 5 caterers and helpers count, so the room holds 95 + 5 = 100 people. The reception is standing, so the limit is 120. 100 is under 120, so it's allowed. The 100 is also under the 150 building limit, assuming no other rooms are in use at the same time.
+CLAUDE.md count: 1
+@: 0
+digits outside list:
+./CLAUDE.md:9:2. Then read the papers the contract tells you to, from `reference/`, and answer.
+ls: cannot access 'reference': No such file or directory
+16 CLAUDE.md
+39 CONTEXT.md
+83 01 answer/CONTEXT.md
+6 01 answer/documents.md
+```
+
+## Call: Bash
+
+```json
+{
+  "command": "cd /c/tc-build; cat >> DECISIONS.md <<'EOF'\n\n## Added in round 5 (2026-10-15, 10:02 MDT), after the gate audit: one home per never-rule\n\nThe gate (GATE.md, items a5 and b8) found three rules written in three files each: never ask a\nquestion back, never edit anything, never answer from a paper that does not govern. The PO\nVerifier does repeat its guardrails: `template/CLAUDE.md` line 11 (\"Never send anything, never\nchange what is in `01 intake`, and stop and ask Sam when unsure\"), `template/CONTEXT.md` \"What\nmust never happen\" (\"Nothing in `01 intake` is ever changed\", \"The AI ... never sends anything\",\n\"stop and ask Sam\"), and `template/01 intake/CONTEXT.md` \"What must never happen here\" (\"Nothing\nthat arrives is edited\"). What the house style requires is the *shape*: a closing never-line in\nthe router and a never-section in the map and in each stage. It does not need the same sentence\nin each. So the fix keeps every section and gives each rule one home, with pointers elsewhere:\n\n- Asking back, editing (and answering from memory): home `CLAUDE.md`, the only file that loads by\n  itself, because they hold for the whole session. The map and the contract point to it.\n- Which papers may decide an answer: home `01 answer/CONTEXT.md`, \"The four kinds of paper\". The\n  router and the map point to it; the contract's own never-section points up to it.\n\nThis satisfies both the skill (one home per fact) and the house style (never-sections kept), so it\nis not listed as a departure.\nEOF\n{ cat <<'EOF'\n\n## Round 5 — 2026-10-15, 10:01–10:02 MDT (last allowed round; gate fix only)\n\n**Why.** The gate audit (`GATE.md`, written by another agent at 09:57–10:00) failed walk-test item\na5 and invariant 8 (b8): three never-rules were written in `CLAUDE.md`, `CONTEXT.md` and\n`01 answer/CONTEXT.md`. It also noted that `tools/make-map.mjs` does not resolve from inside the\nworkspace. Scope given by the coordinator: fix only those, change no method step, no reply\ncontent, no other rule's wording.\n\n**Decision.** One home per rule, pointers elsewhere, every never-section kept (reasoning and the\ntemplate lines that show the house style's repetition are in `DECISIONS.md`, \"Added in round 5\").\nAsking back and editing live in `CLAUDE.md`; which papers may decide lives in the contract's\n\"The four kinds of paper\". The map and the placeholder list now say the generator script lives in\nthe workshop, outside the workspace.\n\n**Exact diff** (`diff -ru` of the snapshot taken before editing, `practice-logs/round-5/before/`,\nagainst `icm/`; also saved as `practice-logs/round-5/icm.diff`). The six runs below used these\ncontents except for one whitespace-only reflow of the map paragraph, made after the runs; the map\nis not read during a question.\n\n```diff\nEOF\nsed 's/\\t.*$//' practice-logs/round-5/icm.diff\ncat <<'EOF'\n```\n\n**Runs.** The six gate questions, one run each, as the auditor ran them\n(`--log practice-logs/round-5/<set>`).\n\n| Q | Verdict | Reason | Steps (instr/doc) | Text fetched |\n|---|---|---|---|---|\n| garden Q1 | Right | First Saturday of each month, April to October; lists the 2026 dates | 4 (2/2) | 15,995 |\n| makerspace Q6 | Right | Depends on Wh rating: 100 Wh or less allowed, above not | 5 (2/3) | 18,671 |\n| pool Q1 | Right | £7, visit date decides | 6 (2/4) | 21,113 |\n| hall Q6 | Right | 100 allowed (120 standing, caterers and helpers counted), 3 stewards aged 18+ | 6 (2/4) | 20,040 |\n| boat-lend Q1 | Right | £100 March / £110 April; payment date named as deciding in the rules and check | 5 (2/3) | 15,201 |\n| boat-lend Q6 | Right | £30, runs from 10 January 2026 | 5 (2/3) | 14,751 |\n\n**Headline:** 6 of 6 right, same verdicts as the gate's runs. Mean steps 5.17 (2 instruction opens\nevery run). Mean text fetched about 17,600 characters.\n\n**Scripted checks, 10:02.** Exactly one `CLAUDE.md` in `icm/`, at its top. No `@` anywhere in\n`icm/`. No `reference/` folder in `icm/`. Outside `documents.md` the only digits are the stage\nnumber `01` and list numbering. No practice organisation name, figure, date or section number\nappears. File lengths now: `CLAUDE.md` 16, `CONTEXT.md` 39, `01 answer/CONTEXT.md` 83,\n`01 answer/documents.md` 6 lines.\nEOF\n} >> ROUNDS.md; tail -5 ROUNDS.md; grep -c \"\" ROUNDS.md",
+  "description": "Record the decision and log round 5 with the exact diff"
+}
+```
+
+## Result
+
+```
+**Scripted checks, 10:02.** Exactly one `CLAUDE.md` in `icm/`, at its top. No `@` anywhere in
+`icm/`. No `reference/` folder in `icm/`. Outside `documents.md` the only digits are the stage
+number `01` and list numbering. No practice organisation name, figure, date or section number
+appears. File lengths now: `CLAUDE.md` 16, `CONTEXT.md` 39, `01 answer/CONTEXT.md` 83,
+`01 answer/documents.md` 6 lines.
+332
+```
+
+## Call: SubagentHandback
+
+```json
+{
+  "message": "Round 5 is done: I fixed the two gate failures (a5 and b8), and all six gate questions came back right again.\n\n**What changed** (the exact diff is in C:\\tc-build\\ROUNDS.md and C:\\tc-build\\practice-logs\\round-5\\icm.diff):\n- **Ask back, edit:** these two rules now live only in `CLAUDE.md`. It is the only file that loads by itself, and they apply to the whole session. Its last line now says they are written only there.\n- **Which papers may decide an answer:** this lives only under \"The four kinds of paper\" in `01 answer/CONTEXT.md`. `CLAUDE.md`, the map and the contract's never-section now point to it.\n- **Copies removed:** I took the duplicated lines out of the map's \"What must never happen\" section and its `reference/` table row, and out of the contract's never-section.\n- **Generator path:** the map and the `documents.md` placeholder now say `tools/make-map.mjs` lives in the workshop, outside the workspace.\n- **House style:** the template repeats its guardrails across its files. What it requires is a never-section in the router, the map and each stage, not the same sentence in each, so I kept every section and listed nothing as a departure. The reasoning and the template lines are in C:\\tc-build\\DECISIONS.md, under \"Added in round 5\".\n- **Nothing else changed:** no method step, no reply content, no other rule's wording.\n\n**Verdicts** (one run each, judged against the keys): garden Q1, makerspace Q6, pool Q1, hall Q6, boat-lend Q1 and boat-lend Q6 were all right. Mean steps were 5.17, with 2 instruction opens in every run.\n\n**Checks:** all pass. There is one `CLAUDE.md`, no `@` imports and no `reference/` folder. Outside the generated list there is no figure, date, section number or organisation name from any paper."
+}
+```
+
+## Result
+
+```
+{"success":true,"message":"Report delivered to your caller."}
+```

@@ -4,16 +4,16 @@ PASS  no "@" import in any file
 PASS  the document list is the map script's output on the live documents
 PASS  the document list is the folder's map, word for word
 PASS  no figure, time, date, section number or organisation name from the documents outside the list (120 checked)
-PASS  router under 60 lines (14)
+PASS  router under 60 lines (16)
 
 | File | Lines | Characters | Tokens, about |
 |---|---|---|---|
-| 01 answer/CONTEXT.md | 82 | 5785 | 1446 |
+| 01 answer/CONTEXT.md | 83 | 5854 | 1464 |
 | 01 answer/documents.md | 25 | 2887 | 722 |
-| CLAUDE.md | 14 | 725 | 181 |
-| CONTEXT.md | 38 | 1994 | 499 |
+| CLAUDE.md | 16 | 902 | 226 |
+| CONTEXT.md | 39 | 2161 | 540 |
 
 PASS  icm-eager differs from icm only in its router, which carries 01 answer/CONTEXT.md, 01 answer/documents.md, CONTEXT.md
 
-Text loaded first: icm 725, icm-eager 11473, folder 5261.
-The ICM's minimum text per question (its router, plus the stage contract and the document list its router says to read before anything else): 9397 characters, against the folder's 5261 loaded first.
+Text loaded first: icm 902, icm-eager 11886, folder 5261.
+The ICM's minimum text per question (its router, plus the stage contract and the document list its router says to read before anything else): 9643 characters, against the folder's 5261 loaded first.

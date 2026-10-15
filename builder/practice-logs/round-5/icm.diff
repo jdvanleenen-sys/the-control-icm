@@ -1,0 +1,69 @@
+diff -ru "before/01 answer/CONTEXT.md" "/c/tc-build/icm/01 answer/CONTEXT.md"
+--- "before/01 answer/CONTEXT.md"	2026-10-15 10:01:38.666410700 -0600
++++ "/c/tc-build/icm/01 answer/CONTEXT.md"	2026-10-15 10:01:56.067840400 -0600
+@@ -78,5 +78,6 @@
+ about matters the question did not raise, such as what happens next or other charges.
+ 
+ ## What must never happen here
+-Never ask the person a question back. Never edit anything. Never use the other organisation's
+-papers. Never let a summary or an archive paper decide an answer.
++Never use the other organisation's papers. Which papers may decide an answer is set once, above,
++under "The four kinds of paper". The rules for the whole session (asking back, editing) are in
++`CLAUDE.md`, which is always loaded.
+diff -ru "before/01 answer/documents.md" "/c/tc-build/icm/01 answer/documents.md"
+--- "before/01 answer/documents.md"	2026-10-15 10:01:38.666410700 -0600
++++ "/c/tc-build/icm/01 answer/documents.md"	2026-10-15 10:01:56.067840400 -0600
+@@ -1,5 +1,6 @@
+ # Document list (generated; do not edit by hand)
+ 
+-This file is replaced whole by the output of `tools/make-map.mjs`, run on the papers in
++This file is replaced whole by the output of `tools/make-map.mjs` (a script in the workshop,
++outside this workspace), run on the papers in
+ `reference/`. Until it has been generated, the papers are in `reference/`, one subfolder per
+ organisation, and each paper's header says its organisation and kind.
+diff -ru before/CLAUDE.md /c/tc-build/icm/CLAUDE.md
+--- before/CLAUDE.md	2026-10-15 10:01:38.665408100 -0600
++++ /c/tc-build/icm/CLAUDE.md	2026-10-15 10:01:56.036592100 -0600
+@@ -11,4 +11,6 @@
+ `CONTEXT.md` at the top is the map of this workspace, for whoever maintains it. A question does
+ not need it.
+ 
+-Never edit, move or add anything. Never answer from memory or from a paper that does not govern.
++Never edit, move or add anything, and never answer from memory. These rules, and the one above
++about asking back, hold for the whole session and are written only here. Which papers may decide
++an answer is set only in `01 answer/CONTEXT.md`, under "The four kinds of paper".
+diff -ru before/CONTEXT.md /c/tc-build/icm/CONTEXT.md
+--- before/CONTEXT.md	2026-10-15 10:01:38.664401400 -0600
++++ /c/tc-build/icm/CONTEXT.md	2026-10-15 10:02:26.510748000 -0600
+@@ -12,7 +12,7 @@
+ | `CLAUDE.md` | Where a question starts. Loads by itself. |
+ | `01 answer/CONTEXT.md` | How to answer: which papers to read, how changes and dates work, what the reply holds |
+ | `01 answer/documents.md` | The list of every paper, generated from the papers' headers. Never edited by hand |
+-| `reference/` | The papers, one subfolder per organisation. Supplied with the papers, never edited |
++| `reference/` | The papers, one subfolder per organisation. Supplied with the papers |
+ 
+ ## How a question moves through
+ There is one stage, `01 answer`. A question arrives as the first message. The session reads the
+@@ -22,8 +22,9 @@
+ 
+ ## How the document list is made
+ `01 answer/documents.md` is written by `tools/make-map.mjs` from the header at the top of each
+-paper in `reference/`. When the papers change, run the script again and write its output to that
+-path. It holds the only facts taken from the papers that live outside `reference/`. Everything
++paper in `reference/`. That script is not part of this workspace: it lives in the workshop that
++builds it, outside this folder, so the path does not resolve from here. When the papers change,
++run the script again and write its output to that path. It holds the only facts taken from the papers that live outside `reference/`. Everything
+ else in this workspace is about how to read papers of this kind, not about any one set of them.
+ 
+ ## How things are named
+@@ -31,8 +32,8 @@
+ defined once, in `01 answer/CONTEXT.md`.
+ 
+ ## What must never happen
+-- Nothing in `reference/` is changed, moved or added to.
+ - `01 answer/documents.md` is never edited by hand.
+ - No figure, date or section number from a paper is written into any file here except the
+   generated list.
+-- The session never asks the person a question; a missing fact is handled in the answer.
++- What a session may never do (ask back, edit, move or add anything) is written once, in
++  `CLAUDE.md`. Which papers may decide an answer is written once, in `01 answer/CONTEXT.md`.

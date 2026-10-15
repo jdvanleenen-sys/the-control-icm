@@ -78,5 +78,6 @@ test fails, a rule for a different kind of case) gets one line saying why not. L
 about matters the question did not raise, such as what happens next or other charges.
 
 ## What must never happen here
-Never ask the person a question back. Never edit anything. Never use the other organisation's
-papers. Never let a summary or an archive paper decide an answer.
+Never use the other organisation's papers. Which papers may decide an answer is set once, above,
+under "The four kinds of paper". The rules for the whole session (asking back, editing) are in
+`CLAUDE.md`, which is always loaded.

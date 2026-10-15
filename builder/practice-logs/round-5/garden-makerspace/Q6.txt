@@ -1,0 +1,24 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18671 characters, 316 words, 9.2 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/storage.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+
+**Rules that decide it (Brindle Yard Makerspace)**
+- **storage.md 1.1:** "A Forge member has one locker." So a Forge member is entitled to a locker.
+- **membership.md 2.3:** a member is in good standing when not suspended and with no invoice overdue. The question says the member is in good standing, so that is met.
+- **storage.md 2.1:** "A locker may hold no more than 25 kg. Nobody may store food, pressurised gas cylinders, lithium batteries rated above 100 Wh, or more than 500 ml in total of flammable liquid. Exactly 25 kg, exactly 100 Wh and exactly 500 ml are allowed."
+- **bulletin.md:** none of its four entries changes storage.md 2.1. Entry 3 changes only storage.md 3.2 (the holding period), which isn't in play. The 5 October 2026 date therefore makes no difference, and the printed 2.1 applies.
+
+**Working**
+- **Weight:** 12 kg in total is under the 25 kg limit, so it passes.
+- **Other items:** there is no food, no gas cylinder and no flammable liquid, so those bans don't apply.
+- **Battery:** lithium batteries are not banned outright. Only those rated **above 100 Wh** are. The question doesn't give the pack's watt-hour rating, so the answer depends on it.
+
+**Check:** no figure came from the quick-guide or the 2025 handbook. The bulletin entries were each checked against storage.md 2.1, and none applies. membership.md and storage.md were read, since they cover tier, good standing and locker limits. The missing fact (the Wh rating) is handled with both outcomes. Both parts of the question are answered.
+
+**Answer:** It depends on the pack's rating. If it is **100 Wh or less** (exactly 100 Wh is allowed), the member may store it, because the 12 kg total is under 25 kg and nothing else is prohibited. If it is **above 100 Wh**, the member may not store it, and staff would remove it under storage.md 2.2.
+

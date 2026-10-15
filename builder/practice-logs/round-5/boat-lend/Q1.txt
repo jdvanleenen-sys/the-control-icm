@@ -1,0 +1,28 @@
+## Q1, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 15201 characters, 335 words, 10 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-fees.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-membership.md
+
+**Rules that decide it**
+- `boat-membership.md` 1.2: a household membership may include up to two adults and four children living at the same address. This family qualifies as one household membership, so no individual or junior fees apply.
+- `boat-fees.md` 1.1: "A new member must pay a one-time joining fee of £15." This was not changed.
+- `boat-fees.md` 1.3: the original household annual fee is £85.
+- `boat-changes.md` 2.4 replaces 1.3 with "The annual fee for a household membership is £95." The deciding date is the payment date (the note in `documents.md` says the payment date decides fee rules). Entry 2.2 applies it to payments made on or after 1 April 2026.
+- `boat-membership.md` 2.3: membership begins when cleared payment of both fees is recorded. This doesn't change the amounts.
+
+**Working**
+- Paid in March 2026, on any day from 1 to 31 March, the payment is before 1 April. The change doesn't apply, so the fee is £85. Total: £15 + £85 = **£100**.
+- Paid in April 2026, on any day from 1 April, the change applies. The fee is £95. Total: £15 + £95 = **£110**.
+- The household joining fee is the same either way, so only the annual fee changes.
+- The other change entries (3 and 4) cover bookings and refunds, not this question.
+
+**Assumption:** I treated the household membership as one new member, so there is one £15 joining fee. The papers don't say whether the joining fee is charged per person in a household. If it were, the totals would differ.
+
+**Check:** No figure came from a summary or archive paper. The fee change entry was date-tested on the payment date. The fees, membership and changes papers were all read. The missing deciding fact (the joining month) has both outcomes given.
+
+**Answer:** It depends on the month they join. If they pay in March 2026, they pay **£100** (£15 joining + £85 annual). If they pay in April 2026, they pay **£110** (£15 joining + £95 annual).
+

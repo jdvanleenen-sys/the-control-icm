@@ -218,3 +218,115 @@ Build rules checked by script at 09:54: exactly one `CLAUDE.md` in `icm/`, at it
 anywhere in `icm/`; no `reference/` folder in `icm/`; the only digits in `icm/` are the stage
 number `01` and list numbering; no organisation or paper name from any practice set appears.
 Nothing in `practice/` or `template/` was edited.
+
+## Round 5 — 2026-10-15, 10:01–10:02 MDT (last allowed round; gate fix only)
+
+**Why.** The gate audit (`GATE.md`, written by another agent at 09:57–10:00) failed walk-test item
+a5 and invariant 8 (b8): three never-rules were written in `CLAUDE.md`, `CONTEXT.md` and
+`01 answer/CONTEXT.md`. It also noted that `tools/make-map.mjs` does not resolve from inside the
+workspace. Scope given by the coordinator: fix only those, change no method step, no reply
+content, no other rule's wording.
+
+**Decision.** One home per rule, pointers elsewhere, every never-section kept (reasoning and the
+template lines that show the house style's repetition are in `DECISIONS.md`, "Added in round 5").
+Asking back and editing live in `CLAUDE.md`; which papers may decide lives in the contract's
+"The four kinds of paper". The map and the placeholder list now say the generator script lives in
+the workshop, outside the workspace.
+
+**Exact diff** (`diff -ru` of the snapshot taken before editing, `practice-logs/round-5/before/`,
+against `icm/`; also saved as `practice-logs/round-5/icm.diff`). The six runs below used these
+contents except for one whitespace-only reflow of the map paragraph, made after the runs; the map
+is not read during a question.
+
+```diff
+diff -ru "before/01 answer/CONTEXT.md" "/c/tc-build/icm/01 answer/CONTEXT.md"
+--- "before/01 answer/CONTEXT.md"
++++ "/c/tc-build/icm/01 answer/CONTEXT.md"
+@@ -78,5 +78,6 @@
+ about matters the question did not raise, such as what happens next or other charges.
+ 
+ ## What must never happen here
+-Never ask the person a question back. Never edit anything. Never use the other organisation's
+-papers. Never let a summary or an archive paper decide an answer.
++Never use the other organisation's papers. Which papers may decide an answer is set once, above,
++under "The four kinds of paper". The rules for the whole session (asking back, editing) are in
++`CLAUDE.md`, which is always loaded.
+diff -ru "before/01 answer/documents.md" "/c/tc-build/icm/01 answer/documents.md"
+--- "before/01 answer/documents.md"
++++ "/c/tc-build/icm/01 answer/documents.md"
+@@ -1,5 +1,6 @@
+ # Document list (generated; do not edit by hand)
+ 
+-This file is replaced whole by the output of `tools/make-map.mjs`, run on the papers in
++This file is replaced whole by the output of `tools/make-map.mjs` (a script in the workshop,
++outside this workspace), run on the papers in
+ `reference/`. Until it has been generated, the papers are in `reference/`, one subfolder per
+ organisation, and each paper's header says its organisation and kind.
+diff -ru before/CLAUDE.md /c/tc-build/icm/CLAUDE.md
+--- before/CLAUDE.md
++++ /c/tc-build/icm/CLAUDE.md
+@@ -11,4 +11,6 @@
+ `CONTEXT.md` at the top is the map of this workspace, for whoever maintains it. A question does
+ not need it.
+ 
+-Never edit, move or add anything. Never answer from memory or from a paper that does not govern.
++Never edit, move or add anything, and never answer from memory. These rules, and the one above
++about asking back, hold for the whole session and are written only here. Which papers may decide
++an answer is set only in `01 answer/CONTEXT.md`, under "The four kinds of paper".
+diff -ru before/CONTEXT.md /c/tc-build/icm/CONTEXT.md
+--- before/CONTEXT.md
++++ /c/tc-build/icm/CONTEXT.md
+@@ -12,7 +12,7 @@
+ | `CLAUDE.md` | Where a question starts. Loads by itself. |
+ | `01 answer/CONTEXT.md` | How to answer: which papers to read, how changes and dates work, what the reply holds |
+ | `01 answer/documents.md` | The list of every paper, generated from the papers' headers. Never edited by hand |
+-| `reference/` | The papers, one subfolder per organisation. Supplied with the papers, never edited |
++| `reference/` | The papers, one subfolder per organisation. Supplied with the papers |
+ 
+ ## How a question moves through
+ There is one stage, `01 answer`. A question arrives as the first message. The session reads the
+@@ -22,8 +22,9 @@
+ 
+ ## How the document list is made
+ `01 answer/documents.md` is written by `tools/make-map.mjs` from the header at the top of each
+-paper in `reference/`. When the papers change, run the script again and write its output to that
+-path. It holds the only facts taken from the papers that live outside `reference/`. Everything
++paper in `reference/`. That script is not part of this workspace: it lives in the workshop that
++builds it, outside this folder, so the path does not resolve from here. When the papers change,
++run the script again and write its output to that path. It holds the only facts taken from the papers that live outside `reference/`. Everything
+ else in this workspace is about how to read papers of this kind, not about any one set of them.
+ 
+ ## How things are named
+@@ -31,8 +32,8 @@
+ defined once, in `01 answer/CONTEXT.md`.
+ 
+ ## What must never happen
+-- Nothing in `reference/` is changed, moved or added to.
+ - `01 answer/documents.md` is never edited by hand.
+ - No figure, date or section number from a paper is written into any file here except the
+   generated list.
+-- The session never asks the person a question; a missing fact is handled in the answer.
++- What a session may never do (ask back, edit, move or add anything) is written once, in
++  `CLAUDE.md`. Which papers may decide an answer is written once, in `01 answer/CONTEXT.md`.
+```
+
+**Runs.** The six gate questions, one run each, as the auditor ran them
+(`--log practice-logs/round-5/<set>`).
+
+| Q | Verdict | Reason | Steps (instr/doc) | Text fetched |
+|---|---|---|---|---|
+| garden Q1 | Right | First Saturday of each month, April to October; lists the 2026 dates | 4 (2/2) | 15,995 |
+| makerspace Q6 | Right | Depends on Wh rating: 100 Wh or less allowed, above not | 5 (2/3) | 18,671 |
+| pool Q1 | Right | £7, visit date decides | 6 (2/4) | 21,113 |
+| hall Q6 | Right | 100 allowed (120 standing, caterers and helpers counted), 3 stewards aged 18+ | 6 (2/4) | 20,040 |
+| boat-lend Q1 | Right | £100 March / £110 April; payment date named as deciding in the rules and check | 5 (2/3) | 15,201 |
+| boat-lend Q6 | Right | £30, runs from 10 January 2026 | 5 (2/3) | 14,751 |
+
+**Headline:** 6 of 6 right, same verdicts as the gate's runs. Mean steps 5.17 (2 instruction opens
+every run). Mean text fetched about 17,600 characters.
+
+**Scripted checks, 10:02.** Exactly one `CLAUDE.md` in `icm/`, at its top. No `@` anywhere in
+`icm/`. No `reference/` folder in `icm/`. Outside `documents.md` the only digits are the stage
+number `01` and list numbering. No practice organisation name, figure, date or section number
+appears. File lengths now: `CLAUDE.md` 16, `CONTEXT.md` 39, `01 answer/CONTEXT.md` 83,
+`01 answer/documents.md` 6 lines.

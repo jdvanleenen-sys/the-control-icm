@@ -83,3 +83,23 @@ run does not need it, and the entry file says so.
   differs, an archive with old figures, a change entry with its own deciding date, a rule in a
   second document that changes the case), never the instances.
 - One home per rule: the reading rules live in `01 answer/CONTEXT.md` only.
+
+## Added in round 5 (2026-10-15, 10:02 MDT), after the gate audit: one home per never-rule
+
+The gate (GATE.md, items a5 and b8) found three rules written in three files each: never ask a
+question back, never edit anything, never answer from a paper that does not govern. The PO
+Verifier does repeat its guardrails: `template/CLAUDE.md` line 11 ("Never send anything, never
+change what is in `01 intake`, and stop and ask Sam when unsure"), `template/CONTEXT.md` "What
+must never happen" ("Nothing in `01 intake` is ever changed", "The AI ... never sends anything",
+"stop and ask Sam"), and `template/01 intake/CONTEXT.md` "What must never happen here" ("Nothing
+that arrives is edited"). What the house style requires is the *shape*: a closing never-line in
+the router and a never-section in the map and in each stage. It does not need the same sentence
+in each. So the fix keeps every section and gives each rule one home, with pointers elsewhere:
+
+- Asking back, editing (and answering from memory): home `CLAUDE.md`, the only file that loads by
+  itself, because they hold for the whole session. The map and the contract point to it.
+- Which papers may decide an answer: home `01 answer/CONTEXT.md`, "The four kinds of paper". The
+  router and the map point to it; the contract's own never-section points up to it.
+
+This satisfies both the skill (one home per fact) and the house style (never-sections kept), so it
+is not listed as a departure.
