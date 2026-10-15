@@ -80,7 +80,7 @@
   footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--hairline); color: var(--muted); font-size: 14px; }
   footer strong { color: var(--text); } a { color: inherit; }
   @media (max-width: 760px) { .grid4 { grid-template-columns: 1fr 1fr; } .grid2, .fair { grid-template-columns: 1fr; } .verdict { grid-template-columns: 1fr; gap: 4px; } }
-  @page { size: 1000px 3800px; margin: 30px; }
+  @page { size: 1000px 3960px; margin: 30px; }
   @media print { body { background: #fff; } main { padding: 0; max-width: none; } .grid4 { grid-template-columns: repeat(4, 1fr); } .grid2, .fair { grid-template-columns: 1fr 1fr; } .verdict { grid-template-columns: 210px 1fr; } }
 </style>
 </head>
@@ -184,6 +184,7 @@
     <li><strong>The folder is still the cheapest way to the documents.</strong> Its map took the model to the right papers in 2.46 steps, and the entry's own result came back in this batch: fewer steps on 10 of 10 of the entry's questions in both sets, with more text and fewer complete answers than the documents alone.</li>
     <li><strong>On-demand loading is real, and small here.</strong> At 18 documents the saving was text, not behaviour. The method places its saving against libraries many times this size.</li>
     <li><strong>Most questions did not separate the set-ups.</strong> On 12 of 18, every set-up was right every time. The differences come from six questions.</li>
+    <li><strong>How it fits the ICM paper.</strong> Jake Van Clief and David McDermott's paper says that no controlled comparison of staged loading against loading everything at once has been done yet. This is a small first one, at a scale where the paper would not expect a quality difference, and there was none. The paper's case is at 30,000 to 50,000 tokens.</li>
   </ul>
 
   <h2>How it was kept fair</h2>
@@ -202,6 +203,7 @@
   <ul class="plain">
     <li>Anything about ICM's hand-offs between stages or its human checks. For a single question the method chose one stage: there is nothing to hand on and nobody to check it.</li>
     <li>Anything about large libraries, where ICM claims its biggest saving. This one is about 32,000 characters.</li>
+    <li>Anything about every possible ICM. This one passed every check and two audits, but its one stage contract is about three times the size the method recommends. Its instruction to read every relevant paper and show the working most likely bought both the extra accuracy and the extra cost.</li>
     <li>Anything beyond one model and made-up rule documents. The new questions were written and checked by Claude models.</li>
   </ul>
 
