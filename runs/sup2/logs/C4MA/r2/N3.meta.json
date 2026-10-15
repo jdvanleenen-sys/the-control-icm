@@ -1,0 +1,13 @@
+{
+  "order": 182,
+  "run": 2,
+  "question": "N3",
+  "code": "C4MA",
+  "prompt": "Under the Fenwray Film Society rules: My adult membership application was accepted on 25 June 2025. I sent the fee by bank transfer on 30 June 2025 and it cleared in the society's account on 2 July 2025. How much should I have paid?",
+  "stageDir": "C:/tc/C4MA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 11177,
+  "stderr": ""
+}

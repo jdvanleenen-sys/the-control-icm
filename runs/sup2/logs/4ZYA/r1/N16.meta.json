@@ -1,0 +1,13 @@
+{
+  "order": 14,
+  "run": 1,
+  "question": "N16",
+  "code": "4ZYA",
+  "prompt": "Under the Quillbrook Village Hall rules: Our booking was accepted in writing on 2 October 2025 for an event on 12 October 2025. When do we have to pay the deposit and the rest of the hire charge?",
+  "stageDir": "C:/tc/4ZYA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 5857,
+  "stderr": ""
+}

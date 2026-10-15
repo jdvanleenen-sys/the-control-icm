@@ -1,0 +1,13 @@
+{
+  "order": 256,
+  "run": 2,
+  "question": "N20",
+  "code": "Q7JV",
+  "prompt": "Under the Quillbrook Village Hall rules: A hirer lost the hall key after their event on 12 September 2026. How much do they have to pay for the lost key?",
+  "stageDir": "C:/tc/Q7JV",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 13409,
+  "stderr": ""
+}

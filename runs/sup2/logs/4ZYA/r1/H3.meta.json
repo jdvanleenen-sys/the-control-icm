@@ -1,0 +1,13 @@
+{
+  "order": 57,
+  "run": 1,
+  "question": "H3",
+  "code": "4ZYA",
+  "prompt": "Under the Fenwray Film Society rules: A 17-year-old's membership application is accepted, and the treasurer receives their membership payment on 12 February 2026. On what exact date does that membership expire? Does it end in February 2026, or does the February joining rule give them longer?",
+  "stageDir": "C:/tc/4ZYA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 4461,
+  "stderr": ""
+}

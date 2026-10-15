@@ -1,0 +1,13 @@
+{
+  "order": 278,
+  "run": 2,
+  "question": "Q2",
+  "code": "4ZYA",
+  "prompt": "Under the Fenwray Film Society rules: Two adults have accepted membership applications. The treasurer receives the first person's £24 payment on 30 June 2025 and the second person's payment on 2 July 2025. How much should each person pay for annual adult membership?",
+  "stageDir": "C:/tc/4ZYA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 4687,
+  "stderr": ""
+}

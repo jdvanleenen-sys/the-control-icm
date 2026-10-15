@@ -1,0 +1,13 @@
+{
+  "order": 386,
+  "run": 3,
+  "question": "N15",
+  "code": "4ZYA",
+  "prompt": "Under the Quillbrook Village Hall rules: For a party on 20 September 2025 we paid the full £150 hire charge, which included the £30 booking deposit, plus a £100 damage deposit because we had permission to serve alcohol. Our written cancellation reached the booking officer on 10 September 2025. How much do we get back?",
+  "stageDir": "C:/tc/4ZYA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 6041,
+  "stderr": ""
+}

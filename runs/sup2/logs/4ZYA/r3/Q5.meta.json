@@ -1,0 +1,13 @@
+{
+  "order": 379,
+  "run": 3,
+  "question": "Q5",
+  "code": "4ZYA",
+  "prompt": "Under the Fenwray Film Society rules: A parent brings their 9-year-old child to a public screening on 16 August 2025 and accompanies them throughout. A volunteer has found an old price list showing that children under 12 pay £2. What is the correct ticket price for the child?",
+  "stageDir": "C:/tc/4ZYA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 7265,
+  "stderr": ""
+}

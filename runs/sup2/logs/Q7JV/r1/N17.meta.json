@@ -1,0 +1,13 @@
+{
+  "order": 61,
+  "run": 1,
+  "question": "N17",
+  "code": "Q7JV",
+  "prompt": "Under the Quillbrook Village Hall rules: We're not a village group. We want the Meeting Room on Sunday 13 July 2025 from 15:00 for as long as we're allowed, including clearing up. What is the most we can be charged for room hire?",
+  "stageDir": "C:/tc/Q7JV",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 8412,
+  "stderr": ""
+}

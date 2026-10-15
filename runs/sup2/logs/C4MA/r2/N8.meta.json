@@ -1,0 +1,13 @@
+{
+  "order": 220,
+  "run": 2,
+  "question": "N8",
+  "code": "C4MA",
+  "prompt": "Under the Fenwray Film Society rules: I hired the projector only, for two booking days, collecting at 12:00 on 4 June 2025. I had no extension and returned it at 15:00 on 7 June 2025. Leaving the deposit aside, what do I owe in hire and late charges together?",
+  "stageDir": "C:/tc/C4MA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 9612,
+  "stderr": ""
+}

@@ -1,0 +1,13 @@
+{
+  "order": 243,
+  "run": 2,
+  "question": "N19",
+  "code": "C4MA",
+  "prompt": "Under the Quillbrook Village Hall rules: At the committee meeting on 3 November 2026 three trustees are in the room and a fourth wants to join by video call. Does the fourth trustee count towards the quorum?",
+  "stageDir": "C:/tc/C4MA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 7976,
+  "stderr": ""
+}

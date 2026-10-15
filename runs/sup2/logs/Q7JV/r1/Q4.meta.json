@@ -1,0 +1,13 @@
+{
+  "order": 135,
+  "run": 1,
+  "question": "Q4",
+  "code": "Q7JV",
+  "prompt": "Under the Fenwray Film Society rules: A member aged 35 has an active annual membership but is suspended by the committee from 1 November through 20 November 2025. They arrive at a public screening on 8 November 2025 and ask to pay the usual member admission price. Are they entitled to the discount, and what admission price applies instead?",
+  "stageDir": "C:/tc/Q7JV",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 10514,
+  "stderr": ""
+}

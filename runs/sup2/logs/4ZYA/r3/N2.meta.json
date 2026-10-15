@@ -1,0 +1,13 @@
+{
+  "order": 400,
+  "run": 3,
+  "question": "N2",
+  "code": "4ZYA",
+  "prompt": "Under the Fenwray Film Society rules: I'm an adult member and I want to hire both the projector and the screen together for two booking days, collecting on 10 May 2025. Leaving the deposit aside, what is the hire charge?",
+  "stageDir": "C:/tc/4ZYA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 5202,
+  "stderr": ""
+}

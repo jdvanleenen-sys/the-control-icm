@@ -1,0 +1,13 @@
+{
+  "order": 263,
+  "run": 2,
+  "question": "Q8",
+  "code": "C4MA",
+  "prompt": "Under the Quillbrook Village Hall rules: A registered village group has exactly nine local members and supplies that count when booking the Main Hall for two paid hours on 15 October 2025. The organiser requests the village group discount because the group is registered locally. Does it qualify, and what is the room-hire charge without the discount?",
+  "stageDir": "C:/tc/C4MA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 8676,
+  "stderr": ""
+}

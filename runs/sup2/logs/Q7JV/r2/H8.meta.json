@@ -1,0 +1,13 @@
+{
+  "order": 250,
+  "run": 2,
+  "question": "H8",
+  "code": "Q7JV",
+  "prompt": "Under the Quillbrook Village Hall rules: On 12 October 2025, an organiser wants to use both the Main Hall and Meeting Room for one event. The expected attendance is 89 people in the Main Hall and 23 in the Meeting Room, including organisers and children. Both rooms would individually be within their stated capacities. Is the combined event permitted at that attendance, and by how many people would it exceed any applicable limit?",
+  "stageDir": "C:/tc/Q7JV",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 11551,
+  "stderr": ""
+}

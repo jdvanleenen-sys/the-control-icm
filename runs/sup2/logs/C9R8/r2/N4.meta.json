@@ -1,0 +1,13 @@
+{
+  "order": 283,
+  "run": 2,
+  "question": "N4",
+  "code": "C9R8",
+  "prompt": "Under the Fenwray Film Society rules: At the screening on 30 May 2026, 38 audience members are already inside and two duty volunteers are on shift. I heard the committee voted on 22 May 2026 to lower the audience limit. Can I let in one more person who has just arrived?",
+  "stageDir": "C:/tc/C9R8",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 8447,
+  "stderr": ""
+}

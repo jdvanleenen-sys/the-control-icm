@@ -1,0 +1,13 @@
+{
+  "order": 237,
+  "run": 2,
+  "question": "H4",
+  "code": "C4MA",
+  "prompt": "Under the Fenwray Film Society rules: An active adult member wants to hire the society's projector and screen together for two consecutive booking days beginning at noon on 12 May 2026. What is the total hire charge, excluding the refundable security deposit, and when must the equipment be returned?",
+  "stageDir": "C:/tc/C4MA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 11333,
+  "stderr": ""
+}

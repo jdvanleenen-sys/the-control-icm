@@ -1,0 +1,13 @@
+{
+  "order": 145,
+  "run": 1,
+  "question": "H5",
+  "code": "C9R8",
+  "prompt": "Under the Fenwray Film Society rules: On 10 May 2025, an adult aged 40 pays for a new annual membership. A volunteer finds an older fee sheet showing an adult subscription of £20. What amount should the treasurer actually collect?",
+  "stageDir": "C:/tc/C9R8",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 8603,
+  "stderr": ""
+}

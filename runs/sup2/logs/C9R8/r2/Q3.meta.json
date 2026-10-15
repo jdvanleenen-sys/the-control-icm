@@ -1,0 +1,13 @@
+{
+  "order": 193,
+  "run": 2,
+  "question": "Q3",
+  "code": "C9R8",
+  "prompt": "Under the Fenwray Film Society rules: At a screening on 14 November 2025, a visitor makes a serious threat against another attendee. The visitor has not previously been warned about their behaviour. Must the duty volunteer issue a warning before requiring the visitor to leave?",
+  "stageDir": "C:/tc/C9R8",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 8730,
+  "stderr": ""
+}

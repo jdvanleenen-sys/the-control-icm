@@ -1,0 +1,13 @@
+{
+  "order": 185,
+  "run": 2,
+  "question": "Q6",
+  "code": "C4MA",
+  "prompt": "Under the Quillbrook Village Hall rules: A hirer books the Meeting Room on 6 September 2025 and asks for one portable speaker and three sets of folding display boards. Ignoring room hire and deposits, what is the total equipment charge?",
+  "stageDir": "C:/tc/C4MA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 9397,
+  "stderr": ""
+}

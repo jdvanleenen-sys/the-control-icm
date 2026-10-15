@@ -1,0 +1,13 @@
+{
+  "order": 89,
+  "run": 1,
+  "question": "H1",
+  "code": "4ZYA",
+  "prompt": "Under the Fenwray Film Society rules: On 12 May 2025, a volunteer takes a £9 cash payment for a screening ticket. The customer asks whether the treasurer is required to issue a receipt. Is a receipt compulsory, and what is the payment threshold?",
+  "stageDir": "C:/tc/4ZYA",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 4395,
+  "stderr": ""
+}

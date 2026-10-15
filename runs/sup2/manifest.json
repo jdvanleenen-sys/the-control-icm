@@ -1,0 +1,75 @@
+{
+  "started": "2026-10-15T19:04:24.640Z",
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "version": "2.1.300",
+  "limit": 0,
+  "stageRoot": "C:/tc",
+  "flags": [
+    "--setting-sources",
+    "project",
+    "-p",
+    "<question>",
+    "--model",
+    "claude-sonnet-5-5",
+    "--effort",
+    "medium",
+    "--tools",
+    "Read,Glob,Grep",
+    "--disallowedTools",
+    "Bash,PowerShell,Edit,Write,NotebookEdit,WebFetch,WebSearch,Agent,mcp__*",
+    "--permission-mode",
+    "dontAsk",
+    "--strict-mcp-config",
+    "--disable-slash-commands",
+    "--output-format",
+    "stream-json",
+    "--verbose"
+  ],
+  "environment": [
+    "APPDATA",
+    "CLAUDE_CODE_DISABLE_AUTO_MEMORY",
+    "COMSPEC",
+    "DISABLE_AUTOUPDATER",
+    "DISABLE_UPDATES",
+    "HOMEDRIVE",
+    "HOMEPATH",
+    "LOCALAPPDATA",
+    "OS",
+    "PATH",
+    "PATHEXT",
+    "ProgramData",
+    "ProgramFiles",
+    "ProgramFiles(x86)",
+    "SYSTEMROOT",
+    "SystemRoot",
+    "TEMP",
+    "TMP",
+    "USERNAME",
+    "USERPROFILE",
+    "windir"
+  ],
+  "seed": "2ea52d94c5b039cb88d5897bb0daee47f5c7622f924de9f2b27101ad0c494b8c",
+  "staged": {
+    "Q7JV": {
+      "dir": "C:/tc/Q7JV",
+      "digest": "5d45894f26a7fd59ee3cd1a4760793f1133f14a32d0e3d882e72e819673d5547",
+      "loadedChars": 0
+    },
+    "C9R8": {
+      "dir": "C:/tc/C9R8",
+      "digest": "6e9ab686dd21ce5618805fdae5a982e5e90154a11af2b18c683b60764c55b0b8",
+      "loadedChars": 11886
+    },
+    "C4MA": {
+      "dir": "C:/tc/C4MA",
+      "digest": "cfd7dacf6dfbcfad702b1cbfd114898d818bcb0d053bfae28fd73bf86ef091c3",
+      "loadedChars": 902
+    },
+    "4ZYA": {
+      "dir": "C:/tc/4ZYA",
+      "digest": "93e21211761401bf31ae7b8a603f176b39edf86ac74e0121369b5224afc9fa2a",
+      "loadedChars": 5261
+    }
+  }
+}
