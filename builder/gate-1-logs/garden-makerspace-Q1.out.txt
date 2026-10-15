@@ -1,0 +1,24 @@
+## Q1, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 15923 characters, 206 words, 6.3 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+
+**Rules that decide it**
+
+- plot-rules.md, section 5.1: "The plot secretary inspects every plot on the first Saturday of each month from April to October."
+- amendments.md: Amendment 3 changes only section 5.2 (the first-notice period). Amendments 1 and 2 cover the late-payment charge and watering windows. None of them touches section 5.1, so 5.1 stands as written (amendments.md 1.4). The date tests are not needed.
+- The volunteer FAQ and the 2025 archive were not used, because neither governs.
+
+**Working**
+
+- Day: Saturday, and only the first Saturday of the month.
+- Months: April, May, June, July, August, September and October. That is 7 inspections per year, with none from November to March.
+- For 2026 the first Saturdays are 4 April, 2 May, 6 June, 4 July, 1 August, 5 September and 3 October. I counted these on the calendar.
+
+**Check:** The answer comes from the governing paper only. No change entry alters section 5.1. Both parts of the question (which days, and when) are answered.
+
+**Answer:** The plot secretary inspects every plot on the first Saturday of each month from April to October. In 2026 those dates are 4 Apr, 2 May, 6 Jun, 4 Jul, 1 Aug, 5 Sep and 3 Oct.
+

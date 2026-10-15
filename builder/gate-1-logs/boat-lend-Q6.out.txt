@@ -1,0 +1,26 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 14679 characters, 346 words, 8.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-membership.md
+  - Read reference/lend/lend-changes.md
+
+**Rules that decide it**
+
+- lend-fees.md §2.1 (Standard annual fee) originally set the fee at £24. The register's "Annual fee decision" (lend-changes.md §2) replaces it. Its date test is the date the renewal payment is accepted, and it applies if that date is on or after 1 January 2026. The payment was accepted on 10 January 2026, so the entry applies. The fee is £30 for each 12-month term.
+- lend-fees.md §2.2 (Reduced fee, £12) needs one named adult to declare income support. Neither does, so it doesn't apply.
+- lend-fees.md §3.2 and lend-membership.md §2.2 block renewal while a charge is unpaid. The household has no unpaid charges, so there is no block.
+- lend-membership.md §2.1 says membership "lasts 12 calendar months from the joining or renewal date." It also says "Renewal starts on the date the renewal payment is accepted, not on the old expiry date." The renewal therefore starts on 10 January 2026, not on 20 December 2025, and the gap since expiry is not backdated.
+- The other two entries in lend-changes.md (ordinary loan and unused membership refund) don't touch fees or the renewal term, so they don't apply.
+
+**Working**
+
+- Fee: payment accepted on 10 January 2026, which is after 1 January 2026, so the fee is £30.
+- Term: it starts on 10 January 2026. Twelve calendar months from that date ends on 9 January 2027, so the last day of the term is 9 January 2027. The rules give the start date and the 12-month length but don't say how to name the final day. Counting 12 months from 10 January 2026 gives a new term starting on 10 January 2027.
+
+**Check:** I used no figure from the desk guide or the archive. The register entry was tested on the payment acceptance date. I also read lend-fees.md and lend-membership.md, the other papers that cover these facts. No deciding fact is missing, and both parts of the question are answered.
+
+**Answer:** They pay £30. The renewed membership runs from Saturday 10 January 2026 for 12 calendar months, to 9 January 2027.
+

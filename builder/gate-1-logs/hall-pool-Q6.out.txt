@@ -1,0 +1,26 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 17535 characters, 320 words, 9.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-licensing-limits.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-who-can-hire.md
+
+**Rules that decide it**
+- `hall-licensing-limits.md` §1.1: "Main Hall 120 standing or 90 seated at tables."
+- §1.3: "The count includes children, helpers, caterers and performers."
+- §1.2: no more than 150 people in the building at once.
+- §5.3: "An event with more than 80 guests needs one steward aged 18 or over for every 40 guests or part of 40."
+- The changes log has four entries. The only one that touches this paper is Change 3, which replaces §3.1 on music finishing times. It doesn't affect capacity or stewards, so the original §1 and §5.3 stand. Change 1 (deposit) isn't relevant to what was asked.
+- The alcohol rules (§2) don't matter here. Having no alcohol doesn't change the capacity or steward rules.
+
+**Working**
+- Capacity: the reception is standing, so the limit is 120. The count includes caterers and helpers, so 95 guests + 5 caterers and helpers = 100. 100 is no more than 120, so it is allowed. The 150 building limit isn't an issue either, because 100 is below it, assuming no other rooms push the building total past 150.
+- Stewards: 95 guests is more than 80, so §5.3 applies. 95 ÷ 40 = 2.375, and "or part of 40" rounds up to 3. If the 5 caterers were counted as guests (100 ÷ 40 = 2.5), it would still round up to 3. The result is the same either way.
+- Each steward must be aged 18 or over.
+
+**Check:** I took no figures from the summary or archive papers. Change 3 was the only entry touching this paper, and it concerns music, not these sections. Both parts of the question are answered, and no missing fact changes the result.
+
+**Answer:** Yes, 100 people is allowed in the Main Hall for a standing event (limit 120, caterers and helpers included). The hirer must provide 3 stewards, each aged 18 or over.
+

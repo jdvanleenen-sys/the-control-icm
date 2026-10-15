@@ -1,0 +1,33 @@
+## Q1, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 23752 characters, 359 words, 10.2 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-booking.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-membership.md
+  - Read reference/pool/pool-changes.md
+  - Read reference/pool/pool-rules.md
+
+**Rules that decide it**
+- pool-booking.md 6.1: a guest's place must be booked by the member in the same booking, and the limits in pool-membership.md section 7 apply. Here the guest was booked in the same booking, and one guest is within the limit of 2 guests per visit (pool-membership.md 7.1).
+- pool-fees.md 3.1 (original): guest fee is £6 for a guest aged 16 or over and £3 for a guest under 16, for each visit.
+- pool-changes.md Change 2 replaces pool-fees.md 3.1. It sets the fee at £7 for a guest aged 16 or over and £3.50 for a guest under 16. It is effective from 1 January 2026. Its deciding date is the day of the guest's visit, not the day it was booked.
+- Change 2 applies. The visit is on Saturday 24 January 2026, which is after 1 January 2026. The booking date of 16 January does not matter for this test.
+- Change 1 (booking window) has a deciding date of the day the booking is made. The booking was made on 16 January 2026, which is after 1 October 2025, so the 10-day window applies. 24 January is 8 days ahead, so the booking was allowed. The old 7-day limit would not have allowed it. This does not affect the fee.
+- Change 3 (no-shows) is not relevant, because both people attended.
+
+**Working**
+- The guest is 30, so the "16 or over" rate applies.
+- The visit date, 24 January 2026, is on or after 1 January 2026, so the replacement fee is £7.
+- The fee is charged per visit, and there is one visit by one guest. The total is £7.
+
+**Check**
+- No figure came from the front-desk summary or the 2025 fee archive.
+- Change 2 was date-tested on the visit date.
+- The booking, fees, membership and changes papers were read.
+- No fact is missing, because the guest's age is given.
+- The question asked for one thing, the fee, and it is answered.
+
+**Answer:** £7 (guest aged 16 or over, visit on 24 January 2026, so the Change 2 rate applies, not the original £6).
+

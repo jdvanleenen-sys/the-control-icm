@@ -1,0 +1,26 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18599 characters, 364 words, 9.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/storage.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+
+**Rules that decide it**
+- **storage.md 1.1:** "A Forge member has one locker." The member is entitled to a locker.
+- **storage.md 2.1:** "A locker may hold no more than 25 kg. Nobody may store food, pressurised gas cylinders, lithium batteries rated above 100 Wh, or more than 500 ml in total of flammable liquid. Exactly 25 kg, exactly 100 Wh and exactly 500 ml are allowed."
+- **Bulletin (the changes paper):** Its four entries replace sections of machine-booking.md, fees.md, storage.md 3.2 (holding period) and safety-inductions.md. None of them touches storage.md 1.1 or 2.1. Entry 3 changes only the holding-cage period, and its deciding date is the date an item is moved to the cage. That is not in issue here, so the 5 October 2026 start date changes nothing.
+- **membership.md 2.3:** Good standing is not a condition for using a locker. Storage.md 1.1 gives the locker to a Forge member, and 2.1 sets the limits. The member is in good standing anyway.
+
+**Working**
+- Weight: 12 kg is under the 25 kg limit, so that limit is met.
+- Food, gas cylinders and flammable liquid: the locker would hold none, so those bans are not breached.
+- Lithium battery: the only deciding test is whether the pack is rated above 100 Wh. The question gives no watt-hour rating, so I can't assume one. Voltage times amp-hours gives the figure if the label doesn't state it.
+  - If the pack is rated 100 Wh or less (exactly 100 Wh is allowed), it is permitted.
+  - If the pack is rated above 100 Wh, it is prohibited.
+
+**Check:** No figure came from the quick-guide or the 2025 handbook. The bulletin entries were checked against the sections used, and none applies. The membership and storage papers were read. The missing fact, the battery's Wh rating, is given for both outcomes. Both parts of the question are answered.
+
+**Answer:** It depends on the pack's rating. The member may store it if it is rated 100 Wh or less, and may not if it is rated above 100 Wh. The 12 kg total and the absence of food, gas and flammable liquid are all within the rules.
+
