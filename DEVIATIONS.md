@@ -37,3 +37,15 @@ usage limit as never having reached the model. It keeps the refused attempt unde
 not the arms, the questions, the model, the flags or the order. The freeze was taken again with the
 changed file (`FREEZE.md`), and a new schedule, `sup2`, was drawn from it. The limit is shared with
 the build session itself, which is why a whole run did not fit in one window.
+
+`sup2` was drawn with the same seed as `sup1`, because the seed is the fingerprint of the arms and
+the questions and neither changed; its session order is the same and its arm codes are new. It ran
+with no usage-limit refusal, so the new waiting rule was never used.
+
+## Thursday 2026-10-15: carrying Gemini's batches
+
+The batches went to Gemini through the clipboard. Twice the clipboard held something else when the
+paste was made (the operator's machine shares one clipboard). A check run before every send (the
+marking rules first, and the batch's exact number of answers) caught both, and neither was sent. Each
+batch was then pasted again and checked. A plan to serve the batches from a local web server instead
+was refused by the build session's safety settings and not used.
