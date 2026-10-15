@@ -37,6 +37,7 @@ Every figure, loss and check is in [`RESULTS.md`](RESULTS.md).
 | The questions: new (primary), exam and held-out | [`questions-new.md`](questions-new.md), [`questions.md`](questions.md), [`questions-heldout.md`](questions-heldout.md) |
 | Where the new questions came from and how their key was checked | [`generator/new/`](generator/new) |
 | The work records of the build sessions | [`transcripts/`](transcripts) |
+| What was taken out before publishing, and the old-to-new commit ids | [`PUBLISHING.md`](PUBLISHING.md) |
 | The entry's own design pages, unchanged | [`origin/`](origin) |
 
 ## Run the checks yourself
