@@ -1,6 +1,6 @@
-# Supplement to The Control: does a staged ICM workspace earn its place?
+# Supplement to The Control: does an ICM workspace earn its place?
 
-Version 1. Written on Thursday 2026-10-15, before any new question, ICM file or session exists.
+Version 2. Written on Thursday 2026-10-15, before any ICM file or session exists.
 This page is the plan; `DESIGN-LOG.md` records each review of it and what changed.
 
 ## Where this comes from
@@ -16,10 +16,19 @@ This supplement asks the question the entry left open, with the same documents, 
 
 ## The question
 
-On the same 18 documents, with the same model, settings and questions, does an ICM workspace (a
-short router that loads first, a map, numbered stage folders each with its own `CONTEXT.md`, and the
+On the same 18 documents, with the same model, settings and questions, does the read path of an ICM
+workspace (a short router that loads first, a map, stage contracts read as they are needed, and the
 documents in `reference/`) do better than (a) the documents alone and (b) the entry's five-file
-folder? And does the ICM structure, holding the words fixed, do better than the folder?
+folder? And, holding the words fixed, does loading them in stages instead of all at once change
+anything?
+
+**What "read path" means.** ICM has two halves: routing with layered loading (a router that loads
+first, a map, a contract read only when its stage is reached), and hand-offs (each stage writes a
+file the next one reads, with a person checking between them). A read-only question session can
+exercise only the first half. This supplement tests that half and says so in every outcome
+sentence. The hand-off half and its human gates are not tested. A write-enabled arm was considered
+and left out: it would change the tools between arms, and with no person between stages its files
+would be scratch notes, not the edit surfaces ICM relies on.
 
 ## The arms
 
@@ -27,46 +36,77 @@ folder? And does the ICM structure, holding the words fixed, do better than the 
 |---|---|---|
 | `docs` | The 18 documents, nothing else | The control that keeps the material and removes every instruction |
 | `folder` | The entry's folder, unchanged, its four files loaded first (the entry's arm `c1111`) | The first system |
-| `icm` | An ICM workspace built for this job to Jeff's ICM conventions | The second system |
-| `icm-same` | The entry folder's own sentences, redistributed into the ICM structure | Holds the words fixed and changes only the architecture |
+| `icm` | An ICM workspace built for this job by the ICM method | The second system |
+| `folder-staged` | The entry folder's own sentences, unchanged, laid out as a router, a map and stage files read on demand | Holds the words fixed and changes only when they load. A test of loading, not a verdict on ICM |
 
 The entry's empty arm is not repeated: it scored 0 of 30 and feeds no comparison here.
 
-In every arm the 18 documents are byte for byte the same files in the same place. The arms run in
-one batch, interleaved in a random order from a recorded seed, so the date, the tool version and the
-model are the same for all of them. A script checks that each staged arm holds exactly one
-`CLAUDE.md`, at its top, because Claude Code also loads a `CLAUDE.md` it finds lower down without a
-tool call, which the text count would miss.
+In every arm the 18 documents are byte for byte the same files in the same place, and nothing is
+added inside `reference/`. The arms run in one batch, interleaved in a random order from a recorded
+seed, so the date, the tool version and the model are the same for all of them. A script checks
+that each staged arm holds exactly one `CLAUDE.md`, at its top, holds no `@` import, and that
+nothing else loads by itself.
 
 ## How the ICM is built, and by whom
 
-- **Template:** Jeff's PO Verifier, the version prepared for eduba: a router `CLAUDE.md`, a map
-  `CONTEXT.md`, numbered stage folders each with a `CONTEXT.md`, and `reference/`. Its structure
-  is copied; none of its content is.
-- **On practice documents, as the folder was.** The folder's identity, rules and examples were
-  written on rehearsal documents (`generator/provenance.md`). The ICM is built the same way: a
-  separate session builds and walk-tests it on rehearsal five's 18 documents (a boat club and a
-  lending library) and their practice questions. It never sees the live documents, any live
-  question, any key, the entry's folder files or any result.
-- **The map is the folder's map.** The ICM's `CONTEXT.md` takes its list of documents from the same
-  script that wrote the folder's map (`tools/make-map.mjs`), run on the live documents. The builder
-  writes the rest of `CONTEXT.md` (what the stages are, how a question moves through them).
-- **No live facts in the stages.** A script checks that no figure, date or section number from
-  the live documents appears in any ICM file outside the generated document list.
-- **Constraints the builder works to:** the documents are never edited or moved; a session is
-  read-only (Read, Glob, Grep), so the stages are walked inside one session and their outputs are
-  in the reply, not in files; only `CLAUDE.md` loads by itself.
-- **Fixes before the run, from a closed list only:** a missing file, a broken path, a router or map
-  that does not name a stage, a stage file that does not say where to go next. Found by a
-  structural audit and a walk test on the practice documents, made by the builder session, logged
-  with the diff. No other change is allowed after the freeze.
-- **Disclosed:** the person running this knew the entry's result (instructions that shorten
-  answers cost facts) before the ICM was built, and wrote the builder's brief. The brief is
-  committed. The new questions are the guard against that knowledge reaching the test.
+**The method chooses the shape.** The builder runs the `icm-architect` skill in Build mode and
+writes down, before building, the form it chose, how many stages, where each boundary falls and why.
+If the method's answer is one stage, that is the ICM. The plan fixes only the limits of the
+harness, not the shape.
 
-`icm-same` is built by a rule a script checks: every sentence of the entry's four files appears
-exactly once in its files, the map lines included, and the only words added are headings and
-routing lines ("Next, read `02 .../CONTEXT.md`."). The count of added routing words is published.
+**Conventions.** Jeff's PO Verifier, the version prepared for eduba, is the house style, because it
+is how Jeff practises the method: a router `CLAUDE.md`, a map `CONTEXT.md`, numbered stage folders
+each with a `CONTEXT.md`, `reference/`. Where it differs from the `icm-architect` templates (folder
+names with spaces against `NN_kebab`, "What comes in / What goes out" against "Inputs / Process /
+Outputs"), the PO Verifier wins and each departure is listed. Its content is not copied. One line is
+deliberately not carried over: "stop and ask when unsure". In a session with no person to answer, it
+produces a question instead of an answer. The ICM must instead name what is missing and answer every
+case the papers allow.
+
+**Specified by the method, checked by script:**
+
+- Router `CLAUDE.md`: under 60 lines; who the workspace is for, and a route table. No rules, no
+  answer shape, no live facts, no `@` imports.
+- Map `CONTEXT.md`: the stages, how a question moves through them, and what must never happen.
+- Each stage `CONTEXT.md`: inputs as exact paths, what not to load, the process, "output: in the
+  reply", and a numbered check the model runs on its own work (the PO Verifier's "What is checked
+  here", since no person checks between stages here).
+- The list of documents: generated by the folder's own map script (`tools/make-map.mjs`) from the
+  live documents' headers, so it is word for word the folder's list. It sits in the first stage's
+  contract or in a file the map names, never inside `reference/`.
+- No figure, date or section number from the live documents in any ICM file outside that list.
+- Each file's size in lines and tokens, against the method's budgets, printed.
+
+**Built on practice documents, with the folder's budget of practice.** The folder's identity, rules
+and examples were written and revised over five rehearsals on practice documents. The ICM gets the
+same: up to five rounds of build, walk test and revision, on three practice sets from those
+rehearsals (a garden and a makerspace; a hall and a pool; a boat club and a lending library), with
+their practice questions and keys. The practice sets are copied into `practice/` so a stranger can
+rebuild the ICM. Every round is logged. The builder never sees the live documents, a live question,
+a key, the entry's folder files or any result.
+
+**The builder's brief is fixed in writing.** Build mode starts from questions to the owner. The
+answers are written once, committed before the build, and given to the builder: who the workspace
+is for, what it does, what done looks like, the harness limits, the conventions above. The skill's
+version is recorded by a fingerprint of its files.
+
+**Switching to the live documents.** After the practice rounds the document list is regenerated
+from the live documents and nothing else changes. From then on only four fixes are allowed, each
+logged with its diff: a missing file, a broken path, a router or map that does not name a stage, a
+stage that does not say where to go next.
+
+**The gate before the run.** A cold session that is not the builder walks a fixed set of practice
+questions using only the workspace; its transcript is committed. The `icm-architect` walk-test list
+is scored item by item, pass or fail, with not-applicable and a reason where the harness rules an
+item out. The ICM is run only if every applicable item passes.
+
+**Disclosed:** the person running this knew the entry's result (instructions that shorten answers
+cost facts) and wrote the builder's brief. The brief is committed. The new questions are the guard
+against that knowledge reaching the test.
+
+`folder-staged` is built by a rule a script checks: every sentence of the entry's four files appears
+exactly once, the document list included, and the only words added are headings and routing lines.
+The count of added words is published.
 
 ## The questions
 
@@ -76,11 +116,11 @@ routing lines ("Next, read `02 .../CONTEXT.md`."). The count of added routing wo
 | Exam | 10 | ChatGPT, for the entry | Secondary |
 | Held-out | 10 | ChatGPT, for the entry | Secondary |
 
-- The new questions are written from the entry's own prompt, word for word
-  (`generator/question-prompt.md`), with the live documents attached and nothing else.
-- A separate Claude Fable 5.1 session answers them with no key, from the entry's key-check prompt
-  (`generator/key-check-prompt.md`). A question still disputed after one round is dropped, never
-  reworded.
+- The new questions were written from the entry's own prompt, word for word
+  (`generator/question-prompt.md`), with the live documents attached as two text files and nothing
+  else (`tools/new-questions.mjs`).
+- A separate Claude Fable 5.1 session answers them with no key, from the entry's key-check prompt.
+  A question still disputed after one round is dropped, never reworded.
 - A new question whose source sections are the same as an existing exam or held-out question's
   is dropped, because it would test a rule twice.
 - The set is committed before the ICM is built. The experimenter does not read it until after the
@@ -98,7 +138,7 @@ The entry's measures, by the entry's code, with one split:
 
 - **Document steps:** searches, file listings and opens of anything in `reference/`. The rule uses
   these.
-- **Instruction steps:** opens of instruction files (an ICM stage's `CONTEXT.md`, a folder file
+- **Instruction steps:** opens of instruction files (a stage contract, the map, a folder file
   opened by hand). Reported beside document steps. Their cost is not hidden: the text they return
   is in the text count.
 - **Text:** characters put in front of the model: each file loaded first, once, and each tool
@@ -112,10 +152,16 @@ The entry's measures, by the entry's code, with one split:
   committed before the run, and never changed.
 - Printed beside them: tokens in and out, seconds, answer words, flagged sessions.
 
+**Published before the run:** the ICM's smallest possible text per question (its router, its map
+and the stage contracts every question must read) against the folder's 5,261 characters loaded
+first. If the ICM's minimum is higher, condition 3 against `folder` is known in advance to be hard
+to meet, and the page says so before any session runs. The method places ICM's saving against
+prompts tens of thousands of tokens long; this library is about 32,000 characters. Scale is a limit.
+
 ## The rule, fixed before the run
 
-Three comparisons, on the new questions: `icm` against `docs`; `icm` against `folder`; `icm-same`
-against `folder`.
+Three comparisons, on the new questions: `icm` against `docs`; `icm` against `folder`;
+`folder-staged` against `folder`.
 
 The first arm earns its place against the second only if all three hold:
 
@@ -130,17 +176,17 @@ that many or more, in either direction, at most 5 times in 100: 9 of 10, 15 of 2
 40. A script computes it from the number of questions that survive. Questions in one document set
 may move together, so this is a threshold fixed in advance, not a significance test.
 
-Outcome sentences, as in the entry: "earned its place"; "did not earn its place", naming what
-failed; or "the test could not tell". The ICM is called better than both systems only if it earns
-its place against `docs` and against `folder`.
+Outcome sentences, as in the entry, naming the read path: "The ICM read path earned its place
+against …"; "did not earn its place", naming what failed; or "the test could not tell". The ICM
+read path is called better than both systems only if it earns its place against `docs` and against
+`folder`. The `folder-staged` sentence speaks of loading in stages, never of ICM.
 
 ## Predictions, written before the run
 
 1. `icm` takes clearly fewer document steps than `docs`.
-2. `icm` loads less text first than `folder`, because only the router loads first. Whether its
-   total text is lower: no prediction.
-3. `icm` against `docs` on right answers: no prediction.
-4. `icm-same` against `folder`: no prediction.
+2. `icm` against `docs` and against `folder` on right answers: no prediction.
+3. `folder-staged` against `folder`: no prediction.
+4. Text: written after the minimum is published and before the run.
 
 ## Size
 
@@ -148,8 +194,8 @@ Four arms, up to 40 questions, three runs each: up to 480 sessions. The entry ra
 
 ## What this cannot show
 
-- Anything about ICM's written hand-offs between stages or its human review gates: sessions are
-  read-only and run alone.
+- ICM's hand-offs between stages and its human review gates.
+- Anything at the scale ICM is designed for: one library of about 32,000 characters.
 - Anything beyond one model, one tool and made-up documents of one kind.
 - That this is the best possible ICM: it is one ICM, built once, by the method above.
 
@@ -157,13 +203,14 @@ Four arms, up to 40 questions, three runs each: up to 480 sessions. The entry ra
 
 1. Plan and three design reviews (this page, `DESIGN-LOG.md`).
 2. New questions written, key-checked, de-duplicated and committed; key-fact patterns committed.
-3. Harness changes for the new arms and the step split, with tests.
-4. ICM built by the separate session on practice documents and committed; live map generated;
-   `icm-same` built; both checked by script.
-5. Audit and walk test on practice documents; fixes from the closed list logged and committed.
-6. Freeze: fingerprints of every arm, the questions and the analysis committed.
-7. One sealed run. Every session kept.
-8. Marking with the arms hidden, then the key revealed.
-9. Results page, written to the sentences above.
+3. Practice sets copied in; the builder's brief committed.
+4. Harness changes for the new arms and the step split, with tests.
+5. ICM built and revised over up to five practice rounds, each logged and committed.
+6. Live document list generated; `folder-staged` built; script checks; minimum text published.
+7. The gate: a cold walk test and the walk-test list; fixes from the closed list only.
+8. Freeze: fingerprints of every arm, the questions and the analysis committed.
+9. One sealed run. Every session kept.
+10. Marking with the arms hidden, then the key revealed.
+11. Results page, written to the sentences above.
 
 Nothing is published without Jeff's go.

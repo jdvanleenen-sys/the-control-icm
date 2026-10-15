@@ -26,3 +26,26 @@ count. Plan version 0 in; version 1 out.
 | The thresholds are right but are not significance tests | Optional | Accepted | Said so in the rule |
 | Remove the empty arm: it feeds no comparison | Removal | Accepted | Dropped. The entry's 0 of 30 is cited |
 | Run `icm-same` once | Removal | Refused | It now carries a verdict, so it needs the same three runs |
+
+## Round 2: ICM fidelity
+
+Thursday 2026-10-15. Reviewer: Claude Opus 5.5, read-only, given the plan, Jeff's PO Verifier and
+the `icm-architect` skill, and asked whether an ICM practitioner would accept this as a test of the
+method rather than a caricature of it. Plan version 1 in; version 2 out.
+
+| Note | Kind | Decision | What changed |
+|---|---|---|---|
+| The plan fixed "numbered stage folders" before the method chose a shape; the method builds the smallest structure that carries the work | Mandatory | Accepted | The builder runs `icm-architect` Build mode and records the form, stage count and boundaries, with reasons, before building. The plan fixes only the harness limits |
+| One read-only session cannot hold stage hand-offs or human gates, so "ICM" overclaims | Mandatory | Accepted | The arm is the ICM read path (routing and layered loading). Said in the question and every outcome sentence |
+| A write-enabled hand-off arm would break "same tools" and, with no person between stages, test scratch files | Optional | Accepted | Not run. The reason is in the plan |
+| The folder had five rehearsals; the ICM would get one build and four fixes | Mandatory | Accepted | Up to five build, walk and revise rounds on three practice sets, logged. The closed list applies only after the switch to live documents |
+| The text condition is close to decided by arithmetic at this scale | Mandatory | Accepted | The ICM's minimum text is published against the folder's before the run; scale added to the limits |
+| The generated document list is over the method's map budget; putting it in `reference/` would change every arm | Defect | Accepted | It goes in the first stage contract or a file the map names, never inside `reference/` |
+| Router and map content unspecified; the template's "stop and ask" would turn answers into questions | Defect | Accepted | Contents and exclusions specified and checked by script; "stop and ask" replaced by "name what is missing and answer every case" |
+| A stage contract needs a human check and there is no human | Defect | Accepted | A numbered check the model runs on its own work, after the PO Verifier's "What is checked here" |
+| The PO Verifier and the skill templates disagree on conventions | Defect | Accepted | The PO Verifier wins; departures listed |
+| The audit and walk test could not be repeated | Defect | Accepted | A cold session that is not the builder walks fixed practice questions; the skill's walk-test list scored item by item; budgets printed by script |
+| Build mode starts from questions to an owner who is not there | Defect | Accepted | The answers are written once and committed as the brief; the skill's version fingerprinted |
+| `icm-same` is a test of load timing, not of ICM | Optional | Accepted | Renamed `folder-staged`; its sentence never mentions ICM |
+| Remove prediction 2: the ICM loads less text first by construction | Removal | Accepted | Removed; the text prediction is written after the minimum is published |
+| A stranger could not rebuild the ICM without the practice documents | Missing | Accepted | The three practice sets are copied into `practice/` |
