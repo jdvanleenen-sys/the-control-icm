@@ -14,3 +14,11 @@ the failing item (and to say plainly that the map script lives outside the works
 auditor also noted), on practice documents, with the six gate questions run again. The live document
 list was then regenerated and the gate run again by a fresh auditor. The builder never saw the live
 documents or any live question.
+
+The fifth round changed three files (12 lines added, 8 removed; diff in
+`builder/practice-logs/round-5/icm.diff`). A fresh auditor then passed the gate with no failures and
+six of six practice answers right (`builder/GATE-2.md`). It recorded four problems that are not among
+the four fixable kinds, so they were left as they are: the map's note on regenerating the list would
+not work as a literal command, the stage contract is about three times the size the method suggests,
+it mixes path styles, and it repeats one rule within itself. The text prediction was updated to the
+fifth round's file sizes before the freeze.
