@@ -1,0 +1,32 @@
+## Q5, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 21432 characters, 358 words, 10.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-closures-and-refunds.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-membership.md
+  - Read reference/pool/pool-changes.md
+
+**Rules that decide it**
+- pool-membership.md 6.1: "A member may resign by giving 30 days' written notice to the membership secretary."
+- pool-closures-and-refunds.md 4.2 (original): "A member who resigns under pool-membership.md section 6.1 is refunded for each whole calendar month left after the notice ends, less £20. The joining fee is not refunded."
+- pool-fees.md 1.1: the Adult annual fee for 1 July 2025 to 30 June 2026 is £312. The membership year ends 30 June 2026 (pool-membership.md 3.4).
+- pool-changes.md, Change 5, is the only change entry that touches 4.2. It raises the deduction to £30 and pays nothing where fewer than 2 whole months are left. Its deciding date is the day the club receives the written notice. The club received it on 25 March 2026, which is before the 1 April 2026 effective date. Change 5 does not apply, so the original 4.2 stands with its £20 deduction and no 2-month minimum.
+
+**Working**
+1. The notice is received on 25 March 2026. Thirty days on from that is 24 April 2026, so the notice ends in April.
+2. The whole calendar months left after that are May and June 2026, which is 2 months. April is only part left, so it does not count.
+3. The monthly value is £312 ÷ 12 = £26. For 2 months that is £52.
+4. Less the £20 deduction: £52 − £20 = £32.
+5. Whether the member paid in one payment or in instalments does not matter. 4.2 refunds by month left, and the member paid in full anyway.
+
+**Check**
+- No figure came from the front-desk summary or the 2025 fee archive.
+- Change 5 was date-tested on the date the notice was received.
+- The membership, fees and refunds papers were all read.
+- No deciding fact is missing.
+- The question has one part, and the answer covers it.
+
+**Answer:** The member is due a refund of **£32**. That is 2 whole months (May and June 2026) at £26 each, which is £52, less the £20 deduction. The £30 deduction in Change 5 does not apply because the notice was received before 1 April 2026.
+

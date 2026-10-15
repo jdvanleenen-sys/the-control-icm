@@ -1,0 +1,34 @@
+## Q3, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 15138 characters, 346 words, 12.9 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-booking.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-membership.md
+
+**Rules that decide it**
+- boat-booking.md §3.1 (original): "A member may hold no more than three future bookings in any rolling seven-day period." Under this version the third booking would be allowed.
+- boat-changes.md §3 (replaces §3.1 of boat-booking.md):
+  - §3.2: the entry "applies to bookings dated from 1 July 2026 to 30 September 2026 inclusive."
+  - §3.3: §3.1 is replaced by "A member may hold no more than two future bookings in any rolling seven-day period."
+  - Per the note in boat-changes.md and documents.md, the deciding date is the booking date.
+- The booking is made on 10 July 2026. The session is on 16 July 2026. Both dates fall inside 1 July to 30 September 2026, so the change applies whichever one counts as the booking date. The two-booking limit replaces the three-booking limit.
+- boat-booking.md §2.1 (bookings open 14 days before the session) is also met. The 16 July session opened on 2 July, so the window is not a problem.
+- boat-booking.md §1.1 requires an active member. The question describes an adult member who already holds confirmed bookings, so I have taken them to be active.
+
+**Working**
+- Existing future bookings are on 12 July and 14 July, which is two.
+- Adding 16 July makes three.
+- 12 July to 16 July spans five days, so all three sit inside one rolling seven-day period (for example 10 to 16 July, or 12 to 18 July).
+- The limit is two, and three exceeds it.
+
+**Check**
+- No figure came from the summary or archive papers.
+- The change entry was tested on the booking date and passes.
+- boat-booking.md, boat-changes.md and boat-membership.md were read.
+- No missing fact changes the result.
+- The question's single part is answered.
+
+**Answer:** No. Under the summer limit of two future bookings in any rolling seven-day period, which applies to bookings dated 1 July to 30 September 2026, the member already holds two bookings (12 and 14 July). A third booking for 16 July falls in the same seven-day period, so it cannot be made.
+

@@ -1,0 +1,29 @@
+## Q5, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 19012 characters, 388 words, 11.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+  - Read reference/garden/fees.md
+
+**Rules that decide it**
+- plot-rules.md §2.3: "Raised bed: 1.2 m by 2.4 m. Offered only to a plot holder who is aged 70 or over, or who has a mobility need accepted by the plot secretary."
+- plot-rules.md §1.1: a plot holder is aged 16 or over, lives in Fernhill parish and has signed a plot agreement. Your mother lives in the parish, so this is met as long as she is 16 or over, which she clearly is.
+- plot-rules.md §3.1 and §3.3: a household may hold up to 2 plots, and its first plot must be a Starter plot or a Raised bed. Her household has never held a plot, so a Raised bed as a first plot is allowed. The household limits are not a barrier.
+- amendments.md: its three entries change only the late-payment charge (fees.md §4), the watering windows (water-and-hours.md §2) and the first-notice period (plot-rules.md §5.2). None touches §1, §2 or §3 of plot-rules.md, so there is nothing to date-test. The original wording stands.
+
+**Working**
+- Mobility need: you say she has none, so that route to a Raised bed is closed.
+- Age: you haven't given her age, and §2.3 turns on it. She qualifies only if she is 70 or over.
+- The rule sets no reference date for the age, such as 1 January 2026. It says only "is aged 70 or over", so the papers don't say whether the age is checked when she applies or at some other date.
+
+**Check**
+- No figure came from the volunteer FAQ or the 2025 archive.
+- The only change entries are on other sections, so none applies.
+- I read the plot rules, fees and amendments papers. Fees, tools and water don't bear on eligibility.
+- The missing fact, her age, is covered with both outcomes.
+- Both parts of the question are answered: her eligibility, and the fact it turns on.
+
+**Answer:** It depends on her age. If she is aged 70 or over, yes, she can be offered a Raised bed as her first plot, because she lives in Fernhill parish and the household has no plots. If she is under 70, no, because with no accepted mobility need she doesn't qualify. She could instead be offered a Starter plot, which is the other permitted first plot.
+

@@ -1,0 +1,32 @@
+## Q10, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 17973 characters, 331 words, 9.3 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-refunds.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-changes.md
+  - Read reference/lend/lend-safety.md
+  - Read reference/lend/lend-borrowing.md
+
+**Rules that decide it**
+
+- lend-refunds.md §3.1: "charge actual repair cost for avoidable damage, up to £40 per item." The damage is confirmed avoidable and the repair cost is £55, so the cap applies.
+- lend-fees.md §3.1: the deposit for a powered tool is a refundable £20. The member paid it.
+- lend-refunds.md §1.2: "Deduct only a confirmed repair or replacement charge for that tool from its deposit. Give the member a written calculation; any balance owed remains payable."
+- lend-refunds.md §3.2: "Give written notice of the calculation; payment is due within 14 days of that notice."
+- lend-refunds.md §1.1: the deposit is repaid within 7 days of return and inspection. Here the whole deposit is deducted, so nothing is left to repay.
+- Change entries: the register's three entries cover the annual fee, the ordinary loan and the unused-membership refund. None touches the sections used here, so no date test is needed.
+- I did not use lend-desk-guide.md (summary) or lend-fees-archive.md (archive).
+
+**Working**
+
+1. Repair cost £55, capped at £40, so the charge is £40.
+2. Deposit £20 is deducted from the £40 charge. £40 − £20 = £20 balance owed by the member.
+3. No deposit remains to repay.
+4. The balance is due within 14 days of the written notice of the calculation. The papers give no calendar date. The notice date isn't given, so neither is a due date. For example, notice on day 0 makes the balance due by day 14.
+
+**Check:** No figure came from a summary or archive. No change entry touches these sections. Every part of the question is answered: the charge, the deposit, and when the balance is due. The £15 excess repair cost above the £40 cap is not chargeable.
+
+**Answer:** The library charges £40, the £55 repair cost capped at £40 per item. The whole £20 deposit is deducted, so none is returned. The member owes the £20 balance, due within 14 days of the written notice of the calculation.
+

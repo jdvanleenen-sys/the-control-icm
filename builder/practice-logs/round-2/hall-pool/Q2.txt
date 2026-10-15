@@ -1,0 +1,19 @@
+## Q2, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 17818 characters, 222 words, 7.9 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-membership.md
+  - Read reference/pool/pool-changes.md
+
+**They pay £274 in total: £234 for the rest of the membership year plus a £40 joining fee.**
+
+- **Category:** The question says Adult, so the Adult figures apply.
+- **Membership fee:** pool-fees.md 1.3 says someone joining part-way through the year pays one-twelfth of the annual fee for each whole calendar month left, counting the month they join. Membership starts on the day the first fee is paid, 14 October 2025 (pool-membership.md 3.3). The year ends on 30 June (3.4). October to June is 9 months. The Adult annual fee is £312 (pool-fees.md 1.1), so 9 × (£312 ÷ 12) = 9 × £26 = £234. Section 1.3 itself gives £234 for an Adult joining in October 2025.
+- **No handling charge:** The £2 handling charge in pool-fees.md 1.2 applies only to the 12 monthly instalments. A lump sum avoids it.
+- **Joining fee:** pool-fees.md 2.1 sets a one-off £40 for an Adult, paid with the first fee. The waiver in 2.2 is only for a lapsed member who rejoins in time, and the question describes a new member.
+- **Total:** £234 + £40 = £274.
+
+None of the entries in pool-changes.md touches the sections used here. Changes 2 and 3 amend only pool-fees.md 3.1 and 4.1 (guest fee and no-show charge). Change 5 amends only the resignation refund paragraph in pool-closures-and-refunds.md.
+

@@ -1,0 +1,20 @@
+## Q10, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18116 characters, 223 words, 7.1 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/membership.md
+  - Read reference/makerspace/fees.md
+  - Read reference/makerspace/bulletin.md
+
+**The membership ends on 30 September 2026.**
+
+- **Notice date:** Membership 5.1 says notice given on or before the 20th of a month ends the membership on the last day of that month. Notice given on 20 August 2026 is on the 20th, so it is in time. The membership ends on the last day of August, which is 31 August 2026.
+- **Later notice:** Notice given after the 20th would end the membership on the last day of the following month. That rule does not apply here.
+- **Tier and age:** Neither changes the date. The resignation rule is the same for every tier and age. Forge is a permitted tier for a 41-year-old, because the Bench-only limit applies only to members aged 16 or 17.
+- **Bulletin:** None of its four entries touches membership.md 5.1. They cover check-in, the late-payment charge, the holding period and induction validity, so they have no effect on this date.
+- **Termination date:** Membership 5.3 makes the last day of membership under 5.1 the termination date, so the termination date is also 31 August 2026.
+- **Fees:** Fees 5.1 says no part of a monthly fee is refunded on resignation.
+
+I first wrote 30 September 2026 above, and that was wrong. The correct date is **31 August 2026**, because the notice was given on the 20th.
+

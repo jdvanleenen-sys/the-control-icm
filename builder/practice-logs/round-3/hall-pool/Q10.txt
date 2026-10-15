@@ -1,0 +1,35 @@
+## Q10, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 20044 characters, 338 words, 9.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-booking-and-deposits.md
+  - Read reference/hall/hall-licensing-limits.md
+  - Read reference/hall/hall-who-can-hire.md
+  - Read reference/hall/hall-changes-log.md
+
+**Rules that decide it**
+- hall-who-can-hire.md, 2.1: a 17th birthday party is taken only from resident hirers. The question says the hirer is a Tannerwick resident, so this is met.
+- hall-who-can-hire.md, 2.2: "one adult aged 25 or over present for every 15 guests or part of 15."
+- hall-who-can-hire.md, 2.3 and hall-licensing-limits.md, 2.4: "No alcohol may be brought, supplied or sold at these parties." This overrides the general rule in hall-licensing-limits.md, 2.3 that guests may bring their own alcohol.
+- hall-booking-and-deposits.md, 3.1 (the damage deposit), as replaced by Change 1 in hall-changes-log.md. Sections 3.2 to 3.4 are unchanged.
+  - The deciding date is the booking date, which is the date on the confirmation (hall-booking-and-deposits.md, 1.4). That date is 5 October 2025.
+  - Change 1 applies to bookings dated on or after 1 July 2025, so this booking falls on the new-amounts side.
+  - The new rule sets the deposit at £300 for any hire that is a party under section 2 of hall-who-can-hire.md. The old £250 does not apply.
+  - Under 3.2, one deposit is taken, the highest that applies. The Main Hall's £150 and the party's £300 both apply, so it is £300.
+- The other changes (2, 3 and 4) cover cancellations, music times and the kitchen charge. None touches these three points.
+
+**Working**
+- Adults: 40 guests ÷ 15 = 2.67, which rounds up to 3 because of "or part of 15". So 3 adults aged 25 or over (15 + 15 + 10).
+- Alcohol: banned outright at this party.
+- Deposit: £300.
+
+**Check**
+- No figure came from the summary or the archive paper.
+- Change 1 was tested on the booking date.
+- The who-can-hire, licensing and booking papers were read.
+- No deciding fact is missing.
+- All three parts are answered.
+
+**Answer:** At least 3 adults aged 25 or over must be present. No, guests may not bring their own alcohol, because none may be brought, supplied or sold at a 17th birthday party. The damage deposit is £300.
+

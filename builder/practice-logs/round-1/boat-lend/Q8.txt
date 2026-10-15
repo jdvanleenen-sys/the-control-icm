@@ -1,0 +1,31 @@
+## Q8, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 17294 characters, 310 words, 10.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-borrowing.md
+  - Read reference/lend/lend-changes.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-conduct.md
+  - Read reference/lend/lend-refunds.md
+
+**The overdue charge is £20, and no, they can't take the new toy until it is paid or formally waived.**
+
+**Charge**
+- The rule is lend-borrowing.md §3.2: £1 per item for each calendar day after the recorded due date, capped at £10 per item.
+- The changes register doesn't affect this. Its 21-day loan entry replaces §2.1, which only sets the loan length. The due dates are already recorded, so §3.2 runs from those.
+- Counting from the due date, Friday 8 May 2026, to the return on Monday 25 May 2026:
+  - Day 1 is Saturday 9 May and day 17 is Monday 25 May, so each item is 17 days late.
+  - The day of the week fits, since 17 days is two weeks and three days, and Friday plus three is Monday.
+- Each item comes to 17 × £1 = £17, which the cap reduces to £10.
+- The toy and the hand saw each get the cap, so the total is 2 × £10 = **£20**.
+- No extension was granted, and §2.2 says an overdue loan can't be extended anyway.
+- A hand saw is a hand tool, so no deposit is involved (lend-fees.md §3.1).
+
+**New toy**
+- lend-fees.md §3.2 says an unpaid charge blocks new loans until it is paid or formally waived. A pending appeal doesn't lift the block (also lend-conduct.md §3.3).
+- lend-borrowing.md §1.2 also requires all charges to be paid or formally waived before a loan.
+- Only the committee can waive a charge, with the amount and reason recorded in its minutes (lend-fees.md §3.3). A desk volunteer can't waive it.
+- The household limit isn't a problem, because both items have been returned (lend-borrowing.md §1.1).
+- Once they pay the £20 at the desk (cash or card, lend-fees.md §1.1), they can take the new toy on the same visit.
+

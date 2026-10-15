@@ -1,0 +1,29 @@
+## Q5, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 19212 characters, 332 words, 10.4 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+  - Read reference/garden/fees.md
+
+**Rules that decide it**
+- `plot-rules.md` §1.1: a plot holder is aged 16 or over, lives in Fernhill parish and has signed a plot agreement. Your mother lives in the parish, so she can be a plot holder.
+- `plot-rules.md` §2.3: a Raised bed is "Offered only to a plot holder who is aged 70 or over, or who has a mobility need accepted by the plot secretary."
+- `plot-rules.md` §3.3: a household's first plot "must be a Starter plot or a Raised bed". A first plot being a Raised bed is therefore allowed.
+- `plot-rules.md` §3.1: the household limit of 2 plots, 1 of them Standard, is not an obstacle. She has no plots and lives alone, so her household is just her (§1.3).
+
+**Change entries**
+- Amendments 1, 2 and 3 change the late-payment charge, the watering windows and the first-notice period. None touches §1, §2.3 or §3, so none affects eligibility.
+
+**Working**
+- Mobility route: she has no mobility need, so this route is closed.
+- Age route: her age isn't given, and the papers make the answer turn on it.
+  - Aged 70 or over: she qualifies under §2.3.
+  - Aged 69 or under: she doesn't qualify, and a Raised bed can't be offered.
+- No other rule in the papers allows a Raised bed to someone who is under 70 and has no mobility need.
+
+**Check:** I took nothing from the summary (`volunteer-faq.md`) or the archive paper. I read `plot-rules.md`, `fees.md` and the amendments log, and none of the amendments touches the sections I relied on. The missing fact, her age, is covered for both outcomes, and both parts of the question are answered.
+
+**Answer:** It depends on her age. Because she has no mobility need, she can be offered a Raised bed as her first plot only if she is 70 or over. If she is under 70, she can't be offered one. She could instead be offered a Starter plot as her first plot (§3.3).
+

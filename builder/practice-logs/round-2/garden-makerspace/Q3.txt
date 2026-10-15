@@ -1,0 +1,23 @@
+## Q3, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18256 characters, 290 words, 8.3 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/water-and-hours.md
+  - Read reference/garden/amendments.md
+  - Read reference/garden/plot-rules.md
+
+**No.** Rule 3.1 of the Water and Hours paper bans sprinklers and unattended hoses, so you may not set one up and leave it running. That holds on a permitted day in a permitted window, and with no restriction in force.
+
+**Reasons**
+
+- **Water and Hours, section 3.1:** "A hose must be held in the hand at all times. Sprinklers, soaker hoses and unattended hoses are not allowed." A sprinkler left running while you weed the far end of the plot breaks both the sprinkler ban and the held-in-hand requirement.
+- **Amendments Log, Amendment 2:** this changes only the watering windows in section 2. It replaces the times and the no-hose day, and its trigger is the date the watering takes place. It does not touch section 3, so the sprinkler ban stands whatever the date. Your window and day still have to be allowed under section 2 as amended, but that doesn't help here.
+- **Plot type:** a Standard plot (4 m by 5 m) has no exemption from section 3.1. Section 3.2 allows up to 20 minutes per plot per window, and 15 minutes would be inside that. That limit only caps hand-held watering and doesn't permit a sprinkler.
+- **Water restriction:** section 4 isn't engaged, as you say none is in force. A restriction would only add limits. It could not lift the sprinkler ban.
+
+**What you can do**
+
+- Water by hose for up to 20 minutes per window, holding the hose in your hand the whole time.
+- Use watering cans filled from the tanks at any time during gate hours, on any day (section 2.3, repeated in Amendment 2, section 3.3). You could fill cans and water the plot that way while you weed.
+

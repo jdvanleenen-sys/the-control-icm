@@ -1,0 +1,23 @@
+## Q7, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 21200 characters, 253 words, 9 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/machine-booking.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+  - Read reference/makerspace/safety-inductions.md
+
+**She is a no-show.** The session was on 7 May 2026, so the 10-minute check-in rule applies, and 14:12 is 12 minutes after the 14:00 start.
+
+- **Rule that applies:** Bulletin entry 1 replaces machine-booking.md section 5.1. Its deciding date is the date of the session, whenever the booking was made. The session is on 7 May 2026, which is after the effective date of 1 May 2026, so the entry applies. The printed 15-minute window in machine-booking.md 5.1 does not apply.
+- **The 10-minute window:** She had to check in within 10 minutes after the start time, and exactly 10 minutes counts as in time. The last in-time moment was 14:10. She arrived at 14:12, which is 2 minutes too late. Under the entry, a member who misses the window is a no-show and the session is released to other members.
+- **Why the 15-minute rule doesn't help her:** 14:12 would have been in time under the old rule, but that rule is replaced for this session.
+
+Her booking itself was valid:
+- She is in good standing and holds a valid wood lathe induction (machine-booking.md 2.1).
+- She booked on 24 April, 13 days before the session, inside the Bench 21-day window (2.2).
+- 7 May 2026 is a Thursday, so the session is not in Saturday peak time. Peak time is not a factor in the check-in answer.
+
+The question doesn't give the session's length, so I haven't checked the 4-hour Bench weekly limit. It doesn't affect the check-in answer.
+

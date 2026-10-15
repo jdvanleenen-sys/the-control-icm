@@ -1,0 +1,30 @@
+## Q7, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 12724 characters, 349 words, 9.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-borrowing.md
+  - Read reference/lend/lend-changes.md
+
+**Rules that decide it**
+- `lend-borrowing.md` 2.1 (original): "An ordinary loan lasts 14 calendar days from its collection date."
+- `lend-changes.md` section 3 replaces 2.1 from 1 April 2026: "An ordinary loan lasts 21 calendar days from its collection date." The deciding date is the date the item is collected. The reservation date, notification date and due date do not count. The replacement applies if collection is on or after 1 April 2026.
+- `lend-borrowing.md` 3.1: "collection is due within 7 days of notification." This sets the collection window.
+- The two annual-fee and unused-membership entries in the changes paper do not touch loan length. `lend-borrowing.md` 2.2 (the extension) is outside the question.
+
+**Working**
+- The notification was on Friday 27 March 2026. Seven days later is Friday 3 April 2026, so the collection window runs from 27 March to 3 April.
+- The collection date has not happened yet, and the question does not give it. The change entry's date test turns on that date, so the answer depends on it.
+- Collected 27, 28, 29, 30 or 31 March 2026 (before 1 April): the old 2.1 applies, so 14 calendar days.
+- Collected 1, 2 or 3 April 2026 (on or after 1 April): the replacement applies, so 21 calendar days.
+- If they collect after 3 April, the 21-day rule would apply by date. However, the papers do not say what happens to a reservation that is not collected in time, so I can't say whether the reservation would still stand.
+
+**Check**
+- No figure came from the desk guide or the archive.
+- The change entry was tested on the collection date, which is the date it names.
+- `lend-borrowing.md` was read in full for the reservation window.
+- The missing fact (the collection date) is given with both outcomes.
+- The question's single part is answered.
+
+**Answer:** It depends on the collection date. The loan is 14 calendar days if they collect on 27–31 March 2026, and 21 calendar days if they collect on or after 1 April 2026 (within the window, 1–3 April).
+

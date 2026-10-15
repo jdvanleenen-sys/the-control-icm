@@ -1,0 +1,30 @@
+## Q6, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 19451 characters, 306 words, 8.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-licensing-limits.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-who-can-hire.md
+  - Read reference/hall/hall-kitchen-and-equipment.md
+
+**Yes, 100 people is allowed, and the hirer must provide 3 stewards.**
+
+**Capacity**
+- hall-licensing-limits.md, section 1.1 sets the Main Hall limit at 120 standing or 90 seated at tables. A standing reception of 100 is under 120.
+- Section 1.3 says the count includes children, helpers, caterers and performers. So the 5 caterers and helpers count, and the total is 95 + 5 = 100.
+- Section 1.2 caps the whole building at 150 people. The question gives no other hires, so I have assumed nothing else brings the building over that.
+- If the guests were seated at tables, the limit would be 90 and 100 would be too many. The question says standing, so that does not apply.
+
+**Stewards**
+- Section 5.3 requires one steward aged 18 or over for every 40 guests or part of 40, for an event with more than 80 guests.
+- The wording is "guests", and the question gives 95 guests plus 5 caterers and helpers. It is not clear from section 5.3 alone whether caterers and helpers count as guests. Section 1.3 counts them only for capacity.
+  - Counting 95 guests: more than 80, so stewards are needed. 95 ÷ 40 = 2.375, which rounds up to 3.
+  - Counting all 100 people: 100 ÷ 40 = 2.5, which also rounds up to 3.
+  - Either way the answer is **3 stewards**, each aged 18 or over.
+- Having no alcohol does not remove the steward duty. Section 5.3 depends only on the number of guests.
+
+**Change entries**
+- Change 3 in hall-changes-log.md replaces only section 3.1 (music times). It does not touch sections 1 or 5.3, so it has no effect here.
+- The other changes concern deposits, cancellations and the kitchen charge. They do not touch capacity or stewards, so I have not applied them.
+

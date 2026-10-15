@@ -1,0 +1,19 @@
+## Q4, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 17598 characters, 271 words, 8.2 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-lifeguard-cover.md
+  - Read reference/pool/pool-changes.md
+  - Read reference/pool/pool-booking.md
+
+**2 qualified lifeguards must be on the poolside.**
+
+**Why**
+- **Change 4 applies.** Under pool-changes.md, Change 4 replaces paragraph 1.2 of pool-lifeguard-cover.md. It is effective 1 March 2026, and its deciding date is the day of the session. The session is on 10 March 2026, which is after that date. So the new text governs: 2 lifeguards are required whenever more than 16 swimmers are in the water, or whenever a lesson for under-8s shares the pool.
+- **The count.** There are 18 swimmers, and 18 is more than 16, so 2 lifeguards are needed.
+- **Early-session rule.** Pool-lifeguard-cover.md paragraph 5.1 limits weekday sessions starting between 06:30 and 08:00 to 20 swimmers, all aged 16 or over. This session is within that limit: 18 swimmers, all 16 or over, starting at 07:00 on a Tuesday. Change 4 says 5.1 is unchanged and still reads 20. It also says that from 1 March 2026 an early session with more than 16 swimmers needs 2 lifeguards. 5.1 therefore does not reduce the requirement to 1.
+- **Under the old rule, not applicable.** The original paragraph 1.2 set the threshold at more than 20 swimmers, which would have meant 1 lifeguard for 18. It was replaced for sessions from 1 March 2026.
+- **Lesson condition.** No lesson is taking place, so the under-8s lesson condition does not apply. The 16-swimmer threshold alone decides it.
+- **Qualifications.** Under pool-lifeguard-cover.md section 2, each lifeguard must hold a pool lifeguard qualification renewed within the last 24 months, and be aged 16 or over (2.1, 2.3). A lifeguard under 18 is never the only lifeguard on duty (2.3).
+

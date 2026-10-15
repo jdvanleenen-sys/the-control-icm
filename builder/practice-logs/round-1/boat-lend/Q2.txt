@@ -1,0 +1,27 @@
+## Q2, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 16254 characters, 285 words, 8.4 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-fees.md
+  - Read reference/boat/boat-safety.md
+  - Read reference/boat/boat-booking.md
+  - Read reference/boat/boat-changes.md
+
+**The member paid £8 and is refunded the full £8.**
+
+**Amount paid.** Boat-fees.md §3.1 sets a standard rowing session at £4 per boat. Two boats at £4 each is £8. Booking.md §3.2 allows up to two boats in one session, so the booking is within the limit. Payment on arrival is fine because §3.3 only requires payment before launch.
+
+**Refund.**
+- Safety.md §4.1 lets an on-duty committee member close the lake for lightning. That is what happened at 09:55.
+- Safety.md §4.3 says a closure cancels the affected bookings for the purpose of boat-fees.md §4.1. Booking.md §5.3 points to the same rule.
+- Boat-fees.md §4.1 says the club refunds a boat-use charge in full if it cancels a confirmed booking. The booking was confirmed, so the full £8 comes back.
+
+**Rules that don't apply.**
+- Boat-fees.md §4.2 (member cancellation, 24 hours' notice) and §4.3 (no-show) concern cancellations made by the member or missed bookings. The member didn't cancel and didn't miss the session. The club cancelled it, so the notice period is irrelevant.
+- Boat-changes.md entry 4 would change §4.2 to 12 hours, but only for payments made on or after 10 August 2026. The payment was on 14 June 2026, which is before that date, so the entry doesn't apply. It wouldn't change the result anyway, because §4.2 isn't the rule that decides this case.
+- Boat-changes.md entry 3 (summer booking limit) covers bookings dated 1 July to 30 September 2026. A 14 June booking falls outside that range, and the question doesn't involve the weekly limit.
+- Entry 2 (annual fees) concerns membership fees, not boat-use charges.
+
+I didn't use the front-desk guide (a summary) or the 2025 fees archive, since neither governs.
+

@@ -1,0 +1,29 @@
+## Q7, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 12924 characters, 307 words, 9.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-borrowing.md
+  - Read reference/lend/lend-changes.md
+
+**Rules that decide it**
+- `lend-borrowing.md` 2.1 (original): "An ordinary loan lasts 14 calendar days from its collection date."
+- `lend-changes.md` section 3 replaces 2.1 from 1 April 2026: "An ordinary loan lasts 21 calendar days from its collection date." Its date test is the date the item is collected, not the reservation date or the due date. It applies if collection is on or after 1 April 2026.
+- `lend-borrowing.md` 3.1: "collection is due within 7 days of notification."
+- The extension in 2.2 is not part of the question. The other changes entries (annual fee, unused-membership refund) don't touch loan length.
+
+**Working**
+- The household was notified on Friday 27 March 2026, so collection is due within 7 days, by Friday 3 April 2026.
+- The question doesn't say when they will collect, and the papers make the loan length turn on that date.
+- If they collect on 28, 29, 30 or 31 March, that is before 1 April. The change doesn't apply, so the original 14 days stands.
+- If they collect on 1, 2 or 3 April, the change applies, so the loan is 21 days.
+- The reservation and notification dates fall before 1 April, but the entry says they don't decide it.
+
+**Check**
+- No figure came from the desk guide or the archive.
+- The change entry was tested on the collection date.
+- Both outcomes are given because the collection date is missing.
+- I found nothing in the papers on what happens if they collect after 3 April, so I haven't answered that.
+
+**Answer:** It depends on the collection date. If they collect on or before 31 March 2026 (28–31 March), the loan runs 14 calendar days. If they collect on or after 1 April 2026 (1–3 April, within the 7-day window), it runs 21 calendar days.
+

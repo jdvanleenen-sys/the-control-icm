@@ -1,0 +1,22 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 14162 characters, 222 words, 7.3 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-membership.md
+  - Read reference/lend/lend-changes.md
+
+**They pay £30, and the renewed membership runs from Saturday 10 January 2026.** It lasts 12 calendar months from that date, which ends on 9 January 2027. The papers don't say whether the last day is 9 or 10 January 2027.
+
+**Fee: £30**
+- lend-fees.md 2.1 sets the standard annual fee at £24. The change entry in lend-changes.md section 2 replaces it with £30 for each 12-month term.
+- That entry is tested on the date the renewal payment is accepted. The desk accepted payment on 10 January 2026, which is on or after the 1 January 2026 effective date, so the £30 applies.
+- The reduced £12 fee in lend-fees.md 2.2 needs one named adult to declare income support. Neither adult does, so it doesn't apply.
+- The household has no unpaid charges, so nothing blocks renewal (lend-fees.md 3.2, lend-membership.md 2.2).
+
+**Start date: 10 January 2026**
+- lend-membership.md 2.1 says renewal "starts on the date the renewal payment is accepted, not on the old expiry date". The old expiry on 20 December 2025 is therefore ignored.
+- The same section says membership lasts 12 calendar months from the renewal date.
+- The membership was expired from 21 December 2025 until 10 January 2026. Under lend-membership.md 3.2, an expired membership can't take new loans. The papers give no backdating or grace period.
+

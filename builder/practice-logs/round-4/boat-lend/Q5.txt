@@ -1,0 +1,31 @@
+## Q5, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 17180 characters, 346 words, 11.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-membership.md
+  - Read reference/boat/boat-booking.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-safety.md
+
+**Rules that decide it**
+- boat-membership.md §4.3 (Repeated use): "A guest may use club boats on no more than three separate days between 1 January and 31 December."
+- boat-membership.md §4.1: an adult member may bring up to two guests on one visit. One guest is within this limit, so it isn't the problem.
+- boat-safety.md §2.3 only says guest children count toward the §4 limits. It adds nothing here.
+- boat-changes.md: the only entry touching booking rules is §3 (replacing boat-booking.md §3.1, the member's weekly booking limit). Its date test uses the booking date and covers bookings dated 1 July to 30 September 2026. A booking for 11 July 2026 falls inside that range. It limits how many bookings the member holds, not how often a guest may attend. It doesn't change §4.3 and doesn't affect this answer. The other entries are fee rules and don't apply.
+
+**Working**
+- Guest days in calendar year 2026 so far: Sat 14 March, Sat 2 May and Sat 20 June. That is 3 separate days, which is the maximum.
+- Sat 11 July 2026 would be a fourth separate day within 1 January to 31 December 2026, so it is not allowed.
+- The count runs per calendar year, so it starts again on 1 January 2027. That is a Friday, because 14 March 2026 was a Saturday and 1 January 2026 was a Thursday.
+- The first Saturday of 2027 is 2 January.
+
+**Check**
+- No figure came from the summary or the archive paper.
+- The change entry was date-tested on the booking date.
+- boat-membership.md, boat-booking.md, boat-safety.md and boat-changes.md were read.
+- No deciding fact is missing.
+- Both parts of the question are answered.
+
+**Answer:** No. The friend has already used club boats as a guest on three separate days in 2026, which is the §4.3 maximum, so 11 July 2026 is not allowed. The friend can next use a club boat as a guest from 1 January 2027, when the new calendar-year count starts. The first Saturday after that is 2 January 2027.
+

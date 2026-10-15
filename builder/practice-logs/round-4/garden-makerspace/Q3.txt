@@ -1,0 +1,27 @@
+## Q3, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18773 characters, 326 words, 10.4 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/water-and-hours.md
+  - Read reference/garden/amendments.md
+  - Read reference/garden/plot-rules.md
+
+**Rules that decide it**
+- water-and-hours.md, section 3.1: "A hose must be held in the hand at all times. Sprinklers, soaker hoses and unattended hoses are not allowed."
+- water-and-hours.md, section 4 (water restrictions) isn't in play, because you say none is in force.
+- amendments.md, Amendment 2 replaces only section 2 (watering windows). Its deciding date is the date of watering, and it applies to watering on or after 1 June 2026. It changes the windows to 06:00–09:00 and 19:00–21:00, and the no-hose day to Monday. It doesn't touch section 3, so section 3.1 stands as written. Which side of 1 June the watering falls on only changes which windows and days are permitted. It doesn't change the answer.
+
+**Working**
+- Window and day: you've said you're in a permitted window on an allowed day, so section 2 (original or amended) is met.
+- Duration: section 3.2 allows up to 20 minutes per plot in each window, so 15 minutes is within the limit.
+- Method: a sprinkler is banned outright by section 3.1. Leaving a hose running while you weed the other end of the plot also breaks the rule that a hose be held in the hand at all times, because it would be unattended.
+
+**Check**
+- No figure came from the summary (volunteer-faq.md) or the archive.
+- The only change entry that touches water, Amendment 2, was tested on the date of watering. It doesn't alter section 3.
+- The governing papers that cover the facts (water-and-hours.md, plot-rules.md for the Standard plot) were read. The plot type doesn't change the hose rule.
+- Every part of the question is answered.
+
+**Answer:** No. Sprinklers and unattended hoses are not allowed (water-and-hours.md, section 3.1), even in a permitted window on an allowed day and within the 20-minute limit. You may water by hose only while holding it in your hand. Watering cans filled from the tanks are allowed at any time during gate hours.
+

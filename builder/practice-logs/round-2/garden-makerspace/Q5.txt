@@ -1,0 +1,22 @@
+## Q5, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18695 characters, 270 words, 8.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+  - Read reference/garden/fees.md
+
+**It depends on her age. She can be offered a Raised bed if she is 70 or over. If she is under 70, she can't, because she has no mobility need.**
+
+Her age is the one fact the question doesn't give, and the rules turn on it.
+
+- **Raised bed rule:** A Raised bed is "offered only to a plot holder who is aged 70 or over, or who has a mobility need accepted by the plot secretary" (plot-rules.md, section 2.3). The rule doesn't say on which date the age is tested.
+  - **70 or over:** she meets the age condition, so a Raised bed can be offered.
+  - **Under 70:** she meets neither condition, since you say she has no mobility need. She could take a Starter plot instead (see below).
+- **Who can hold a plot:** She must be 16 or over, live in Fernhill parish and sign a plot agreement (plot-rules.md, section 1.1). She lives in the parish, so she only needs to sign the agreement.
+- **First plot:** A household's first plot must be a Starter plot or a Raised bed (plot-rules.md, section 3.3). A Raised bed is allowed as a first plot. Her household has no plots, so the limit of 2 plots per household (section 3.1) is not a problem.
+- **Amendments:** The only amendment to plot-rules.md changes the first-notice period in section 5.2 (Amendment 3). None of the amendments touch sections 1 to 3, so the original wording applies.
+
+I used only the governing papers. The volunteer FAQ is a summary and the 2025 plot rules are an archive, so neither decides this.
+

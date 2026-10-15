@@ -1,0 +1,25 @@
+## Q1, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 15129 characters, 277 words, 9.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-fees.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-membership.md
+
+**Rules that decide it**
+- `boat-membership.md` 1.2: a household membership may include up to two adults and four children who normally live at the same address. Two adults and two children at one address qualify for one household membership.
+- `boat-fees.md` 1.1: "A new member must pay a one-time joining fee of £15." The papers set no per-person joining fee for a household, so I've charged it once for the household membership.
+- `boat-fees.md` 1.3 sets the household annual fee at £85.
+- `boat-changes.md` 2.2 to 2.4: the household fee is replaced by £95 for "payments made on or after 1 April 2026". The deciding date is the payment date, not the date the committee decided (12 December 2025). The joining fee (1.1) is not changed by any entry.
+- Other change entries (3 and 4) cover booking limits and cancellation refunds, so they don't touch this case.
+
+**Working**
+The payment date decides the fee, and the family has not fixed it:
+- Paid in March 2026 (before 1 April), the original 1.3 applies: £15 + £85 = **£100**.
+- Paid in April 2026 (on or after 1 April), the replacement applies: £15 + £95 = **£110**.
+
+**Check:** I took no figure from the quick guide or the 2025 archive. The change entry was tested against the payment date. I read the membership paper for household eligibility. The missing payment date is covered with both outcomes.
+
+**Answer:** It depends on the payment date. If they pay in March 2026, the total is £100 (£15 joining fee + £85 household fee). If they pay in April 2026, the total is £110 (£15 joining fee + £95 household fee).
+

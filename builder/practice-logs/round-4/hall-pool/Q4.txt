@@ -1,0 +1,34 @@
+## Q4, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18115 characters, 320 words, 9.2 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-lifeguard-cover.md
+  - Read reference/pool/pool-changes.md
+  - Read reference/pool/pool-booking.md
+
+**Rules that decide it**
+
+- pool-lifeguard-cover.md §1.2 originally said 2 lifeguards are needed when "more than 20 swimmers are in the water, or whenever a lesson for under-8s shares the pool with other swimmers."
+- pool-changes.md, Change 4 (Second lifeguard) replaces §1.2. It was decided 10 February 2026 and took effect 1 March 2026. The deciding date is the day of the session. "There must be 2 lifeguards whenever more than 16 swimmers are in the water, or whenever a lesson for under-8s shares the pool."
+- The session is on 10 March 2026, which is after 1 March 2026. Change 4 therefore applies, and the old threshold of 20 does not.
+- pool-lifeguard-cover.md §5.1 (early sessions) is unchanged. Early weekday sessions starting 06:30–08:00 are limited to 20 swimmers, all aged 16 or over. Change 4 says that from 1 March 2026 an early session with more than 16 swimmers needs 2 lifeguards.
+- §1.1 sets the minimum of 1 lifeguard. §1.3 caps the pool at 40 swimmers. Neither changes the result.
+
+**Working**
+
+- The session starts at 07:00 on a Tuesday, a weekday inside 06:30–08:00. It is an early session.
+- There are 18 swimmers, which is within the 20 limit, and all are 16 or over, so the session is allowed to run.
+- 18 is more than 16, so the Change 4 threshold is met. There is no lesson, so the under-8s limb doesn't matter.
+- Two lifeguards are required.
+
+**Check**
+
+- No figure came from a summary or archive paper.
+- Change 4 was tested against the session date, 10 March 2026, which is on or after 1 March 2026.
+- Of the other changes, only Change 4 touches lifeguard cover.
+- The question gives all the facts the rule turns on, so nothing is missing.
+- The question asked for one number, and it is answered.
+
+**Answer:** 2 qualified lifeguards must be on the poolside.
+

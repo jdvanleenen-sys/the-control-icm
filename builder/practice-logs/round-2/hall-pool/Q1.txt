@@ -1,0 +1,17 @@
+## Q1, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 20524 characters, 231 words, 7.9 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-booking.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-membership.md
+  - Read reference/pool/pool-changes.md
+
+**The guest fee is £7.**
+
+- **Guest fee rate:** Under pool-fees.md section 3.1, the guest fee was £6 for a guest aged 16 or over. Change 2 in pool-changes.md replaces that with £7 for a guest aged 16 or over and £3.50 for a guest under 16. It is effective 1 January 2026, and its deciding date is the day of the guest's visit, not the day of booking. The visit is on 24 January 2026, which is after 1 January 2026, so Change 2 applies. The guest is 30, so the £7 rate applies. The booking date of 16 January does not matter for the fee.
+- **Booking is allowed:** The booking is made 8 days ahead (16 to 24 January). Original pool-booking.md section 1.2 allows only 7 days, but Change 1 allows 10 days. Its deciding date is the day the booking is made, 16 January 2026, which is after 1 October 2025, so Change 1 applies and the booking is valid.
+- **Guest rules:** Under pool-booking.md section 6.1 the guest was booked by the member in the same booking. Under pool-membership.md section 7.1 a full member may bring up to 2 guests, and this is 1. The question doesn't say whether this guest has already come 6 times in the membership year, so I've assumed not.
+- **Not applicable:** Change 3 (no-shows) doesn't apply because both people attended.
+

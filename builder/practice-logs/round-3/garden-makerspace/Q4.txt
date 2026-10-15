@@ -1,0 +1,36 @@
+## Q4, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 19012 characters, 501 words, 12.9 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/fees.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+
+**Rules that decide it**
+
+- **Plot rules, section 3.** A household may hold up to 2 plots, with no more than 1 Standard. A household's first plot must be a Starter or Raised bed, and it may apply for a Standard plot only after holding its first plot for 1 complete plot year. Your Starter plot dates from 2023 and the Standard would be your second plot and first Standard, so you're allowed it.
+- **Fees, section 1.1.** The annual fee is charged per plot. A Standard plot is $85 and a Starter plot is $30.
+- **Fees, section 2.2.** The full annual fee is charged if the agreement is dated on or before 30 June 2026. Half is charged only if it is dated 1 July 2026 or later. Your agreement is dated 4 May 2026, so the full fee applies and the half-fee rule doesn't.
+- **Fees, section 6.2.** You qualify for the reduced rate because you were 65 or over on 1 January 2026.
+- **Fees, section 6.3.** "The reduced rate applies to 1 plot per household. If the household holds 2 plots, it applies to the plot with the lower annual fee."
+- **Fees, section 6.4.** The reduced rate and the section 2.2 half fee can stack to 25%, but only on the same plot. The half fee doesn't apply to your new plot, so there is nothing to stack.
+- **Fees, section 3.1.** "The deposit is $50 per household, not per plot. It is paid once, with the household's first fee."
+- **Amendments.** The only changes are to the late-payment charge, the watering windows and the first-notice period. None touches the sections used here, so no date test is needed.
+
+**Working**
+
+- The household will hold 2 plots: the Starter at $30 and the Standard at $85.
+- The reduced rate goes to the lower-fee plot, which is the Starter. 50% of $30 is $15, which matches what you paid.
+- The Standard plot therefore pays the full $85. The 50% reduction doesn't carry over, so $42.50 is wrong.
+- The deposit is charged once per household, with the first fee. Plot 22 was your household's first plot, so the deposit belongs to that and a second plot doesn't trigger another one. The papers don't say when you paid it, but it was due with your first fee.
+
+**Check**
+
+- I took no figures from the volunteer FAQ or the archived 2025 rules.
+- I read the fees, plot rules and amendments papers, and the amendments don't touch the sections I used.
+- I used your own facts: age, household size, the agreement date and the plot types.
+- Both questions are answered.
+
+**Answer:** No, the Standard plot costs the full $85, not $42.50. The reduced rate applies to only one plot per household, the lower-fee Starter, and the half-fee rule doesn't apply because your agreement is dated before 1 July 2026. You don't pay a second $50 deposit, because it is charged once per household.
+

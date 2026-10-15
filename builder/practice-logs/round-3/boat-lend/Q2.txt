@@ -1,0 +1,41 @@
+## Q2, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 18984 characters, 394 words, 11.4 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-fees.md
+  - Read reference/boat/boat-booking.md
+  - Read reference/boat/boat-safety.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-volunteers.md
+
+**Rules that decide it**
+- boat-fees.md §3.1 (Standard session): "A booked rowing boat or kayak session costs £4 per boat." The junior rate in §3.2 doesn't apply, because the member is an adult and the session wasn't booked solely for juniors.
+- boat-booking.md §3.2: up to two boats can be booked in one session, so two boats is allowed.
+- boat-safety.md §4.1: an on-duty committee member may close the lake because of lightning. The closure at 09:55 was within that authority.
+- boat-safety.md §4.3: "A closure cancels affected bookings for the purpose of section 4.1 of boat-fees.md."
+- boat-fees.md §4.1 (Club cancellation): "The club will refund a boat-use charge in full if it cancels a confirmed booking."
+
+**Change entries**
+- The only change entry that touches the refund rules is boat-changes.md §4, which replaces boat-fees.md §4.2 (member cancellation). Its deciding date is the payment date. The payment was made on 14 June 2026, before the 10 August 2026 effective date, so it doesn't apply.
+- It wouldn't matter anyway. This was a club cancellation under §4.1, not a member cancellation under §4.2.
+- The fee entry in boat-changes.md §2 covers annual fees only. The booking-limit entry in §3 covers a different section.
+- So the §4.1 and §3.1 text stands as written.
+- The §4.3 no-show rule doesn't apply. The member did not miss the booking, because the club cancelled it.
+
+**Working**
+- Paid: 2 boats × £4 = £8.
+- The member arrived at 09:45, which is 15 minutes before the 10:00 start. That meets the "at least 10 minutes" arrival rule in boat-booking.md §4.1, though nothing turns on it.
+- The charge was paid before launch, as boat-fees.md §3.3 requires.
+- Refund: the closure cancelled the confirmed booking, so the whole charge is refunded, which is £8.
+- Neither the lateness of the closure (09:55, after payment) nor the member's earlier arrival affects this. §4.1 has no time condition.
+
+**Check**
+- No figure came from the front-desk guide or the 2025 fees archive.
+- I date-tested the change entries on the payment date.
+- I read the fees, booking, safety and volunteers papers, and the changes register.
+- No deciding fact is missing.
+- Both parts of the question are answered.
+
+**Answer:** The member paid £8 (2 boats × £4), and all £8 is refunded because the lightning closure cancelled the booking.
+

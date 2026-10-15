@@ -1,0 +1,30 @@
+## Q1, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 14929 characters, 308 words, 9.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-fees.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-membership.md
+
+**Rules that decide it**
+- **boat-membership.md §1.2:** a household membership may include up to two adults and four children living at the same address. This family (two adults, two children) qualifies.
+- **boat-fees.md §1.1:** "A new member must pay a one-time joining fee of £15." This is a first-time joiner, so it applies. It is not changed by any entry.
+- **boat-fees.md §1.3:** the household annual fee is £85.
+- **boat-changes.md §2.4 (replaces §1.3):** the household annual fee becomes £95. The deciding date is the payment date, and the entry applies to payments made on or after 1 April 2026 (§2.2).
+- **boat-changes.md §3 and §4:** these cover booking limits and boat-use refunds, so they don't touch this case.
+- **boat-membership.md §2.3:** membership begins when the Treasurer records cleared payment of both fees. That matches the plan to pay both together on the day they join.
+
+**Working**
+- Joining in March 2026: the payment date is before 1 April 2026, so the original §1.3 applies. £15 + £85 = **£100**.
+- Joining in April 2026: the payment date is on or after 1 April 2026, so the replacement §1.3 applies. £15 + £95 = **£110**.
+
+**Check**
+- No figure came from the front-desk guide or the 2025 archive.
+- The change entry was tested against the payment date.
+- I read the membership paper for the household rules.
+- Both possible months are answered.
+- One assumption: §1.1 gives one £15 joining fee per new membership. The paper doesn't say it is charged per person, so I have charged it once for the household.
+
+**Answer:** It depends on the month they join. They pay **£100** if they join and pay in March 2026 (£15 joining fee + £85 household fee). They pay **£110** if they join and pay in April 2026 (£15 joining fee + £95 household fee).
+

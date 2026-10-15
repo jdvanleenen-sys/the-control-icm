@@ -1,0 +1,31 @@
+## Q2, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 15723 characters, 347 words, 7.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+
+Notice dated 20 June 2026 is before 1 July 2026, so the original 14-day period applies.
+
+14th day after 20 June: 20 June + 14 days = 4 July 2026. Cleared on 2 July, which is before that.
+
+**Rules that decide it**
+- plot-rules.md, 4.2: "Weeds must not be taller than 20 cm." The plot failed this.
+- plot-rules.md, 5.2 (original): the plot holder "must put the plot right on or before the 14th day after the date printed on the notice."
+- amendments.md, Amendment 3 (effective 1 July 2026) would shorten this to the 10th day. Its deciding date is the date printed on the first notice (4.4). That date is 20 June 2026, which is before 1 July 2026, so the amendment does not apply. Under 4.4, a notice dated on or before 30 June keeps the original period "even if that period ends in July."
+- plot-rules.md, 5.4 and 6.1(b): this was the household's only notice in 2026, so it is far from the 3-notice forfeiture threshold. The second-notice rule in 5.3 applies only if the plot is not put right in time.
+
+**Working**
+- Deadline under the original 5.2: 20 June + 14 days = 4 July 2026. Day 1 is 21 June and day 14 is 4 July.
+- The plot was cleared on 2 July 2026 and met the standard from that day. That is day 12, which is 2 days before the deadline.
+- For comparison, the amended 10-day period would have ended on 30 June. It does not apply here.
+
+**Check**
+- I used no figure from the volunteer FAQ or the 2025 archive.
+- I date-tested Amendment 3 on the date printed on the notice (20 June 2026). I did not use the clearing date.
+- The other amendments cover fees and watering, which this question doesn't raise.
+- Every part of the question is answered.
+
+**Answer:** Yes. The original 14-day period applies, so the deadline was 4 July 2026. The plot was put right on 2 July 2026, which is in time, and no second notice follows.
+

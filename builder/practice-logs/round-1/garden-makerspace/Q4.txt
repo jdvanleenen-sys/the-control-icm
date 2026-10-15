@@ -1,0 +1,33 @@
+## Q4, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18401 characters, 424 words, 13.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/fees.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+
+**Answer: No on both. The Standard plot costs the full $85, not $42.50, and there is no second $50 deposit.**
+
+**Why the Standard plot is $85**
+- The Standard annual fee is $85 (fees.md, 1.1).
+- Your agreement is dated 4 May 2026. That is on or before 30 June 2026, so the full annual fee is charged, not the half fee for plots taken up from 1 July (fees.md, 2.2).
+- The reduced rate is 50% of the annual fee, and you qualify because you were 65 or over on 1 January 2026 (fees.md, 6.1 and 6.2).
+- It applies to only one plot per household. When a household holds 2 plots, it goes to the plot with the lower annual fee (fees.md, 6.3).
+- Your Starter plot ($30) has the lower fee than the Standard ($85), so the reduced rate stays on plot 22. That is why you paid $15, which is correct. The Standard plot gets no reduction.
+- The 25% figure in fees.md, 6.4 only applies when the reduced rate and the half fee fall on the same plot. That isn't the case here.
+
+**Why there is no second deposit**
+- The deposit is $50 per household, not per plot. It is paid once, with the household's first fee (fees.md, 3.1).
+- Your household's first plot is plot 22, so the deposit belongs with that first fee. The papers don't show whether it was paid, but if it was, nothing more is due.
+
+**Your eligibility for the Standard plot**
+- A household may hold up to 2 plots, with at most 1 Standard (plot-rules.md, 3.1).
+- A household can apply for a Standard plot only after holding its first plot for 1 complete plot year (plot-rules.md, 3.3). You have held plot 22 since 2023, so you meet this.
+
+**When to pay**
+- The fee is due on or before the 14th day after the agreement date (fees.md, 2.2). Counting from 4 May 2026, that is **18 May 2026**.
+- The late-payment charge is $2 per day from 19 May as day 1, capped at $30 per plot per year. Amendment 1 applies because the due date falls after its 1 April 2026 effective date (amendments.md, 2.3 and 2.4).
+- If the fee is still unpaid more than 30 days after the due date, the plot is forfeited (plot-rules.md, 6.1(c)). The charge is not refundable, and paying it does not stop forfeiture (amendments.md, 2.3).
+- If you haven't paid yet, the amount is $85 plus any late charge, up to $30.
+

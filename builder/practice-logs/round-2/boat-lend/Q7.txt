@@ -1,0 +1,26 @@
+## Q7, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 12407 characters, 241 words, 8.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-borrowing.md
+  - Read reference/lend/lend-changes.md
+
+**It depends on the collection date: 14 days if they collect on or before Tuesday 31 March 2026, and 21 days if they collect on or after Wednesday 1 April 2026.** The question doesn't give the collection date, and the rules make the answer turn on it.
+
+**Rules used**
+- **lend-borrowing.md 2.1 (original):** "An ordinary loan lasts 14 calendar days from its collection date."
+- **lend-changes.md section 3 (Ordinary loan decision):** this replaces 2.1 with "An ordinary loan lasts 21 calendar days from its collection date."
+  - The date test is the date the item is collected, "not its reservation or due date".
+  - The replacement applies if collection is on or after 1 April 2026.
+  - The notification date of 27 March doesn't decide anything. The committee's decision date of 16 March doesn't either.
+- **lend-borrowing.md 3.1:** collection is "due within 7 days of notification". From 27 March, that runs to Friday 3 April 2026.
+
+**Outcomes**
+- **Collected 27–31 March 2026:** the entry's test isn't met, so the old 2.1 applies and the loan is **14 calendar days**.
+- **Collected 1–3 April 2026:** the entry applies and the loan is **21 calendar days**.
+
+The papers don't say what happens if the household collects after 3 April. If that happens, the 21-day rule would apply on the collection date alone, but whether the reservation still stands isn't covered.
+
+The extension (lend-borrowing.md 2.2) isn't included in these figures, as the question asked.
+

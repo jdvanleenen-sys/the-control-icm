@@ -1,0 +1,23 @@
+## Q9, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 15920 characters, 255 words, 9.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-refunds.md
+  - Read reference/lend/lend-changes.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-membership.md
+
+**Yes. The full £30 is due, and it must be paid by Friday 24 July 2026.**
+
+**Which rules apply**
+- **Refund window** (`lend-refunds.md` 2.1, as replaced by `lend-changes.md` section 4): the date test is the date the written request reaches the desk. That is 10 July 2026, which is on or after 1 July 2026, so the replacement applies. The window is 14 calendar days of joining, not the original 7. The joining date is day zero.
+- **Amount** (`lend-fees.md` 2.1, as replaced by `lend-changes.md` section 2): the date test is the date the payment is accepted. That is 1 July 2026, which is on or after 1 January 2026, so the standard fee is £30, not the original £24. The question says the household paid the standard fee, so the £12 reduced fee does not come into it.
+- **Payment deadline** (`lend-refunds.md` 2.3): an approved refund must be paid within 14 calendar days of receiving the request. Nothing in the changes register alters this section.
+
+**Working**
+- Joining on Wednesday 1 July is day 0, so Friday 10 July is day 9. That is within the 14-day window.
+- Under the old 7-day rule, day 9 would have been too late. That rule no longer applies because the request was received on or after 1 July 2026.
+- Neither named adult collected an item, so the "unused" condition is met. The exclusion in 2.2 (no refund after collection) does not apply.
+- Deadline: 10 July + 14 calendar days = Friday 24 July 2026.
+

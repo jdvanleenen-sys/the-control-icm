@@ -1,0 +1,25 @@
+## Q9, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18599 characters, 291 words, 9.1 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/storage.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+
+**Rules that decide it**
+- storage.md §3.2 (Holding period), as printed: "The item is kept in the holding cage for 21 days. The day it is moved is day one and day 21 is included. The owner may collect it on any of those days."
+- storage.md §3.3 (Uncollected items): "On the day after the holding period ends, the item becomes the property of the makerspace."
+- bulletin.md Entry 3 (effective 15 July 2026) would cut the holding period to 14 days. Its deciding date is the date the item is moved to the holding cage. That date is 10 July 2026, which is before 15 July 2026. So Entry 3 does not apply, and the printed 21-day period stands.
+- The other bulletin entries concern different sections (check-in, late-payment charge, induction validity), so none of them touches this case.
+
+**Working**
+- Day one is 10 July 2026, the day the door was moved.
+- Day 21 is 10 July + 20 days = 30 July 2026.
+- 28 July 2026 is day 19 (10 July + 18 days). That is within the 21 days.
+- The door becomes the makerspace's property on the day after day 21, which is 31 July 2026.
+
+**Check:** No figure came from the quick-guide or the 2025 handbook. Entry 3 was date-tested on the date the item was moved (10 July), not the collection date. The question gives every fact the answer turns on. Both parts of the question are answered.
+
+**Answer:** Yes. On 28 July 2026 (day 19 of 21) she may still collect the door, and it does not yet belong to the makerspace. Her right to collect runs through 30 July 2026, and ownership passes to the makerspace on 31 July 2026.
+

@@ -1,0 +1,36 @@
+## Q8, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 22628 characters, 370 words, 11.4 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-hire-charges.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-who-can-hire.md
+  - Read reference/hall/hall-kitchen-and-equipment.md
+  - Read reference/hall/hall-booking-and-deposits.md
+
+**Rules that decide it**
+- **hall-who-can-hire.md, s1.2–1.3:** a resident (lives in Tannerwick parish) pays the "Resident or community group" column. The question says the hirer is not a regular hirer, so the 10% discount in hall-hire-charges.md s3.1 does not apply.
+- **hall-hire-charges.md, s1.1:** the Main Hall resident rate is £18 an hour.
+- **hall-hire-charges.md, s1.2:** "Part hours are charged as full hours." The minimum hire is 2 hours.
+- **hall-hire-charges.md, s1.4:** this only protects bookings made before 9 June 2025. The booking date here is 20 March 2026, so it does not apply.
+- **hall-hire-charges.md, s2:** session rates cover Saturday evening and a whole day. This is a Wednesday afternoon, so neither applies.
+- **hall-hire-charges.md, s4.3:** 15 April 2026 is not a bank holiday, so there is no 50% increase.
+- **hall-hire-charges.md, s1.3, replaced by Change 4 in hall-changes-log.md:** full use of the kitchen (cooker and crockery) is "full use" under hall-kitchen-and-equipment.md s1.2.
+  - Change 4's deciding date is the hire date. A hire on or after 1 April 2026 pays £20.
+  - The exception is a booking date before 9 March 2026, which keeps £15.
+  - The hire date is 15 April 2026, which is on or after 1 April 2026.
+  - The booking date is 20 March 2026, which is not before 9 March 2026.
+  - So Change 4 applies and the kitchen charge is **£20**, not £15.
+- **Changes 1–3:** these concern the damage deposit, late cancellations and music. They do not touch the hire charge.
+
+**Working**
+- Time hired: 14:00 to 17:30 is 3.5 hours, which is charged as 4 full hours.
+- Hourly charge: 4 × £18 = £72.
+- Kitchen: £20, a flat charge for the booking.
+- Total: £72 + £20 = £92.
+
+**Check:** no figure came from the front-desk summary or the archive. Change 4 was tested on the hire date and the booking date, and the other changes do not touch this charge. No session rate, discount or extra applies. There is no missing fact, because the question gives the hirer category, the hours and the kitchen use.
+
+**Answer:** The hire charge is £92. That is £72 for the Main Hall (4 hours at £18) plus £20 for full kitchen use.
+

@@ -1,0 +1,30 @@
+## Q8, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 22111 characters, 259 words, 11.9 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-hire-charges.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-who-can-hire.md
+  - Read reference/hall/hall-kitchen-and-equipment.md
+  - Read reference/hall/hall-booking-and-deposits.md
+
+**The hire charge is £92.**
+
+**Working**
+- **Category:** a Tannerwick resident who isn't a regular hirer pays the Resident rate, with no regular-hirer discount (hall-who-can-hire.md, sections 1.2 and 3.1; hall-hire-charges.md, section 3.1).
+- **Hours:** 14:00 to 17:30 is 3.5 hours. Part hours are charged as full hours, so that is 4 hours. This is over the 2-hour minimum (hall-hire-charges.md, section 1.2).
+- **Hourly charge:** the Main Hall resident rate is £18 an hour (hall-hire-charges.md, section 1.1). 4 × £18 = £72.
+- **Kitchen:** full use means the cooker and crockery (hall-kitchen-and-equipment.md, section 1.2), so the kitchen charge applies.
+  - Change 4 in hall-changes-log.md replaces hall-hire-charges.md, section 1.3, with a flat £20 per booking.
+  - The deciding date is the hire date, 15 April 2026, which is on or after 1 April 2026.
+  - The exception keeps £15 only for bookings with a booking date before 9 March 2026. The booking date is the confirmation date (hall-booking-and-deposits.md, section 1.4), 20 March 2026, so the exception doesn't apply.
+  - The kitchen charge is therefore £20, not £15.
+- **Total:** £72 + £20 = **£92**.
+
+**Rules that don't change the figure**
+- **Bank holiday uplift:** the 50% increase in hall-hire-charges.md, section 4.3, doesn't apply because 15 April 2026 is not a bank holiday.
+- **Session rates:** the Saturday evening and whole-day rates (section 2) don't apply. The hire is on a Wednesday afternoon and isn't a whole day.
+- **Section 1.4:** it only protects bookings made before 9 June 2025.
+- **Archive and front-desk guide:** I didn't use either, because neither governs.
+

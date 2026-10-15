@@ -1,0 +1,26 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18599 characters, 361 words, 10.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/storage.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+
+**Rules that decide it**
+- **storage.md section 1.1:** "A Forge member has one locker." The member is entitled to a locker.
+- **storage.md section 2.1:** "A locker may hold no more than 25 kg. Nobody may store food, pressurised gas cylinders, lithium batteries rated above 100 Wh, or more than 500 ml in total of flammable liquid. Exactly 25 kg, exactly 100 Wh and exactly 500 ml are allowed."
+- **membership.md section 2.3:** this defines good standing. Storage section 2.1 does not make good standing a condition for a locker, and the member has it anyway.
+- **bulletin.md:** none of its four entries replaces storage.md section 2.1. Entry 3 changes only section 3.2 (the holding period), so no date test is needed for the 5 October 2026 start. The quick-guide and the 2025 handbook were not used, because neither governs.
+
+**Working**
+- Weight: the locker would hold 12 kg in total, and 12 kg is under the 25 kg limit.
+- Food, gas cylinders and flammable liquid: the locker would hold none, so those limits are met.
+- Lithium battery: the limit is 100 Wh, and exactly 100 Wh is allowed. The question gives the pack's rating in neither Wh nor anything convertible to it (such as volts and amp-hours). The papers make the answer turn on that figure, so it is the missing fact.
+  - Rated 100 Wh or less: allowed.
+  - Rated above 100 Wh: prohibited. Staff would remove it under section 2.2.
+
+**Check:** I used no figures from a summary or archive paper. The changes paper was read, and none of its entries touches section 2.1. The storage and membership papers were read, since their cover lines touch the facts. The missing deciding fact has both outcomes given, and both parts of the question (locker entitlement and the battery) are answered.
+
+**Answer:** It depends on the pack's rating. The member may keep it in the locker if it is rated 100 Wh or less, including exactly 100 Wh. It is not allowed if it is rated above 100 Wh. The 12 kg total, the Forge locker entitlement and the absence of food, gas and flammable liquid all pass.
+

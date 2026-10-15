@@ -1,0 +1,33 @@
+## Q7, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 19768 characters, 383 words, 12.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-cancellations-and-damage.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-booking-and-deposits.md
+  - Read reference/hall/hall-hire-charges.md
+
+**Kept: the whole hire charge. Refunded: the damage deposit in full and the £10 projector charge.** The papers don't give the hire charge, so I can't state the kept amount in pounds.
+
+**Which cancellation rule applies**
+- Notice counts on the date the booking secretary receives it, which is 18 December 2025 (hall-cancellations-and-damage.md, 1.1).
+- The hire date is 28 December 2025, so notice came 10 days before (28 − 18 = 10).
+- Change 2 in hall-changes-log.md replaces sections 1.4 and 1.5. Its deciding date is the date notice is received, and it applies to notice received on or after 1 November 2025. 18 December 2025 is after that, so the new rule applies.
+- Under Change 2, notice received 14 days or fewer before the hire date means the whole hire charge is kept.
+- The old section 1.4 does not apply. It would have kept only 50% for notice 28 to 8 days before.
+
+**What is kept**
+- The whole hire charge for the Main Hall on 28 December. This includes the booking fee, which counts towards the hire charge (hall-booking-and-deposits.md, 2.1).
+- The charge depends on the hirer's category and the hours booked (hall-hire-charges.md, section 1), so I can't give the figure.
+- 28 December 2025 is a Sunday and not a bank holiday, so the 50% bank holiday increase in 4.3 does not arise.
+
+**What is refunded**
+- **Damage deposit:** refunded in full in every case (hall-cancellations-and-damage.md, 1.6, which Change 2 leaves unchanged).
+- **Projector:** the extra was never used, so it is not charged and the £10 is refunded (1.6; extras are £10 per booking under hall-hire-charges.md, 4.2). The projector is an extra, not part of the hire charge, so it isn't kept.
+
+**Deposit amount**
+The booking date, which is the date on the written confirmation, isn't given. It decides the deposit amount under Change 1 in hall-changes-log.md. The deposit is refunded in full either way:
+- **Booked before 1 July 2025:** the Main Hall deposit is £100 (hall-booking-and-deposits.md, 3.1). It is £250 if alcohol was to be sold or supplied, more than 80 guests were expected, or it was a party.
+- **Booked on or after 1 July 2025:** the Main Hall deposit is £150. It is £300 in the same alcohol, guest-number or party cases.
+

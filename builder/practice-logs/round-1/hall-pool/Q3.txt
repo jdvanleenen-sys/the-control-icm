@@ -1,0 +1,30 @@
+## Q3, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 20127 characters, 336 words, 10 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-booking.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-changes.md
+  - Read reference/pool/pool-rules.md
+
+**The 25 January no-show is charged £4 and the 10 February no-show is charged £6. The second no-show suspends the member's right to book for 14 days, though they can still swim in any session that has free places on the day.**
+
+**Charges**
+- The charge is set by pool-fees.md section 4.1, which pool-booking.md section 4.2 points to. The original figure is £4 per missed lane session.
+- Change 3 in pool-changes.md raises it to £6. It is effective 1 February 2026, and the deciding date is the day of the missed session.
+- 25 January 2026 is before 1 February, so the old rate applies: **£4**.
+- 10 February 2026 is on or after 1 February, so the new rate applies: **£6**.
+- The total is £10.
+
+**Right to book**
+- The original pool-booking.md paragraph 4.3 needs three no-shows within 30 days before it suspends booking. Change 3 replaces that with two no-shows within any 30 days, suspending the right to book for 14 days.
+- Change 3 says a no-show before 1 February 2026 is charged at the old rate but still counts towards the 30-day total.
+- The 10 February no-show is the one that triggers the suspension, and it falls on the new rule's side of the effective date.
+- From 25 January to 10 February is 16 days, which is inside 30 days. So the two count together, and the right to book is **suspended for 14 days**.
+- The second sentence of paragraph 4.3 still stands. The member may still swim in a session that has free places on the day.
+- The papers don't say on what day the 14 days start. If they run from the second no-show on 10 February, they would end on 23 February 2026. That start date is my reading, not something the papers state.
+
+**Related rule**
+Under pool-fees.md section 4.4, any charge left unpaid for 30 days also stops the member booking until it is paid. This is separate from the suspension above.
+

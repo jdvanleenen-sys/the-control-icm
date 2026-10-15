@@ -1,0 +1,33 @@
+## Q9, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 16437 characters, 419 words, 11.6 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-refunds.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-changes.md
+  - Read reference/lend/lend-membership.md
+
+**Rules that decide it**
+- `lend-fees.md` 2.1 sets the standard fee at £24. `lend-changes.md` §2 replaces it with £30. Its date test is the date the joining payment is accepted. That date is 1 July 2026, which is on or after 1 January 2026, so the £30 replacement applies.
+- `lend-refunds.md` 2.1 originally gave a 7-day window. `lend-changes.md` §4 replaces it. Its date test is the date the written request reaches the desk. That date is 10 July 2026, which is on or after 1 July 2026, so the replacement applies. It reads: "Refund the full annual fee if a written request reaches the desk within 14 calendar days of joining. This applies only if neither named adult has collected any item during that membership. The joining date is day zero when counting the request period."
+- `lend-refunds.md` 2.3: "Pay an approved membership refund within 14 calendar days of receiving the request."
+- `lend-membership.md` 2.2 says membership starts when the application is approved and the fee is paid. That happened on 1 July.
+- Not relevant: the loan-period change in `lend-changes.md` §3, because nothing was collected. The reduced £12 fee in `lend-fees.md` 2.2, because the question says the household paid the standard fee. `lend-refunds.md` 2.2 (no refund after collection) doesn't bite, because nothing was collected.
+
+**Working**
+- Fee paid: £30.
+- Request window: 1 July is day 0, so 10 July is day 9. Day 9 is within 14 days, so the request is in time.
+- Under the old 7-day rule, day 9 would have been too late. That rule no longer applies, because the request arrived on or after 1 July 2026.
+- Neither named adult collected an item, so the condition is met.
+- Payment deadline: the request was received on 10 July 2026, and 10 July + 14 calendar days = 24 July 2026, which is a Friday.
+
+**Check**
+- No figure came from the desk guide or the archive fee paper.
+- Both change entries were tested on the right dates: the payment date for the fee, and the request-receipt date for the refund window.
+- `lend-fees`, `lend-refunds`, `lend-membership` and `lend-changes` were all read.
+- No deciding fact is missing.
+- All three parts are answered: whether a refund is due, how much, and by when.
+
+**Answer:** Yes, a refund is due. It is the full annual fee of £30, and it must be paid by Friday 24 July 2026 (within 14 calendar days of the request reaching the desk on 10 July 2026).
+

@@ -1,0 +1,25 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18082 characters, 293 words, 9.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/storage.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+
+**It depends on the battery's rating, which the question doesn't give.** The member may store it if it is rated at 100 Wh or less, and may not if it is rated above 100 Wh.
+
+**Rules that decide it**
+- **Entitlement (storage.md §1.1):** A Forge member has one locker, so they may use one.
+- **Lithium limit (storage.md §2.1):** Nobody may store "lithium batteries rated above 100 Wh". The section adds that "exactly 100 Wh… [is] allowed".
+  - A pack rated 100 Wh or less is allowed.
+  - A pack rated above 100 Wh is prohibited. Under §2.2, staff would remove it and §3 would apply.
+- **Weight (storage.md §2.1):** A locker may hold up to 25 kg, and exactly 25 kg is allowed. The locker would hold 12 kg with the battery inside, so it is within the limit.
+- **Other prohibited items (storage.md §2.1):** There would be no food, gas cylinders or flammable liquid, so none of those limits is a problem.
+- **Good standing (membership.md §2.3):** The member is in good standing. That status isn't a condition for using a locker anyway. It is only required for the project shelf (§1.2).
+
+**Rules that don't change the answer**
+- **Bulletin entries (bulletin.md §2):** The 5 October 2026 start date doesn't matter here. The only storage entry (Entry 3, effective 15 July 2026) changes the holding period in §3.2, not the §2.1 limits. The other entries cover check-in, late-payment charges and induction validity. So §2.1 applies as printed.
+
+**To settle it:** check the pack's watt-hour rating. If only volts and amp-hours are shown, Wh = V × Ah. For example, 18 V × 5 Ah = 90 Wh, which is allowed. 36 V × 4 Ah = 144 Wh, which is not.
+

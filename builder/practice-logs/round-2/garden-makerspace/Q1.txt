@@ -1,0 +1,13 @@
+## Q1, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 15406 characters, 116 words, 5.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+
+**The plot secretary inspects every plot on the first Saturday of each month from April to October.**
+
+- **Rule:** plot-rules.md, section 5.1 says the inspection is "on the first Saturday of each month from April to October." That is seven inspection days a year, one in each of April, May, June, July, August, September and October. There are none from November to March.
+- **Amendments:** amendments.md replaces section 5 of plot-rules.md only in part. Amendment 3 changes section 5.2, the first-notice period, from 14 days to 10 days. Its test is whether the first notice is dated on or after 1 July 2026. It doesn't touch section 5.1, so the inspection days stay as originally written.
+

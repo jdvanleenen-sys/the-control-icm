@@ -1,0 +1,30 @@
+## Q2, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 15923 characters, 399 words, 10 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+
+**Rules that decide it**
+- `plot-rules.md` §4.2: "Weeds must not be taller than 20 cm." The plot failed this.
+- `plot-rules.md` §5.2 (original): the plot holder "must put the plot right on or before the 14th day after the date printed on the notice."
+- `amendments.md` Amendment 3 (effective 1 July 2026) changes §5.2 to the 10th day. Its deciding date is the date printed on the first notice. The amendment applies only to a notice dated on or after 1 July 2026. A notice dated on or before 30 June 2026 "keeps the period in the original section 5.2, even if that period ends in July" (§4.4).
+- The notice is dated 20 June 2026, which is before 1 July. Amendment 3 does not apply, so the original 14-day period governs.
+- Amendments 1 and 2 cover the late-payment charge and watering windows, not this case.
+
+**Working**
+- The date printed on the notice is 20 June 2026. The 14th day after it is 20 June + 14 days = 4 July 2026. June has 30 days, so 20 June + 10 days is 30 June, and 4 more days is 4 July.
+- The deadline is therefore on or before 4 July 2026.
+- The weeds were cleared on 2 July 2026 and the plot met the standard from that day. 2 July is before 4 July, so it was within time.
+- Under the amended 10-day period the deadline would have been 30 June, and 2 July would have been late. That period does not apply, because the notice is dated before 1 July.
+- Because it was put right in time, no second notice under §5.3 follows. Forfeiture under §6.1(a) does not arise. The household had only one notice in 2026, so the 3-notice rule in §6.1(b) is not reached.
+
+**Check**
+- No figure came from the volunteer FAQ or the 2025 archive paper.
+- Amendment 3 was date-tested on the date printed on the notice, 20 June 2026, which is before the effective date.
+- I read `plot-rules.md` and `amendments.md`. The other papers' cover lines do not touch these facts.
+- No deciding fact is missing, and both the timing and the effect of the notice are answered.
+
+**Answer:** Yes. The deadline was 4 July 2026 (14 days after 20 June), and the plot was put right on 2 July 2026, two days early.
+

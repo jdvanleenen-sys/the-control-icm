@@ -1,0 +1,34 @@
+## Q8, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 21717 characters, 529 words, 14.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/machine-booking.md
+  - Read reference/makerspace/membership.md
+  - Read reference/makerspace/safety-inductions.md
+  - Read reference/makerspace/bulletin.md
+
+**Rules that decide it**
+- machine-booking.md §1.1: the wood lathe is a bookable machine.
+- machine-booking.md §2.1: the member must be in good standing, and must hold a valid induction on the day of the session, not the day of booking. The question says the member is in good standing and the induction stays valid throughout September 2026, so both are met. The bulletin's Entry 4 (9-month induction validity, effective 1 September 2026) doesn't affect this, because the question fixes the induction as valid for the whole month.
+- machine-booking.md §2.2: Bench members may book up to 21 days ahead, Forge up to 14, and Keystone up to 7. The booking day is day zero and the last day of the window is included.
+- machine-booking.md §2.3: the weekly limit is 4 hours for Bench, 10 for Forge and 20 for Keystone, counted Monday to Sunday.
+- machine-booking.md §3.1: the workshop is open 08:00–22:00, and sessions start on the hour or half hour. The longest session on a wood lathe is 4 hours.
+- membership.md §2.1: age 34 raises no issue. The age limit in safety-inductions.md §1.2 covers only the table saw and MIG welder.
+- machine-booking.md §5 (no-shows): this doesn't apply. The member has no no-shows in 2026, so the §5.2 restriction to booking 2 days ahead isn't triggered. Bulletin Entry 1 changes only the check-in time, so it isn't relevant either.
+- Peak time (§3.2): Saturday is peak all day, so this is a peak session. The rules in these papers don't make that a bar to booking.
+
+**Working**
+- Window: 1 September is day zero, so 12 September is day 11. Saturday 12 September 2026 is correct because 1 September is a Tuesday (the 5th is Saturday, the 12th the next Saturday).
+  - Bench (21 days): day 11 is within the window.
+  - Forge (14 days): day 11 is within the window.
+  - Keystone (7 days): day 11 is beyond day 7, so it is outside the window.
+- Session: 10:00–12:00 is 2 hours, which is within the 4-hour maximum, inside opening hours and on the hour.
+- Weekly limit: the week of 7–13 September has no other bookings, so the total is 2 hours. That is within 4 hours (Bench), 10 (Forge) and 20 (Keystone).
+
+**Missing fact:** the member's tier isn't given, and the booking window depends on it.
+
+**Check:** no figure came from the quick-guide or the 2025 archive. Bulletin Entry 4 was date-tested against the induction. Its deciding date is the date of the holder's last logged session or of the induction, and the question doesn't give either. The question states the induction stays valid, so the entry changes nothing. The other entries don't touch this case. The booking, membership and safety papers were read. The tier gap is covered by giving each outcome, and the question has one part.
+
+**Answer:** It depends on the member's tier. A Bench or Forge member can make the booking on 1 September 2026, because 12 September is day 11 and falls within the 21-day and 14-day windows. A Keystone member cannot, because their window ends on day 7 (8 September) and 12 September is outside it.
+

@@ -1,0 +1,37 @@
+## Q8, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 17904 characters, 331 words, 11 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-borrowing.md
+  - Read reference/lend/lend-changes.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-conduct.md
+  - Read reference/lend/lend-membership.md
+
+**Rules that decide it**
+- `lend-borrowing.md` §3.2 Overdue charge: "Charge £1 per item for each calendar day after its recorded due date, capped at £10 per item."
+- `lend-borrowing.md` §1.2 Eligibility: "all charges must be paid or formally waived."
+- `lend-fees.md` §3.2 Unpaid charges: "An unpaid charge blocks new loans and renewal until paid or formally waived." A pending appeal does not remove the block.
+- `lend-fees.md` §3.3: only the committee may waive a charge.
+- `lend-changes.md`: none of the three entries changes these sections.
+  - The only entry touching borrowing (§3, 21-day loan) replaces §2.1, which is not used here. The question gives the recorded due date, so the loan length doesn't matter.
+  - The fee and refund entries cover other matters.
+- Both items are charged under the same rule. The hand saw being a tool makes no difference to the overdue charge.
+
+**Working**
+- The due date was Friday 8 May 2026. Charging starts the day after, on 9 May.
+- Days from 9 May to 25 May inclusive: 9 to 25 is 17 days. This is also 25 − 8 = 17.
+- Each item: 17 days × £1 = £17, capped at £10, so £10 per item.
+- Two items: 2 × £10 = **£20**.
+- The £20 is an unpaid charge until the household pays it. The committee has not waived it. So the household is not eligible for a new loan on this visit.
+
+**Check**
+- No figure came from the summary desk guide or the archive.
+- The change entries were date-tested. None touches the sections used.
+- The borrowing, fees, membership and conduct papers were read.
+- No fact is missing.
+- Both parts of the question are answered.
+
+**Answer:** The overdue charge is £20: £10 for the toy and £10 for the hand saw, each capped at £10 after 17 days late. No, they may not take the new toy until the £20 is paid or the committee formally waives it.
+

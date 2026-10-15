@@ -1,0 +1,23 @@
+## Q4, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 18579 characters, 206 words, 8.3 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-fees.md
+  - Read reference/boat/boat-safety.md
+  - Read reference/boat/boat-booking.md
+  - Read reference/boat/boat-membership.md
+  - Read reference/boat/boat-changes.md
+
+**The charge is £4 in total: £2 for each of the two kayaks.**
+
+**Rules used**
+- boat-fees.md §3.2 (Junior session): a session booked solely for junior members costs £2 per boat when an approved adult supervisor is present. Both people booked are juniors, aged 14 and 16, and the booking names an approved adult member who stays on site. The adult isn't in a boat, but §3.2 only asks for the adult supervisor to be present. The £4 standard rate in §3.1 therefore doesn't apply.
+- boat-safety.md §2.2: a junior aged 12 to 17 may use a boat only while an approved adult member remains on site. This is met. Both juniors are in that age band.
+- boat-booking.md §1.2: a junior may book only where an approved adult member is named in the booking. This is met.
+- boat-fees.md §3.3: the charge must be paid before launch unless the Treasurer has agreed otherwise in writing. The question mentions no such agreement.
+
+**Working:** 2 kayaks × £2 = £4.
+
+**Change entries:** none of them touches boat-use charges. The register only replaces §§1.2–1.4 and §4.2 of boat-fees.md and §3.1 of boat-booking.md. Its summer booking limit (§3) isn't relevant either, because the booking limit isn't in question here.
+

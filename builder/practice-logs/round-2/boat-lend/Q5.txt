@@ -1,0 +1,28 @@
+## Q5, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 16663 characters, 255 words, 8.1 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-membership.md
+  - Read reference/boat/boat-booking.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-safety.md
+
+**No. The friend can't use a club boat as a guest on Saturday 11 July 2026. They could next do so on Friday 1 January 2027, which is the first day of the next period.**
+
+**Why not**
+- Under boat-membership.md §4.3, a guest may use club boats on no more than three separate days between 1 January and 31 December.
+- The friend has already used boats on three separate days in 2026: 14 March, 2 May and 20 June. That is the limit.
+- 11 July 2026 would be a fourth day in the same period, so it isn't allowed.
+- Having only one guest doesn't help. The two-guest limit in §4.1 is a separate rule and isn't what stops this visit.
+- The limit counts the friend's days of use, whichever member brings them. Nothing in the papers lets the member apply for an extra day.
+
+**When the friend could next come**
+- The count restarts on 1 January, so the first day available is Friday 1 January 2027.
+- That is the earliest date under the rules. The member would still need to book as normal, and the friend would use one of their three days for 2027.
+
+**Other papers checked**
+- boat-changes.md has no entry that touches guest access. The summer booking limit in §3 covers only the member's own bookings, and it doesn't change the guest rule.
+- boat-booking.md §1.3 and boat-safety.md §2.3 don't alter the three-day limit.
+- I didn't use boat-front-desk-guide.md, which is a summary and doesn't govern.
+

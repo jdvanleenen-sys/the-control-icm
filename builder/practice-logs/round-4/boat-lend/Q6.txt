@@ -1,0 +1,27 @@
+## Q6, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 14679 characters, 375 words, 9.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-membership.md
+  - Read reference/lend/lend-changes.md
+
+**Rules that decide it**
+
+- lend-fees.md §2.1 (standard annual fee) was £24, but lend-changes.md §2 replaces it. The deciding date is the day the renewal payment is accepted. That is Saturday 10 January 2026, which is on or after 1 January 2026, so the replacement applies. The replacement text reads: "The annual household membership fee is £30 for each 12-month term. The fee is payable on joining and on each renewal."
+- lend-fees.md §2.2 (reduced £12 fee) needs one named adult to declare income support. Neither adult does, so it does not apply.
+- lend-fees.md §3.2 and lend-membership.md §2.2 block renewal while a charge is unpaid. The household has no unpaid charges, so there is no block.
+- lend-membership.md §2.1: "Membership lasts 12 calendar months from the joining or renewal date. Renewal starts on the date the renewal payment is accepted, not on the old expiry date."
+- lend-changes.md §3 (loan length) and §4 (refunds) don't touch this question.
+
+**Working**
+
+- Fee: the payment date of 10 January 2026 is after the 1 January 2026 effective date, so the fee is £30. The £24 figure is the old one and doesn't apply.
+- Start date: the term starts on the day the payment is accepted, 10 January 2026. The old expiry of 20 December 2025 is ignored, so the lapse from 20 December to 10 January is not backdated.
+- Term: 12 calendar months from 10 January 2026 ends on 10 January 2027. So the term runs from 10 January 2026 to 9 January 2027 (last full day) and expires on 10 January 2027. §2.1 gives only "12 calendar months from the renewal date", so I read the end as the same date a year later, with the final day being 9 January 2027.
+
+**Check:** I took no figure from the desk guide or the archive fees paper. I date-tested the fee change on the payment acceptance date. I read lend-fees.md, lend-membership.md and lend-changes.md in full. No deciding fact is missing, and I've answered both parts of the question.
+
+**Answer:** They pay **£30**. The renewed membership runs from **Saturday 10 January 2026**, the day the payment is accepted and not the old 20 December 2025 expiry. It lasts 12 calendar months, to 10 January 2027.
+

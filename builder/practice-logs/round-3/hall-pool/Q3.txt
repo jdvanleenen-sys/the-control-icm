@@ -1,0 +1,34 @@
+## Q3, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 20738 characters, 406 words, 11.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-booking.md
+  - Read reference/pool/pool-changes.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-rules.md
+
+**Rules that decide it**
+- pool-booking.md 4.1: a member not checked in within 10 minutes of the start is a no-show. 4.2 sets the charge by reference to pool-fees.md 4.1.
+- pool-fees.md 4.1 (original): "£4 for each missed lane session".
+- pool-booking.md 4.3 (original): three no-shows within any 30 days suspend the right to book for 14 days. The member may still swim in a session that has free places on the day.
+- pool-changes.md Change 3 (decided 13 Jan 2026, effective 1 Feb 2026). Its deciding date is the day of the missed session.
+  - It replaces pool-fees.md 4.1: the no-show charge becomes £6.
+  - It replaces pool-booking.md 4.3: two no-shows within any 30 days suspend the right to book for 14 days. The second sentence of 4.3 stands.
+  - "A no-show before 1 February 2026 is charged at the old rate but still counts towards the 30-day total."
+
+**Working**
+- 25 Jan 2026 is before 1 Feb 2026, so Change 3 does not set its charge. The original £4 applies.
+- 10 Feb 2026 is on or after 1 Feb 2026, so Change 3 applies. The charge is £6.
+- Days between the two no-shows: 25 Jan to 10 Feb is 6 days left in January plus 10 days in February, which is 16 days. That is inside 30 days.
+- The 25 Jan no-show still counts towards the total. Under Change 3, the 10 Feb no-show is the second within 30 days, so the suspension applies. The original three-no-show rule would not have been met.
+- The papers do not say whether the 14 days run from the day of the second no-show or from the next day. I have not assumed either.
+
+**Check**
+- No figure came from the front-desk guide or the 2025 fees archive.
+- Change 3 was tested against each session's own date.
+- Other changes were read. Change 1 (booking limits), Change 2 (guest fees), Change 4 (lifeguard cover) and Change 5 (resignation refund) do not touch no-shows.
+- The suspension length and both charges are given. pool-rules.md section 6 covers conduct breaches, not no-shows.
+
+**Answer:** The 25 January 2026 no-show is charged £4 and the 10 February 2026 no-show is charged £6. The second no-show falls within 30 days of the first, so the member's right to book is suspended for 14 days. They can still swim in any session that has free places on the day.
+

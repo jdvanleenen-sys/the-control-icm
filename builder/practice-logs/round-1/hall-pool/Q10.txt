@@ -1,0 +1,31 @@
+## Q10, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 21723 characters, 282 words, 8.1 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-booking-and-deposits.md
+  - Read reference/hall/hall-licensing-limits.md
+  - Read reference/hall/hall-who-can-hire.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-hire-charges.md
+
+**Answer:** 3 adults aged 25 or over. No, guests may not bring their own alcohol, because no alcohol is allowed at all. The damage deposit is £300.
+
+**Adults aged 25 or over**
+- A 17th birthday party is a party for young people (hall-who-can-hire.md, section 2.1). A resident hirer qualifies, and the question says the hirer is a Tannerwick resident.
+- Section 2.2 requires one adult aged 25 or over for every 15 guests or part of 15.
+- 40 ÷ 15 = 2.67, which rounds up to 3.
+- The section 5.3 steward rule in hall-licensing-limits.md applies only above 80 guests. With 40 guests it does not apply.
+
+**Alcohol**
+- hall-who-can-hire.md, section 2.3 says no alcohol may be brought, supplied or sold at these parties.
+- hall-licensing-limits.md, section 2.4 says the same.
+- Section 2.3 of hall-licensing-limits.md normally lets guests bring their own alcohol without consent. That does not apply here, because section 2.4 overrides it for these parties.
+
+**Damage deposit**
+- The booking date is the date on the confirmation, 5 October 2025 (hall-booking-and-deposits.md, section 1.4).
+- Change 1 in hall-changes-log.md replaces section 3.1 for bookings with a booking date on or after 1 July 2025. Its deciding date is the booking date. 5 October 2025 is after 1 July 2025, so the new amounts apply.
+- Under the new rule the Main Hall deposit is £150. It is £300 for any hire that is a party under section 2 of hall-who-can-hire.md.
+- Section 3.2 takes one deposit per hire, the highest that applies. That is £300, not £150.
+- Section 2.3 of hall-who-can-hire.md applies the higher deposit however many guests are expected. The 40-guest figure does not change it.
+

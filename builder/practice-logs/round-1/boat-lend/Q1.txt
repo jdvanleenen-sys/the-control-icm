@@ -1,0 +1,26 @@
+## Q1, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 14318 characters, 197 words, 7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-fees.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-membership.md
+
+**The total depends on the joining date. A March payment costs £100. An April payment costs £110.**
+
+The household fits one household membership. Membership rules 1.2 allow up to two adults and four children living at the same address, and this family has two adults and two children.
+
+**Fees used**
+- Joining fee: £15, one-time, for a new member (boat-fees.md 1.1). The changes register does not touch it.
+- Annual household fee: £85 under boat-fees.md 1.3 as originally written.
+- The changes register (entry 2) replaces 1.3 with £95. Under 2.2, the entry applies to payments made on or after 1 April 2026. The payment date decides, because these are fee rules.
+
+**Working**
+- **Paying in March 2026 (1–31 March):** this is before 1 April, so the change does not apply. The original £85 stands. £15 + £85 = **£100**.
+- **Paying in April 2026:** every April date is on or after 1 April, so the change applies. The fee is £95. £15 + £95 = **£110**.
+
+Both fees are paid together on the joining day, so one date decides both.
+
+Boat-use charges (£4 per boat per session) are separate and are not part of this total.
+

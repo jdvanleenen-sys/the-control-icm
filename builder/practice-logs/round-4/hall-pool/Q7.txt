@@ -1,0 +1,37 @@
+## Q7, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 20285 characters, 465 words, 12.9 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-cancellations-and-damage.md
+  - Read reference/hall/hall-booking-and-deposits.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-hire-charges.md
+
+**Rules that decide it**
+
+- hall-cancellations-and-damage.md, section 1.1: notice must be in writing to the booking secretary, and the date received counts. That is Thursday 18 December 2025.
+- hall-changes-log.md, Change 2, replaces sections 1.4 and 1.5. The deciding date is the date the notice is received. Notice received on or after 1 November 2025 falls under the new rule, whatever the booking or hire date. 18 December 2025 is after that date, so Change 2 applies. The new rule says: "Notice received 14 days or fewer before the hire date, or no notice at all, the whole hire charge is kept."
+- Section 1.6 is unchanged by Change 2: "The damage deposit is refunded in full in every case. Extras that were not used are not charged."
+- Sections 1.2 and 1.3 (the 56-day and 29-day bands) don't apply, because the notice is far too late for them.
+- The old section 1.4 (28 to 8 days, 50% kept) is replaced for this notice. Under it, 10 days before would have meant only half kept, but that wording no longer governs.
+- Change 1 (deposit amounts) would depend on the booking date, which the question doesn't give. It doesn't affect the answer, because the deposit is refunded in full either way.
+
+**Working**
+
+- Days from 18 December to 28 December 2025: 28 − 18 = 10 days. 28 December 2025 is a Sunday.
+- 10 days is 14 days or fewer, so the whole hire charge is kept.
+- The booking fee (25% of the hire charge, minimum £20) counts towards the hire charge (hall-booking-and-deposits.md, section 2.1). It is part of what is kept, not an additional amount.
+- The damage deposit is refunded in full. Since the hire was paid in full, the deposit was paid too. It is £150 if the booking date was on or after 1 July 2025, or £100 if it was earlier (Change 1 and booking section 3.1).
+- The projector was an extra and was never used, so it is not charged. Its £10 is refunded (extras: hall-hire-charges.md, section 4.2).
+
+**Check**
+
+- No figure came from the summary or archive papers.
+- Change 2 was tested on the notice-received date.
+- I read the cancellations, booking and deposits, hire charges and changes papers.
+- The missing deposit figure doesn't change the outcome, and both values are given.
+- Both parts of the question (what is kept and what is refunded) are answered.
+
+**Answer:** The whole hire charge is kept, including the booking fee that counts towards it. The damage deposit is refunded in full (£150 if booked on or after 1 July 2025, otherwise £100). The unused projector (£10) is refunded. The question doesn't give the hire charge, so I can't state the kept amount in pounds.
+

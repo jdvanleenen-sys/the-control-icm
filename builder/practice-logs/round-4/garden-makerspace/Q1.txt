@@ -1,0 +1,20 @@
+## Q1, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 15923 characters, 165 words, 6.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+
+**Rules that decide it**
+- plot-rules.md, section 5.1: "The plot secretary inspects every plot on the first Saturday of each month from April to October."
+- amendments.md changes only section 5.2 (the first-notice period), through Amendment 3. It doesn't touch 5.1, so 5.1 stands as written. The date test never comes into play for inspection days.
+- The volunteer FAQ is a summary and the 2025 plot rules are an archive. I used neither.
+
+**Working**
+The inspection day is the first Saturday of the month. The months are April, May, June, July, August, September and October, which is 7 inspections a year. Nothing in the papers gives dates for any other months.
+
+**Check:** The figure comes from a governing paper, plot-rules.md 5.1. The change entries were checked, and none alters 5.1. Every part of the question is answered.
+
+**Answer:** The plot secretary inspects every plot on the first Saturday of each month from April to October. There are no regular inspections from November to March.
+

@@ -1,0 +1,30 @@
+## Q10, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18433 characters, 230 words, 7.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/membership.md
+  - Read reference/makerspace/fees.md
+  - Read reference/makerspace/bulletin.md
+
+**Rules that decide it**
+
+- membership.md section 5.1 (Resignation): "Notice given on or before the 20th of a month ends the membership on the last day of that month; later notice ends it on the last day of the following month." Section 5.3 makes that last day the termination date.
+- Tier and age make no difference. Section 5.1 applies to every member, so being a Forge member aged 41 changes nothing. Age matters only for joining (section 2.1).
+- The bulletin has four entries. None of them touches membership.md section 5.1 (they cover machine-booking 5.1, fees 4.2, storage 3.2 and safety-inductions 3.1), so none applies.
+- fees.md section 5.1 says no part of the monthly fee is refunded on resignation. That doesn't change the date.
+
+**Working**
+
+1. The notice is given on 20 August 2026, which is "on or before the 20th", so it is in time.
+2. The membership therefore ends on the last day of that same month, which is 31 August 2026.
+
+**Check**
+
+- No figure came from the quick-guide or the 2025 handbook.
+- No change entry reaches this rule, so none needed a date test.
+- I read the other governing paper that touches the facts, fees.md (refunds and the deposit).
+- No deciding fact is missing, and the question asked only for the end date.
+
+**Answer:** The membership ends on 31 August 2026.
+

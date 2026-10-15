@@ -1,0 +1,28 @@
+## Q1, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 21041 characters, 365 words, 10.8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-booking.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-membership.md
+  - Read reference/pool/pool-changes.md
+
+**Rules that decide it**
+- pool-fees.md §3.1 (original): the guest fee is £6 for a guest aged 16 or over and £3 for a guest under 16, "for each visit".
+- pool-changes.md, Change 2 (Guest fees) replaces §3.1. The fee becomes £7 for a guest aged 16 or over and £3.50 for a guest under 16. It is effective 1 January 2026, and the deciding date is the day of the guest's visit, not the day of booking. The visit is on 24 January 2026, which is after 1 January 2026, so Change 2 applies and the original £6 and £3 do not.
+- pool-booking.md §6.1 and pool-membership.md §7.1: the guest's place must be booked in the same booking, and a full member may bring up to 2 guests per visit. One guest booked with the member is within the limit. §7.1 also lets the same person come as a guest at most 6 times a year, and the question doesn't say how often this guest has visited. I've assumed this is within that limit.
+
+**Booking check**
+- pool-booking.md §1.2 originally allows booking only 7 days ahead. The booking was made on 16 January for 24 January, which is 8 days ahead. Change 1 replaces §1.2 with 10 days ahead. Its deciding date is the day the booking is made, 16 January 2026, which is after its 1 October 2025 effective date. The booking is therefore allowed.
+- 24 January 2026 is a Saturday, and a 10:00 session falls within the 08:00–18:00 Saturday opening hours (§1.1).
+
+**Working**
+- The guest is 30, so they are in the "16 or over" band.
+- That band's fee under Change 2 is £7 for the visit.
+- Only one guest attended, so £7 × 1 = £7.
+
+**Check:** no figure came from a summary or archive paper. Change 2 was tested on the visit date and Change 1 on the booking date. The booking, fees and membership papers were all read. The guest's age was given, so no fact is missing. Change 3 (no-shows) doesn't apply because both attended.
+
+**Answer:** £7 (the guest fee for a guest aged 16 or over, under Change 2 effective 1 January 2026).
+

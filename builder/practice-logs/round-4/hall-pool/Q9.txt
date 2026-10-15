@@ -1,0 +1,32 @@
+## Q9, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 20334 characters, 295 words, 9.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-licensing-limits.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-booking-and-deposits.md
+  - Read reference/hall/hall-cancellations-and-damage.md
+
+**Rules that decide it**
+- `hall-licensing-limits.md` §3.1 (original): music ends at 23:00 Monday to Saturday and 22:00 on Sunday.
+- `hall-changes-log.md`, Change 3 replaces §3.1: "music, live or recorded, ends at 22:30 Monday to Saturday and at 22:00 on Sunday." It takes effect from 1 February 2026. The deciding date is the **hire date**, not the booking date. A hire on or after 1 February 2026 follows the new times, even if it was booked earlier.
+- `hall-cancellations-and-damage.md` §4.3: "the hall deducts £50 where music went on past the time allowed." Change 3 says this £50 deduction "runs from the new times". Nothing else changes §4.3.
+
+**Working**
+- The hire date is Saturday 7 March 2026. That is a Saturday: 1 March 2026 is a Sunday, so 7 March is the Saturday after it.
+- 7 March 2026 is on or after 1 February 2026, so Change 3 applies. The 10 December 2025 booking date doesn't matter for this change. The old 23:00 time does not apply.
+- Saturday falls under "Monday to Saturday", so the music must end at 22:30.
+- Music past 22:30 is a breach of the music limit, so the deduction is £50 under §4.3.
+- The live band makes no difference. §3.1 covers "music, live or recorded".
+- Change 1 (damage deposit amounts) is not relevant here. It changes the deposit amount, not the music deduction.
+
+**Check**
+- No figure came from the front-desk summary or the archive.
+- Change 3 was tested against the hire date.
+- The licensing and cancellations/damage papers were read.
+- No deciding fact is missing.
+- Both parts of the question are answered.
+
+**Answer:** The music must stop by 22:30. If it runs past that time, the hall deducts £50 from the damage deposit.
+

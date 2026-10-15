@@ -1,0 +1,33 @@
+## Q10, run 1
+
+steps 7 (instruction opens 2, document steps 5), text fetched 17456 characters, 233 words, 9.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/lend/lend-refunds.md
+  - Read reference/lend/lend-changes.md
+  - Read reference/lend/lend-fees.md
+  - Read reference/lend/lend-safety.md
+  - Read reference/lend/lend-borrowing.md
+
+**The library charges the member £40 for the damage. The £20 deposit is applied against that charge, which leaves £20 for the member to pay. That balance is due within 14 days of the written notice of the calculation.**
+
+**Charge**
+- lend-refunds.md §3.1 says to charge the actual repair cost for avoidable damage, "up to £40 per item".
+- The confirmed repair cost is £55, so the £40 cap applies. The charge is £40, not £55.
+
+**Deposit**
+- lend-fees.md §3.1 sets the powered-tool deposit at £20, which the member paid.
+- lend-refunds.md §1.2 allows deducting a confirmed repair charge for that tool from its deposit.
+- The £20 deposit is used up against the £40 charge, so nothing is repaid under §1.1.
+- Working: £40 − £20 = £20 balance.
+- The library must give the member a written calculation, and §1.2 says "any balance owed remains payable".
+
+**When the balance is due**
+- lend-refunds.md §3.2 says payment is due within 14 days of the written notice of the calculation.
+- The papers give no calendar date, because the notice date isn't stated. Count the 14 days from the date of that notice.
+
+**Changes register**
+- None of its entries touch these sections. They replace only lend-fees.md §2.1, lend-borrowing.md §2.1 and lend-refunds.md §2.1, so the original text of §1.1, §1.2, §3.1 and §3.2 stands.
+
+The desk guide and archive papers were not used.
+

@@ -1,0 +1,27 @@
+## Q9, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18082 characters, 220 words, 7.3 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/storage.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+
+**Yes, she may still collect it on 28 July 2026.** It doesn't belong to the makerspace until 31 July.
+
+**Which holding period applies**
+- storage.md section 3.2 prints a holding period of 21 days.
+- Bulletin entry 3 cuts that to 14 days, but only if the date the item is moved to the holding cage is on or after its effective date of 15 July 2026.
+- The item was moved on 10 July 2026, which is before 15 July. Entry 3 does not apply, so the printed 21 days stand.
+
+**Day count (storage.md 3.2)**
+- The day of the move is day one, so 10 July is day 1.
+- Day 21 is included, and 10 July + 20 days is 30 July. The item is held through 30 July.
+- 28 July is day 19 (10 July = day 1, so 28 July = day 19). That is inside the period, and section 3.2 says the owner may collect on any of those days.
+
+**When ownership passes (storage.md 3.3)**
+- The item becomes the makerspace's property on the day after the holding period ends, which is 31 July 2026.
+- On 28 July it is still hers.
+
+Under the entry 3 14-day period she would have had to collect by 23 July. That period doesn't apply here.
+

@@ -1,0 +1,30 @@
+## Q2, run 1
+
+steps 4 (instruction opens 2, document steps 2), text fetched 15112 characters, 314 words, 8 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/garden/plot-rules.md
+  - Read reference/garden/amendments.md
+
+**Yes, the plot was put right in time.** The deadline was 4 July 2026, and the weeds were cleared on 2 July.
+
+**Rules used**
+- **plot-rules.md, section 4.2:** weeds must not be taller than 20 cm. Weeds above that fail the upkeep standard, so a first notice was proper (section 5.2).
+- **plot-rules.md, section 5.2 (original):** the plot holder must put the plot right "on or before the 14th day after the date printed on the notice".
+- **amendments.md, Amendment 3 (section 4):** this changes section 5.2 to 10 days. It applies only to a first notice dated on or after 1 July 2026 (4.4). The trigger is the date printed on the notice.
+  - This notice is dated 20 June 2026, which is before the effective date.
+  - Under 4.4, a notice dated on or before 30 June 2026 keeps the original 14-day period, "even if that period ends in July". So the 10-day period does not apply.
+
+**Day count**
+- The date printed on the notice is day 0, which is 20 June.
+- Day 10 would be 30 June, but that is the amended period and does not apply here.
+- Day 14 is 4 July 2026 (20 June + 10 days = 30 June; 4 more days = 4 July).
+- The weeds were cleared on 2 July, which is day 12. That is before the deadline, so the plot was put right in time.
+
+**Consequences**
+- No second notice is issued (plot-rules.md, 5.3), and forfeiture under 6.1(a) does not arise.
+- Notices are counted per household for each plot year (5.4). This was the household's only notice in 2026, so the 3-notice forfeiture rule in 6.1(b) is not close to being triggered.
+- The plot type, a Starter plot, makes no difference to the result.
+
+I did not use the volunteer FAQ or the 2025 archive, because neither governs.
+

@@ -1,0 +1,18 @@
+## Q3, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 14621 characters, 212 words, 9.2 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/boat/boat-booking.md
+  - Read reference/boat/boat-changes.md
+  - Read reference/boat/boat-membership.md
+
+**No, the booking can't be made.** Under the summer limit, the member may hold at most two future bookings in any rolling seven-day period. The new booking would be a third.
+
+- **Change entry:** `boat-changes.md` §3 replaces `boat-booking.md` §3.1 with: "A member may hold no more than two future bookings in any rolling seven-day period."
+- **Date test:** `documents.md` says booking rules turn on the booking date. §3.2 applies the entry to bookings dated 1 July 2026 to 30 September 2026 inclusive. The request is made on 10 July 2026, and the session is on 16 July 2026. Either date is inside the range, so the entry applies.
+- **Original rule not used:** The original §3.1 allowed three future bookings, which would have permitted this request. It is replaced for this case.
+- **Count:** The three sessions are Sunday 12 July, Tuesday 14 July and Thursday 16 July 2026. All three fall within the seven days from 12 to 18 July, and all are future bookings. That makes three in one rolling seven-day period, against a limit of two.
+
+The member could book the Thursday session only if one of the earlier two bookings were cancelled first. They could also choose a session that doesn't put three bookings inside one seven-day window.
+

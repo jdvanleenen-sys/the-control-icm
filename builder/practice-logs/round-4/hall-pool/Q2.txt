@@ -1,0 +1,31 @@
+## Q2, run 1
+
+steps 5 (instruction opens 2, document steps 3), text fetched 18335 characters, 289 words, 9.1 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-membership.md
+  - Read reference/pool/pool-changes.md
+
+**Rules that decide it**
+- pool-fees.md 1.1: the Adult annual fee for the 2025–26 membership year (1 July 2025 to 30 June 2026) is £312.
+- pool-fees.md 1.3: "Someone who joins part-way through the year pays one-twelfth of the annual fee for each whole calendar month left, counting the month they join. An Adult joining in October 2025 pays for 9 months, which is £234."
+- pool-fees.md 1.2: the £2 handling charge belongs only to the 12 monthly instalments. A lump-sum payer doesn't pay it.
+- pool-fees.md 2.1: the joining fee for an Adult is £40, "paid with the first fee".
+- pool-membership.md 3.3–3.4: membership starts on the day the first fee is paid, and the year runs from 1 July to 30 June.
+- pool-changes.md: none of the five entries replaces pool-fees.md 1.1, 1.2, 1.3 or 2.1. Change 2 only changes guest fees (3.1), and Change 3 only changes the no-show charge (4.1). Each of these also has an effective date after 14 October 2025.
+
+**Working**
+- Months left, counting October: Oct, Nov, Dec, Jan, Feb, Mar, Apr, May, Jun = 9 months.
+- One-twelfth of £312 = £26, and 9 × £26 = £234.
+- Add the joining fee: £234 + £40 = £274.
+
+**Check**
+- No figure came from the front-desk guide or the 2025 archive.
+- I read the fees, membership and changes papers.
+- No change entry touches the sections used.
+- No fact is missing: the question gives the category (Adult), the date and the payment method.
+- Both parts are answered: the lump sum is £234, and the total including the joining fee is £274.
+
+**Answer:** £274 in total, which is £234 for the 9 remaining months plus the £40 joining fee.
+

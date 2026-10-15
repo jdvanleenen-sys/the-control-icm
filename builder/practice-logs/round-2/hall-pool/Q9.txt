@@ -1,0 +1,26 @@
+## Q9, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 19817 characters, 223 words, 7.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/hall/hall-licensing-limits.md
+  - Read reference/hall/hall-changes-log.md
+  - Read reference/hall/hall-booking-and-deposits.md
+  - Read reference/hall/hall-cancellations-and-damage.md
+
+**Music must stop by 22:30, and the hall deducts £50 from the damage deposit if it runs past that.**
+
+**Time limit**
+- Saturday 7 March 2026 is a Saturday, so the Monday-to-Saturday time applies.
+- The original rule in hall-licensing-limits.md, section 3.1, was 23:00. Change 3 in hall-changes-log.md replaces it with 22:30, Monday to Saturday, live or recorded. The band falls under this.
+- Change 3 is decided by the hire date, not the booking date. The hire date, 7 March 2026, is on or after the effective date of 1 February 2026, so the new time applies. The booking date of 10 December 2025 doesn't matter, even though it is before the change.
+
+**Deduction**
+- hall-cancellations-and-damage.md, section 4.3, says the hall deducts £50 where music went on past the time allowed. Change 3 states that this £50 deduction runs from the new times, so any music after 22:30 triggers it.
+- The rule is a flat £50. It is not per minute or per overrun.
+- Change 3 only replaces the music time in section 3.1, so the £50 figure itself is unchanged.
+
+**Other rules not used**
+- Change 1 (deposit amounts) changes how much deposit is taken, not the music deduction, so it doesn't affect this answer.
+- The deposit sizes were not asked about, so I haven't worked them out.
+

@@ -1,0 +1,37 @@
+## Q7, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 21717 characters, 359 words, 10.7 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/machine-booking.md
+  - Read reference/makerspace/bulletin.md
+  - Read reference/makerspace/membership.md
+  - Read reference/makerspace/safety-inductions.md
+
+**Rules that decide it**
+
+- machine-booking.md s5.1 (as printed): check in "within 15 minutes after the session start time". 14:12 would be in time under this version.
+- bulletin.md Entry 1 (effective 1 May 2026) replaces s5.1. The new rule says: "A member must check in at the front desk within 10 minutes after the session start time; checking in at exactly 10 minutes is in time. A member who does not is a no-show, and the session is released to other members."
+- Entry 1's deciding date is the date of the session, whenever the booking was made. The session is on 7 May 2026, which is on or after 1 May 2026, so Entry 1 applies. The booking date of 24 April is before the effective date, but it does not matter.
+- The other bulletin entries (late-payment charge, holding period, induction validity) don't touch this question. Entry 4 only applies from 1 September 2026.
+
+**Working**
+
+- The session starts at 14:00, so the last in-time check-in is 14:10.
+- She checked in at 14:12, which is 12 minutes after the start and 2 minutes too late.
+
+**Eligibility to book**
+
+- She is a Bench member in good standing with a valid induction, as s2.1 requires. 7 May 2026 is a Thursday.
+- 24 April to 7 May is 13 days, inside the Bench window of 21 days (s2.2). The booking was valid.
+- Her age (52) has no bearing on the wood lathe. The age limit in safety-inductions.md s1.2 covers only the table saw and MIG welder, and only for people under 18.
+
+**Check**
+
+- No figure came from the quick guide or the 2025 handbook.
+- Entry 1 was tested against the session date.
+- I read machine-booking, membership, safety-inductions and the bulletin.
+- No deciding fact is missing, and both parts of the question are answered.
+
+**Answer:** She is not in time. Under the 10-minute rule (bulletin Entry 1, applying to the 7 May session), the cut-off was 14:10, so a 14:12 check-in makes her a no-show. The old 15-minute rule would have let her in, but it no longer applies to this session.
+

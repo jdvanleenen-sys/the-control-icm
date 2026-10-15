@@ -1,0 +1,37 @@
+## Q8, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 20906 characters, 409 words, 12.4 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/makerspace/machine-booking.md
+  - Read reference/makerspace/membership.md
+  - Read reference/makerspace/safety-inductions.md
+  - Read reference/makerspace/bulletin.md
+
+**It depends on the member's tier, which the question doesn't give.** Booking 11 days ahead is allowed for a Bench or Forge member and not for a Keystone member.
+
+**Day count (machine-booking.md section 2.2).**
+- The window is 21 days for Bench, 14 for Forge and 7 for Keystone.
+- The booking day is day zero, and the last day of the window is included.
+- Tuesday 1 September is day 0, so Saturday 12 September is day 11.
+- **Bench (21 days):** the window runs to 22 September, so yes.
+- **Forge (14 days):** the window runs to 15 September, so yes.
+- **Keystone (7 days):** the window ends on 8 September, so no. The member could book 12 September from 5 September onward.
+
+**Other conditions, which are met for every tier.**
+- **Who may book (machine-booking.md section 2.1, membership.md section 2.3):** the member is in good standing, which the question states. An induction must be valid on the day of the session, not the day of booking.
+- **Induction:**
+  - The wood lathe needs an induction (safety-inductions.md section 1.1).
+  - The question says the induction stays valid throughout September, so it is valid on 12 September.
+  - Bulletin entry 4 changes the validity period, but the induction is valid on 12 September under either the 12-month or the 9-month rule, so the entry doesn't change the answer.
+- **Age:** the member is 34, so the under-18 limit in safety-inductions.md section 1.2 doesn't apply. That limit covers only the table saw and the MIG welder anyway.
+- **Session length (machine-booking.md section 3.1):**
+  - The workshop is open 08:00 to 22:00, and sessions start on the hour or half hour.
+  - The 10:00 to 12:00 session is 2 hours. The wood lathe maximum is 4 hours, so it fits.
+- **Weekly limit (machine-booking.md section 2.3):**
+  - The week of Monday 7 to Sunday 13 September contains 12 September.
+  - The member has no other bookings, so 2 hours is under even the lowest limit, 4 hours for Bench.
+- **No-shows (machine-booking.md section 5.2):** there are none in 2026, so no restriction applies. Bulletin entry 1 changes only the check-in time, which doesn't matter for making the booking.
+
+**Peak time.** Saturday is peak all day (machine-booking.md section 3.2), so this is a peak session. Peak status doesn't stop the booking in the booking rules I read. I did not read fees.md, so I haven't checked whether it affects the cost.
+

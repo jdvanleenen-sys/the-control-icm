@@ -1,0 +1,32 @@
+## Q5, run 1
+
+steps 6 (instruction opens 2, document steps 4), text fetched 21232 characters, 394 words, 11.5 s, model claude-sonnet-5-5
+  - Read 01 answer/CONTEXT.md
+  - Read 01 answer/documents.md
+  - Read reference/pool/pool-closures-and-refunds.md
+  - Read reference/pool/pool-changes.md
+  - Read reference/pool/pool-fees.md
+  - Read reference/pool/pool-membership.md
+
+**Rules that decide it**
+- pool-membership.md 6.1: a member may resign by giving 30 days' written notice to the membership secretary.
+- pool-closures-and-refunds.md 4.2 (original): "A member who resigns under pool-membership.md section 6.1 is refunded for each whole calendar month left after the notice ends, less £20. The joining fee is not refunded."
+- pool-fees.md 1.1: the Adult annual fee for 1 July 2025 to 30 June 2026 is £312. Section 3.4 of pool-membership.md says the membership year runs 1 July to 30 June.
+- pool-changes.md Change 5 would replace 4.2 with a £30 deduction and no refund where fewer than 2 whole months are left. Its deciding date is the day the club receives the written notice. That is 25 March 2026, which is before the effective date of 1 April 2026. Change 5 therefore does not apply, and original 4.2 governs.
+- None of the other change entries touch resignation or refunds.
+
+**Working**
+1. The notice is received on 25 March 2026. Thirty days later is 24 April 2026. Counting from 26 March as day 1, 31 March is day 6 and 24 April is day 30. If the notice instead ran to 25 April, the result would be the same.
+2. The membership year ends on 30 June 2026. The whole calendar months left after the notice ends are May and June 2026, which makes 2. The rest of April is only part of a month, so it doesn't count.
+3. The monthly value is £312 ÷ 12 = £26. The paper does not say what each month is worth, so I used one-twelfth of the annual fee, as the club does elsewhere (4.3 and 1.3).
+4. Two months at £26 is £52. Less the £20 deduction, that leaves £32.
+5. The joining fee is not refunded. Paying the fee in one payment doesn't change the calculation.
+
+**Check**
+- No figure came from the summary or the archive paper.
+- Change 5 was date-tested on the notice receipt date, 25 March 2026, and fails.
+- I read the closures, fees and membership papers, and the changes log.
+- The question gives no missing deciding fact, and I have answered every part of it.
+
+**Answer:** The member is due a refund of £32. That is 2 whole months (May and June 2026) at £26 each, which is £52, less the £20 deduction.
+
