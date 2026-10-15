@@ -1,0 +1,13 @@
+{
+  "order": 402,
+  "run": 3,
+  "question": "N20",
+  "code": "4DTV",
+  "prompt": "Under the Quillbrook Village Hall rules: A hirer lost the hall key after their event on 12 September 2026. How much do they have to pay for the lost key?",
+  "stageDir": "C:/tc/4DTV",
+  "attempts": 1,
+  "exit": 1,
+  "timedOut": false,
+  "wallMs": 1640,
+  "stderr": ""
+}

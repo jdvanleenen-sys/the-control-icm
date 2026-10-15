@@ -1,6 +1,6 @@
 # The freeze
 
-Thursday 2026-10-15, before the schedule was drawn and before any session of the sealed run. Each arm is fingerprinted as it will be staged; each file the analysis rests on is fingerprinted by content (line endings normalised).
+Thursday 2026-10-15, before the schedule was drawn (taken again for sup2 after sup1 was voided; only tools/sup-run.mjs changed) and before any session of the sealed run. Each arm is fingerprinted as it will be staged; each file the analysis rests on is fingerprinted by content (line endings normalised).
 
 ## Arms
 
@@ -25,7 +25,7 @@ Thursday 2026-10-15, before the schedule was drawn and before any session of the
 | lib/claude.mjs | c8eee1510788c5e383b98b17d7ccb611acbfc90dd461f2586bb14c1a72b0cee1 |
 | lib/config.mjs | be1de18942770ccab1b1b7f9c7edd0058b727be9b3454994a8b0165cc2fe0390 |
 | tools/sup-schedule.mjs | 4b84e378407979d6d1a4f3e0b856be0680d11bbc5b44007c2afd21f477cc4f13 |
-| tools/sup-run.mjs | be030e04b31e56cf514114fde60438380434849dad97e2b3107b4c9f31beadeb |
+| tools/sup-run.mjs | 070e100d7f269899d1272851d47e2cc51b5e9460e9c48a9a2d43d0f2b277e328 |
 | verify/sup-verdict.mjs | a7ad3f734629debc1e27be7953c9058fcc36a18da12253a6a0f56ba8bb4b0659 |
 | verify/sup-mark.mjs | ddd0871ce3e3337fe049e19a1bb5cc21c72545f4b1592c8088ee3d7b6ba181ee |
 | tools/key-facts.mjs | 37c143fa7d7bc3762127a607a67e8d6d019466947947c1bd5584c828248c1228 |

@@ -1,0 +1,13 @@
+{
+  "order": 236,
+  "run": 2,
+  "question": "H9",
+  "code": "3JJW",
+  "prompt": "Under the Quillbrook Village Hall rules: A hirer books the Main Hall for a private celebration on 18 October 2025 and intends to serve wine to adult guests without selling it. The hirer asks whether the ordinary £30 booking deposit is sufficient, or whether any additional permission and deposit are required. What must the hirer arrange, and how much must be provided in deposits altogether?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 9065,
+  "stderr": ""
+}

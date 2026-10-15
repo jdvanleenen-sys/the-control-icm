@@ -1,0 +1,13 @@
+{
+  "order": 74,
+  "run": 1,
+  "question": "N10",
+  "code": "3JJW",
+  "prompt": "Under the Fenwray Film Society rules: A 16-year-old has handed in the membership form with a parent's written consent and been accepted. The treasurer received their payment on 5 August 2025. How much is their annual membership?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 7999,
+  "stderr": ""
+}

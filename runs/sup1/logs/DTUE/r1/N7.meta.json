@@ -1,0 +1,13 @@
+{
+  "order": 41,
+  "run": 1,
+  "question": "N7",
+  "code": "DTUE",
+  "prompt": "Under the Fenwray Film Society rules: The committee suspended a member from 1 April 2026 to 20 April 2026. They want to come to the screening on 10 April 2026. What do they pay for a ticket?",
+  "stageDir": "C:/tc/DTUE",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 5815,
+  "stderr": ""
+}

@@ -1,0 +1,13 @@
+{
+  "order": 231,
+  "run": 2,
+  "question": "H10",
+  "code": "3JJW",
+  "prompt": "Under the Quillbrook Village Hall rules: A trustee was elected in March 2022, re-elected in March 2024 and wants to stand again in March 2026. Is there a maximum number of consecutive two-year terms a trustee may serve, and what exactly is that maximum?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 7765,
+  "stderr": ""
+}

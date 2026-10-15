@@ -1,0 +1,13 @@
+{
+  "order": 454,
+  "run": 3,
+  "question": "Q10",
+  "code": "3JJW",
+  "prompt": "Under the Quillbrook Village Hall rules: Four trustees want to attend a committee meeting on 15 November 2026, but one proposes joining by video call from home while the other three attend in person. Do the rules allow a remote trustee to count towards the required quorum, and would that make this meeting quorate?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 1,
+  "timedOut": false,
+  "wallMs": 1719,
+  "stderr": ""
+}

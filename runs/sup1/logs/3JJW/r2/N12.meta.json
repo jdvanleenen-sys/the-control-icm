@@ -1,0 +1,13 @@
+{
+  "order": 222,
+  "run": 2,
+  "question": "N12",
+  "code": "3JJW",
+  "prompt": "Under the Quillbrook Village Hall rules: We're not a village group. On Tuesday 10 June 2025 we want the Meeting Room for 3 hours, including setup and clearing, with the kitchen, the projector and two sets of folding display boards. What is the total hire charge?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 10039,
+  "stderr": ""
+}

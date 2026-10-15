@@ -1,0 +1,13 @@
+{
+  "order": 338,
+  "run": 3,
+  "question": "Q9",
+  "code": "3JJW",
+  "prompt": "Under the Quillbrook Village Hall rules: An organiser plans a children's event in the Meeting Room on 19 October 2025. There will be 16 children aged 8 to 11 and five adults, including organisers. The organiser wants to know whether the attendance is permitted and whether the children may be left without adult supervision while the adults prepare another room. What do the rules require?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 12088,
+  "stderr": ""
+}

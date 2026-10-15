@@ -1,0 +1,13 @@
+{
+  "order": 208,
+  "run": 2,
+  "question": "H7",
+  "code": "DTUE",
+  "prompt": "Under the Quillbrook Village Hall rules: A registered village group with 14 local members books the Meeting Room for four paid hours on 20 February 2026. The group submits its membership count before booking. What room-hire discount percentage applies, and what is the discounted room charge before any other fees?",
+  "stageDir": "C:/tc/DTUE",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 4761,
+  "stderr": ""
+}

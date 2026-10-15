@@ -1,0 +1,13 @@
+{
+  "order": 434,
+  "run": 3,
+  "question": "N14",
+  "code": "3JJW",
+  "prompt": "Under the Quillbrook Village Hall rules: Our event is on 15 June 2026. Our written cancellation reached the booking officer on 29 May 2026. What share of our hire charges do we get back, and do we get the £30 booking deposit back?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 1,
+  "timedOut": false,
+  "wallMs": 1691,
+  "stderr": ""
+}

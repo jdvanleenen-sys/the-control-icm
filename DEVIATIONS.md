@@ -22,3 +22,18 @@ the four fixable kinds, so they were left as they are: the map's note on regener
 not work as a literal command, the stage contract is about three times the size the method suggests,
 it mixes path styles, and it repeats one rule within itself. The text prediction was updated to the
 fifth round's file sizes before the freeze.
+
+## Thursday 2026-10-15: the first sealed run, sup1, is void
+
+`sup1` ran from 10:08 to 11:00 AM Mountain. From session 345 on, the account's five-hour usage
+limit refused every session (112 of 456, 25%); the run went on to the end because a refusal was
+counted as a fault, not as a reason to stop. By the rule fixed in `PLAN.md`, more than 5% of sessions
+faulted in a verdict arm voids the run. `sup1` is void. It is kept as it ran, under `runs/sup1/`, and
+was not analysed or marked: nobody looked at its answers, steps or text.
+
+What changed for the next run, and only this: `tools/sup-run.mjs` now treats a session refused for the
+usage limit as never having reached the model. It keeps the refused attempt under its own name
+(`.ratelimitN.jsonl`), waits until the limit resets, and asks again. Nothing a session sees changes:
+not the arms, the questions, the model, the flags or the order. The freeze was taken again with the
+changed file (`FREEZE.md`), and a new schedule, `sup2`, was drawn from it. The limit is shared with
+the build session itself, which is why a whole run did not fit in one window.

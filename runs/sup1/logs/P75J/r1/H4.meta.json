@@ -1,0 +1,13 @@
+{
+  "order": 50,
+  "run": 1,
+  "question": "H4",
+  "code": "P75J",
+  "prompt": "Under the Fenwray Film Society rules: An active adult member wants to hire the society's projector and screen together for two consecutive booking days beginning at noon on 12 May 2026. What is the total hire charge, excluding the refundable security deposit, and when must the equipment be returned?",
+  "stageDir": "C:/tc/P75J",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 12057,
+  "stderr": ""
+}

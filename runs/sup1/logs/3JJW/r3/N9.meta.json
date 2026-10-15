@@ -1,0 +1,13 @@
+{
+  "order": 325,
+  "run": 3,
+  "question": "N9",
+  "code": "3JJW",
+  "prompt": "Under the Fenwray Film Society rules: On 28 April 2025 I asked to book the projector for three consecutive booking days, collecting at noon on 6 May 2025. Someone told me the limit is two days. Am I allowed three?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 9930,
+  "stderr": ""
+}

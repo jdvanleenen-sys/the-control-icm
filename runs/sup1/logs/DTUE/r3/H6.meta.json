@@ -1,0 +1,13 @@
+{
+  "order": 335,
+  "run": 3,
+  "question": "H6",
+  "code": "DTUE",
+  "prompt": "Under the Quillbrook Village Hall rules: At a trustee committee meeting on 17 September 2025, seven trustees are in office but only three attend. One attendee says that three should be enough because all three agree. What is the required quorum, and can the committee make a valid decision at this meeting?",
+  "stageDir": "C:/tc/DTUE",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 4414,
+  "stderr": ""
+}

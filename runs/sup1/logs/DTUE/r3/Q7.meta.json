@@ -1,0 +1,13 @@
+{
+  "order": 373,
+  "run": 3,
+  "question": "Q7",
+  "code": "DTUE",
+  "prompt": "Under the Quillbrook Village Hall rules: A band is hired for a Saturday evening event on 4 April 2026. Their contract says amplified music will continue until 21:45. The hirer points out that the general hall rules allow Friday and Saturday amplified music until 22:00. May the band play until 21:45?",
+  "stageDir": "C:/tc/DTUE",
+  "attempts": 1,
+  "exit": 1,
+  "timedOut": false,
+  "wallMs": 1710,
+  "stderr": ""
+}

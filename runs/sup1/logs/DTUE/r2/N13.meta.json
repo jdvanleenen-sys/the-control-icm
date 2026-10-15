@@ -1,0 +1,13 @@
+{
+  "order": 178,
+  "run": 2,
+  "question": "N13",
+  "code": "DTUE",
+  "prompt": "Under the Quillbrook Village Hall rules: Our Main Hall booking was accepted in September 2025 for an event on 8 November 2025, lasting 4 hours including setup and clearing. We aren't a village group. What is the room hire charge?",
+  "stageDir": "C:/tc/DTUE",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 4608,
+  "stderr": ""
+}

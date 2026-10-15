@@ -1,0 +1,13 @@
+{
+  "order": 390,
+  "run": 3,
+  "question": "H2",
+  "code": "3JJW",
+  "prompt": "Under the Fenwray Film Society rules: An adult member booked the projector on 20 September 2025, paid the required hire fee and security deposit, and received confirmation that day. Collection is scheduled for 3 October 2025. How much security deposit must the member ultimately provide before collecting it?",
+  "stageDir": "C:/tc/3JJW",
+  "attempts": 1,
+  "exit": 1,
+  "timedOut": false,
+  "wallMs": 1567,
+  "stderr": ""
+}

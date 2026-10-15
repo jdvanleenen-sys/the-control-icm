@@ -4,7 +4,7 @@
 //
 //   node tools/sup-run.mjs --name sup1 [--limit N]
 
-import { existsSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { ask, programVersion, sessionArgs, sessionEnv } from '../lib/claude.mjs';
@@ -17,6 +17,18 @@ import { digest, loadAllQuestions, splitSteps, stageSupArm } from '../lib/sup.mj
 import { logPath, scanReport, scanRun } from '../verify/scan.mjs';
 import { runSession } from './run.mjs';
 import { scanLog } from '../verify/scan.mjs';
+
+// The account's usage limit, as the program reports it in the session log.
+export const rateLimited = (stream) => parseLog(stream).events.some((e) => e.type === 'rate_limit_event' && e.rate_limit_info?.status === 'rejected');
+export function resetAt(stream) {
+  const info = parseLog(stream).events.filter((e) => e.type === 'rate_limit_event').map((e) => e.rate_limit_info).find((i) => i?.status === 'rejected');
+  const at = Number(info?.resetsAt ?? 0) * 1000;
+  return at > Date.now() ? at : Date.now() + 15 * 60000;
+}
+function sleepUntil(ms) {
+  const block = new Int32Array(new SharedArrayBuffer(4));
+  while (Date.now() < ms) Atomics.wait(block, 0, 0, Math.min(60000, ms - Date.now()));
+}
 
 const STOPPING = [/^model is /, /^tool version is /, /MCP server/, /skill was loaded/, /plugin that is not built in/];
 
@@ -56,7 +68,17 @@ export function executeSupRun(dir, { limit = 0, asker = ask, version = null, sta
   say(`${sessions.length} sessions, model ${MODEL}, effort ${EFFORT}, tool ${manifest.version}, staged under ${stageRoot}`);
   const started = Date.now();
   for (const session of sessions) {
-    const done = runSession(dir, session, prompts[session.question], manifest.staged[session.code].dir, asker);
+    let done = runSession(dir, session, prompts[session.question], manifest.staged[session.code].dir, asker);
+    // A session the account refused for its usage limit never reached the model. Keep it under its
+    // own name, wait for the limit to reset, and ask again. Nothing the model sees changes.
+    for (let wait = 1; rateLimited(done.stream); wait += 1) {
+      const path = logPath(dir, session);
+      renameSync(path, path.replace(/\.jsonl$/, `.ratelimit${wait}.jsonl`));
+      const until = resetAt(done.stream);
+      say(`${session.order}: refused for the usage limit; waiting until ${new Date(until).toISOString()}`);
+      sleepUntil(until + 60000);
+      done = runSession(dir, session, prompts[session.question], manifest.staged[session.code].dir, asker);
+    }
     say(`${session.order}/${sessions.length} ${session.code} r${session.run} ${session.question}: exit ${done.exit}, ${done.wallMs} ms`);
     const stopping = scanLog(done.stream, manifest).filter((f) => STOPPING.some((p) => p.test(f)));
     if (stopping.length > 0) throw new Error(`Run stopped at session ${session.order}: ${stopping.join('; ')}.`);

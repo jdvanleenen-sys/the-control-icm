@@ -1,0 +1,13 @@
+{
+  "order": 209,
+  "run": 2,
+  "question": "Q1",
+  "code": "DTUE",
+  "prompt": "Under the Fenwray Film Society rules: A screening is advertised to begin at 19:30 on 18 November 2025. Someone has paid for a reserved seat but has not arrived when the film starts. Until what exact time must the society hold that seat, and when do the doors normally open?",
+  "stageDir": "C:/tc/DTUE",
+  "attempts": 1,
+  "exit": 0,
+  "timedOut": false,
+  "wallMs": 4221,
+  "stderr": ""
+}

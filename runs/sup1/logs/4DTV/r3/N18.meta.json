@@ -1,0 +1,13 @@
+{
+  "order": 406,
+  "run": 3,
+  "question": "N18",
+  "code": "4DTV",
+  "prompt": "Under the Quillbrook Village Hall rules: For a birthday party in the Main Hall on 14 June 2025 we have written permission to serve wine to guests. We won't sell it. What deposits do we need to pay in total?",
+  "stageDir": "C:/tc/4DTV",
+  "attempts": 1,
+  "exit": 1,
+  "timedOut": false,
+  "wallMs": 1757,
+  "stderr": ""
+}

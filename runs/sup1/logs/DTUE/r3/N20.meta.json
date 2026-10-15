@@ -1,0 +1,13 @@
+{
+  "order": 404,
+  "run": 3,
+  "question": "N20",
+  "code": "DTUE",
+  "prompt": "Under the Quillbrook Village Hall rules: A hirer lost the hall key after their event on 12 September 2026. How much do they have to pay for the lost key?",
+  "stageDir": "C:/tc/DTUE",
+  "attempts": 1,
+  "exit": 1,
+  "timedOut": false,
+  "wallMs": 1763,
+  "stderr": ""
+}
